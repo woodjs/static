@@ -1,16 +1,17 @@
-body {
+body, div, ul, dl, ol, dt, dd, li, p, label, span, i, input, textarea, header, footer, article, section, nav, aside, figure {
   padding: 0;
   margin: 0;
-}
-
-body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body {
   font-size: 14px;
   min-width: 980px;
   font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
   background: #fff;
+  color: #333;
 }
 
 ul, dl, ol {
@@ -18,56 +19,280 @@ ul, dl, ol {
 }
 
 a {
+  color: #333;
   text-decoration: none;
+}
+
+a:hover {
+  color: #007acd;
+  text-decoration: underline;
 }
 
 input, textarea {
   outline: none;
 }
 
+header, footer, article, section, nav, aside, figure {
+  display: block;
+}
+
 .btn {
   cursor: pointer;
 }
 
-.block-top-func-line {
-  height: 45px;
-  line-height: 44px;
-  border-bottom: 1px solid #e5e5e5;
-  background: #f5f5f5;
-}
-.block-top-func-line .logo {
+.icon {
   display: inline-block;
+}
+
+.frame-top-line {
+  height: 29px;
+  line-height: 28px;
+  border-bottom: 1px solid  #e1e1e1;
+  background: #f7f7f7;
+  width: 100%;
+}
+.frame-top-line .func-box-left {
+  float: left;
+}
+.frame-top-line .func-box-left > div {
+  float: left;
+  padding: 0 0 0 20px;
+}
+.frame-top-line .func-box-left .change-lang {
+  font-size: 12px;
+}
+.frame-top-line .func-box-left .change-lang > div {
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  position: relative;
+  min-width: 80px;
+  padding: 0 8px;
+  cursor: pointer;
+  border-left: 1px solid #f7f7f7;
+  border-right: 1px solid #f7f7f7;
+}
+.frame-top-line .func-box-left .change-lang > div:hover {
+  background: #fff;
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+}
+.frame-top-line .func-box-left .change-lang label {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  float: left;
+  cursor: pointer;
+}
+.frame-top-line .func-box-left .change-lang .icon-arrow {
+  height: 28px;
+  float: left;
+}
+.frame-top-line .func-box-left .change-lang ul {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: -1px;
+  right: -1px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-top: 0;
+  padding: 4px 0;
+}
+.frame-top-line .func-box-left .change-lang li {
+  padding: 0 8px;
+  height: 26px;
+  line-height: 26px;
+}
+.frame-top-line .func-box-left .change-lang a:hover {
+  text-decoration: underline;
+  color: #007acd;
+}
+.frame-top-line .btn {
+  font-size: 12px;
+}
+.frame-top-line .btn:hover {
+  color: #007acd;
+  text-decoration: underline;
+}
+.frame-top-line .func-box-right {
+  float: right;
+  font-size: 12px;
+}
+.frame-top-line .func-box-right > div {
+  float: left;
+  padding: 0 14px;
+  position: relative;
+}
+.frame-top-line .func-box-right > div:before {
+  content: '';
+  height: 12px;
+  width: 1px;
+  background: #d7d7d7;
+  display: inline-block;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -6px;
+}
+.frame-top-line .func-box-right > div:first-child:before {
+  width: 0;
+}
+.frame-top-line .func-box-right .nav-box {
+  padding: 0;
+  position: relative;
+}
+.frame-top-line .func-box-right .nav-box > span {
+  cursor: pointer;
+  padding: 0 20px;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+}
+.frame-top-line .func-box-right .nav-box:hover {
+  background: #fff;
+}
+.frame-top-line .func-box-right .nav-box:hover:before {
+  content: '';
+  height: 28px;
+  width: 1px;
+  background: #ebebeb;
+  display: inline-block;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+}
+.frame-top-line .func-box-right .nav-box:hover:after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+}
+.frame-top-line .func-box-right .site-nav {
+  font-size: 12px;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  padding: 18px 0;
+  border-top: none;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 29px;
+}
+.frame-top-line .func-box-right .site-nav .nav-column {
+  width: 194px;
+  height: 100%;
+  padding: 0 20px;
+  float: left;
+  position: relative;
+}
+.frame-top-line .func-box-right .site-nav .nav-column:before {
+  content: '';
+  width: 1px;
+  display: block;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  background: #ebebeb;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.frame-top-line .func-box-right .site-nav .nav-column:first-child:before {
+  display: none;
+}
+.frame-top-line .func-box-right .site-nav dt {
   font-weight: bold;
+  display: block;
+  line-height: 16px;
+  margin-bottom: 14px;
+}
+.frame-top-line .func-box-right .site-nav dd {
+  display: block;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+.frame-logo-search {
+  width: 100%;
+  height: 80px;
+}
+.frame-logo-search .logo-box {
+  float: left;
+  height: 80px;
+  padding: 10px 20px;
+}
+.frame-logo-search .logo-box .logo {
+  display: block;
+  min-width: 200px;
+  height: 40px;
+}
+.frame-logo-search .logo-box img {
+  vertical-align: top;
+}
+.frame-logo-search .logo-box .text-site-intro {
+  display: block;
+  letter-spacing: 6px;
+  font-size: 12px;
+  color: #a1a1a1;
+  margin-top: 4px;
+  height: 16px;
+  line-height: 16px;
+}
+.frame-logo-search .search-box {
+  float: right;
+  height: 80px;
+  padding: 23px 0;
+}
+.frame-logo-search .search-box input {
+  display: block;
+  height: 34px;
+  float: left;
+  width: 460px;
+  border: 2px solid #007acd;
   padding: 0 10px;
-  height: 44px;
-  line-height: 44px;
-  float: left;
 }
-.block-top-func-line .logo a {
-  color: #333;
+.frame-logo-search .search-box input ::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 12px;
 }
-.block-top-func-line .site-intro {
-  float: left;
+.frame-logo-search .search-box input ::-moz-placeholder {
+  color: #ccc;
+  font-size: 12px;
 }
-.block-top-func-line .search-input-box {
-  float: left;
+.frame-logo-search .search-box input :-ms-input-placeholder {
+  color: #ccc;
+  font-size: 12px;
 }
-.block-top-func-line .search-input-box .btn-search {
+.frame-logo-search .search-box .btn {
   display: inline-block;
-  width: 26px;
-  color: red;
-  height: 26px;
-  line-height: 26px;
-}
-.block-top-func-line .search-input-box .search-select {
   float: left;
+  height: 34px;
+  line-height: 34px;
 }
-.block-top-func-line .search-input-box input {
-  height: 26px;
-  line-height: 26px;
-  padding: 0 5px;
-  width: 230px;
+.frame-logo-search .search-box .btn-search {
   font-size: 14px;
+  color: #fff;
+  padding: 0 18px;
+  background: #007acd;
+}
+.frame-logo-search .search-box .btn-replace-search {
+  font-size: 12px;
+  text-decoration: underline;
+  margin: 0 20px;
+}
+.frame-logo-search .search-box .btn-replace-search:hover {
+  color: #007acd;
 }
 
 /*# sourceMappingURL=frame.css.map */

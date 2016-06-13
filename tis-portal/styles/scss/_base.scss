@@ -33,15 +33,18 @@
  transform: $prop;
 }
 
-@mixin placeholderColor($color) {
+@mixin placeholderColor($color, $fontSize: 12px) {
  ::-webkit-input-placeholder {
   color: $color;
+  font-size: $fontSize;
  }
  ::-moz-placeholder {
   color: $color;
+  font-size: $fontSize;
  }
  :-ms-input-placeholder {
   color: $color;
+  font-size: $fontSize;
  }
 }
 
