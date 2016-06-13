@@ -57,6 +57,8 @@ header, footer, article, section, nav, aside, figure {
 .frame-top-line .func-box-left > div {
   float: left;
   padding: 0 0 0 20px;
+  height: 28px;
+  line-height: 28px;
 }
 .frame-top-line .func-box-left .change-lang {
   font-size: 12px;
@@ -293,6 +295,42 @@ header, footer, article, section, nav, aside, figure {
 }
 .frame-logo-search .search-box .btn-replace-search:hover {
   color: #007acd;
+}
+
+.frame-banner-box {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.frame-banner-box ul {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.frame-banner-box li {
+  width: 100%;
+  height: 100%;
+}
+.frame-banner-box .banner-temp {
+  width: 100%;
+  height: 100%;
+}
+.frame-banner-box .btn {
+  display: inline-block;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  z-index: 15;
+}
+.frame-banner-box .btn-prev-banner {
+  left: 0;
+  background: url(images/prev.png) center center no-repeat;
+}
+.frame-banner-box .btn-next-banner {
+  right: 0;
+  background: url(images/next.png) center center no-repeat;
 }
 
 /*# sourceMappingURL=frame.css.map */
