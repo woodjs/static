@@ -1,4 +1,4 @@
-.portal-information .information-content li a {
+.portal-information .information-content li a, .portal-information .information-content .user-name {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -84,25 +84,25 @@ header, footer, article, section, nav, aside, figure {
 .icon-qt {
   width: 18px;
   height: 18px;
-  background: url(images/icons_module.png) -90 px 0 no-repeat;
+  background: url(images/icons_module.png) -90px 0 no-repeat;
 }
 
 .icon-ggl {
   width: 18px;
   height: 18px;
-  background: url(images/icons_module.png) -108 px 0 no-repeat;
+  background: url(images/icons_module.png) -108px 0 no-repeat;
 }
 
 .icon-xwzx {
   width: 18px;
   height: 18px;
-  background: url(images/icons_module.png) -126 px 0 no-repeat;
+  background: url(images/icons_module.png) -126px 0 no-repeat;
 }
 
 .icon-yhdd {
   width: 18px;
   height: 18px;
-  background: url(images/icons_module.png) -144 px 0 no-repeat;
+  background: url(images/icons_module.png) -144px 0 no-repeat;
 }
 
 .frame-top-line {
@@ -120,9 +120,6 @@ header, footer, article, section, nav, aside, figure {
   padding: 0 0 0 20px;
   height: 28px;
   line-height: 28px;
-}
-.frame-top-line .func-box-left .change-brand .btn {
-  color: #999;
 }
 .frame-top-line .func-box-left .change-brand .btn:hover {
   text-decoration: underline;
@@ -304,6 +301,18 @@ header, footer, article, section, nav, aside, figure {
   display: block;
   line-height: 18px;
   margin-bottom: 14px;
+  position: relative;
+}
+.frame-top-line .func-box-right .site-nav dt .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.frame-top-line .func-box-right .site-nav dt label {
+  display: block;
+  width: 100%;
+  padding: 0 0 0 26px;
+  line-height: 18px;
 }
 .frame-top-line .func-box-right .site-nav dd {
   display: block;
@@ -347,8 +356,9 @@ header, footer, article, section, nav, aside, figure {
   display: block;
   height: 34px;
   float: left;
-  width: 460px;
+  width: 458px;
   border: 2px solid #007acd;
+  border-right: none;
   padding: 0 10px;
 }
 .frame-logo-search .search-box input ::-webkit-input-placeholder {
@@ -372,8 +382,15 @@ header, footer, article, section, nav, aside, figure {
 .frame-logo-search .search-box .btn-search {
   font-size: 14px;
   color: #fff;
-  padding: 0 18px;
+  padding: 0 18px 0 20px;
   background: #007acd;
+  cursor: pointer;
+}
+.frame-logo-search .search-box .btn-search:hover {
+  background: #0062a4;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .frame-logo-search .search-box .btn-replace-search {
   font-size: 12px;
@@ -424,11 +441,11 @@ header, footer, article, section, nav, aside, figure {
 }
 .frame-banner-box .btn-prev-banner {
   left: 0;
-  background: url(images/prev.png) center center no-repeat;
+  background: url(images/icons_aside.png) 0 -192px no-repeat;
 }
 .frame-banner-box .btn-next-banner {
   right: 0;
-  background: url(images/next.png) center center no-repeat;
+  background: url(images/icons_aside.png) -50px -192px no-repeat;
 }
 
 .frame-main-container {
@@ -474,15 +491,15 @@ header, footer, article, section, nav, aside, figure {
   position: fixed;
   z-index: 555;
   right: 20px;
-  top: 40%;
+  top: 35%;
   background: #fff;
 }
 .frame-contact .contact-header {
   width: 116px;
   height: 59px;
-  background: url(images/header.png) center center no-repeat;
   display: block;
   cursor: pointer;
+  background: url(images/icons_aside.png) 0 0 no-repeat;
 }
 .frame-contact .contact-header label {
   cursor: pointer;
@@ -511,7 +528,7 @@ header, footer, article, section, nav, aside, figure {
   height: 93px;
   margin-top: 2px;
   display: block;
-  background: url(images/footer.png) center center no-repeat;
+  background: url(images/icons_aside.png) 0 -59px no-repeat;
   cursor: pointer;
 }
 .frame-contact .contact-footer label {
@@ -533,12 +550,27 @@ header, footer, article, section, nav, aside, figure {
   bottom: 20px;
   height: 40px;
   line-height: 40px;
-  background: #000;
-  z-index: 555;
+  z-index: 500;
   min-width: 116px;
   color: #fff;
   font-size: 12px;
   cursor: pointer;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-box-shadow: 0 0 3px #ebebeb;
+  -moz-box-shadow: 0 0 3px #ebebeb;
+  box-shadow: 0 0 3px #ebebeb;
+  background: url(images/icons_aside.png) 0 -152px no-repeat;
+}
+.frame-back-to-top:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-box-shadow: 0 0 3px #ccc;
+  -moz-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .frame-back-to-top label {
   display: inline-block;
@@ -589,7 +621,7 @@ header, footer, article, section, nav, aside, figure {
   display: block;
   float: left;
   width: 240px;
-  min-height: 120px;
+  height: 120px;
   border: 1px solid #f3f3f3;
   zoom: 1;
   margin: 20px 0 0 20px;
@@ -603,17 +635,17 @@ header, footer, article, section, nav, aside, figure {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-box-shadow: 0 0 3px #007acd;
-  -moz-box-shadow: 0 0 3px #007acd;
-  box-shadow: 0 0 3px #007acd;
+  -webkit-box-shadow: 0 0 4px #007acd;
+  -moz-box-shadow: 0 0 4px #007acd;
+  box-shadow: 0 0 4px #007acd;
 }
 .portal-module dd a .icon-free {
   width: 48px;
   height: 44px;
   position: absolute;
-  top: -3px;
+  top: -4px;
   left: -3px;
-  background: url(images/free.png) center center no-repeat;
+  background: url(images/icons_aside.png) 0 -252px no-repeat;
 }
 .portal-module dd .left-icon {
   width: 50px;
@@ -624,8 +656,9 @@ header, footer, article, section, nav, aside, figure {
 .portal-module dd .right-text {
   width: 138px;
   margin: 25px 10px 10px 20px;
-  min-height: 83px;
+  height: 83px;
   float: right;
+  overflow: hidden;
 }
 .portal-module dd .right-text li:first-child {
   color: #333;
@@ -678,14 +711,14 @@ header, footer, article, section, nav, aside, figure {
   width: 100%;
   position: relative;
 }
-.portal-information .information-content li .icon {
+.portal-information .information-content li .icon-dot {
   position: absolute;
   display: inline-block;
   width: 35px;
   height: 24px;
   left: 0;
   top: 0;
-  background: #eee;
+  background: url(images/icons_dot.png) 0 0 no-repeat;
 }
 .portal-information .information-content li a {
   display: block;
@@ -706,6 +739,7 @@ header, footer, article, section, nav, aside, figure {
   width: 32px;
   height: 32px;
   border-radius: 2px;
+  background: #ebebeb;
   float: left;
 }
 .portal-information .information-content .user-icon img {
@@ -723,16 +757,17 @@ header, footer, article, section, nav, aside, figure {
   color: #999;
   margin-left: 20px;
   float: left;
+  max-width: 160px;
 }
 .portal-information .information-content .time {
   display: inline-block;
   height: 32px;
   line-height: 32px;
   color: #999;
-  margin-left: 8px;
-  padding-left: 15px;
+  margin-left: 5px;
+  padding-left: 20px;
   float: left;
-  background: red;
+  background: url(images/icons_dot.png) 0 -24px no-repeat;
 }
 .portal-information .information-content dd {
   padding: 8px 0 15px;

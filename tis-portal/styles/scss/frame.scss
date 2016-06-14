@@ -73,22 +73,22 @@ header,footer,article,section,nav,aside,figure{
 .icon-qt{
  width: 18px;
  height:18px;
- background: url(images/icons_module.png) -90 px 0 no-repeat;
+ background: url(images/icons_module.png) -90px 0 no-repeat;
 }
 .icon-ggl{
  width: 18px;
  height:18px;
- background: url(images/icons_module.png) -108 px 0 no-repeat;
+ background: url(images/icons_module.png) -108px 0 no-repeat;
 }
 .icon-xwzx{
  width: 18px;
  height:18px;
- background: url(images/icons_module.png) -126 px 0 no-repeat;
+ background: url(images/icons_module.png) -126px 0 no-repeat;
 }
 .icon-yhdd{
  width: 18px;
  height:18px;
- background: url(images/icons_module.png) -144 px 0 no-repeat;
+ background: url(images/icons_module.png) -144px 0 no-repeat;
 }
 
 .frame-top-line {
@@ -106,7 +106,6 @@ header,footer,article,section,nav,aside,figure{
    }
    .change-brand{
      .btn{
-      color:#999;
       &:hover{
        text-decoration: underline;
        color:$themeColor;
@@ -290,6 +289,18 @@ header,footer,article,section,nav,aside,figure{
     display: block;
     line-height: 18px;
     margin-bottom: 14px;
+    position: relative;
+    .icon{
+     position: absolute;
+     left:0;
+     top:0;
+    }
+    label{
+     display: block;
+     width:100%;
+     padding:0 0 0 26px;
+     line-height: 18px;
+    }
    }
    dd{
     display: block;
@@ -333,8 +344,9 @@ header,footer,article,section,nav,aside,figure{
    display: block;
    height:34px;
    float:left;
-   width:460px;
+   width:458px;
    border:2px solid $themeColor;
+   border-right:none;
    padding:0 10px;
    @include placeholderColor(#ccc);
   }
@@ -346,8 +358,13 @@ header,footer,article,section,nav,aside,figure{
   .btn-search{
    font-size:14px;
    color:#fff;
-   padding:0 18px;
+   padding:0 18px 0 20px;
    background: $themeColor;
+   cursor:pointer;
+   &:hover{
+    background: darken($themeColor,8%);
+    @include transition(all 0.4s ease-in-out);
+   }
   }
   .btn-replace-search{
    font-size:12px;
@@ -398,11 +415,11 @@ header,footer,article,section,nav,aside,figure{
  }
  .btn-prev-banner{
   left:0;
-  background:url(images/prev.png) center center no-repeat;
+  background:url(images/icons_aside.png) 0 -192px no-repeat;
  }
  .btn-next-banner{
   right:0;
-  background:url(images/next.png) center center no-repeat;
+  background:url(images/icons_aside.png) -50px -192px no-repeat;
  }
 }
 .frame-main-container{
@@ -447,14 +464,14 @@ header,footer,article,section,nav,aside,figure{
  position: fixed;
  z-index: 555;
  right:20px;
- top:40%;
+ top:35%;
  background: #fff;
  .contact-header{
   width:116px;
   height:59px;
-  background: url(images/header.png) center center no-repeat;
   display: block;
   cursor: pointer;
+  background: url(images/icons_aside.png) 0 0 no-repeat;
   label{
    cursor: pointer;
    display: inline-block;
@@ -482,7 +499,7 @@ header,footer,article,section,nav,aside,figure{
   height:93px;
   margin-top:2px;
   display: block;
-  background: url(images/footer.png) center center no-repeat;
+  background: url(images/icons_aside.png) 0 -59px no-repeat;
   cursor: pointer;
   label{
    display: inline-block;
@@ -503,12 +520,19 @@ header,footer,article,section,nav,aside,figure{
  right:20px;
  bottom:20px;
  @include setHeightGroup(40px);
- background: #000;
- z-index:555;
+ z-index:500;
  min-width: 116px;
  color:#fff;
  font-size:12px;
  cursor: pointer;
+ @include opacity(0.8);
+ @include boxShadow(0 0 3px #ebebeb);
+ background: url(images/icons_aside.png) 0 -152px no-repeat;
+ &:hover{
+  @include opacity(1);
+  @include boxShadow(0 0 3px #ccc);
+  @include transition(all 0.5s ease-in-out);
+ }
  label{
   display: inline-block;
   height:40px;
@@ -556,7 +580,7 @@ header,footer,article,section,nav,aside,figure{
    display: block;
    float:left;
    width:240px;
-   min-height:120px;
+   height:120px;
    border:1px solid #f3f3f3;
    zoom:1;
    margin:20px 0 0 20px;
@@ -567,15 +591,15 @@ header,footer,article,section,nav,aside,figure{
     color:#999;
     border:1px solid $themeColor;
     @include transition(all 0.4s ease-in-out);
-    @include boxShadow(0 0 3px $themeColor);
+    @include boxShadow(0 0 4px $themeColor);
    }
    .icon-free{
     width:48px;
     height:44px;
     position: absolute;
-    top: -3px;
+    top: -4px;
     left:-3px;
-    background: url(images/free.png) center center no-repeat;
+    background: url(images/icons_aside.png) 0 -252px no-repeat;
    }
   }
   .left-icon{
@@ -587,8 +611,9 @@ header,footer,article,section,nav,aside,figure{
   .right-text{
    width:138px;
    margin:25px 10px 10px 20px;
-   min-height: 83px;
+   height: 83px;
    float:right;
+   overflow: hidden;
    li:first-child{
     color:#333;
     margin-bottom:5px;
@@ -637,14 +662,14 @@ header,footer,article,section,nav,aside,figure{
    display: block;
    width: 100%;
    position: relative;
-   .icon{
+   .icon-dot{
     position: absolute;
     display: inline-block;
     width:35px;
     height: 24px;
     left:0;
     top:0;
-    background: #eee;
+    background: url(images/icons_dot.png) 0 0 no-repeat;
    }
    a{
     display: block;
@@ -666,6 +691,7 @@ header,footer,article,section,nav,aside,figure{
    width: 32px;
    height:32px;
    border-radius: 2px;
+   background: #ebebeb;
    float:left;
    img{
     display: block;
@@ -682,15 +708,17 @@ header,footer,article,section,nav,aside,figure{
    color:#999;
    margin-left:20px;
    float:left;
+   max-width: 160px;
+   @extend %textOverflowEllipsis;
   }
   .time{
    display: inline-block;
    @include setHeightGroup(32px);
    color:#999;
-   margin-left:8px;
-   padding-left:15px;
+   margin-left:5px;
+   padding-left:20px;
    float:left;
-   background: red;
+   background: url(images/icons_dot.png) 0 -24px no-repeat;
   }
   dd{
    padding:8px 0 15px;
