@@ -25,7 +25,6 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
       self.$btnSaveSite = $('#btn-save-site');
       self.$btnLang = $('#btn-lang');
       self.$boxLang = $('#box-lang');
-      self.$langList = self.$boxLang.find('li');
       self.$btnMessage = $('#btn-message');
       self.$arrMessage = $('#message-arrow');
       self.$boxMessage = $('#box-message');
@@ -40,6 +39,7 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
       self.$noMessage = $('#no-message');
       self.$loadingMessage = $('#loading-message');
       self.$messageTemplateBox = $('#message-template-box');
+      self.$backToTop = $('#back-to-top');
     },
     bindEvent: function () {
       var self = this;
@@ -59,20 +59,23 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
         }
         self.addFavorite(title, url);
       });
+      self.$backToTop.on('click', function () {
+        $('html,body').animate({scrollTop: 0}, 300);
+      });
       self.$btnLang.on({
         mouseenter: function () {
           self.$btnLang.addClass('active');
-          self.$boxLang.slideDown(0);
+          self.$boxLang.fadeIn(0);
         },
         mouseleave: function () {
           self.$btnLang.removeClass('active');
-          self.$boxLang.slideUp(0);
+          self.$boxLang.fadeOut(0);
         }
       });
       self.$btnMessage.on({
         mouseenter: function () {
           self.$btnMessage.addClass('active');
-          self.$boxMessage.slideDown(0);
+          self.$boxMessage.fadeIn(0);
           self.$arrMessage.show();
           if (!self.isMsgLoaded) {
             self.loadMessage();
@@ -80,40 +83,40 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
         },
         mouseleave: function () {
           self.$btnMessage.removeClass('active');
-          self.$boxMessage.slideUp(0);
+          self.$boxMessage.fadeOut(0);
           self.$arrMessage.hide();
         }
       });
       self.$boxMessage.on({
         mouseenter: function () {
           self.$btnMessage.addClass('active');
-          self.$boxMessage.slideDown(0);
+          self.$boxMessage.fadeIn(0);
           self.$arrMessage.show();
         },
         mouseleave: function () {
           self.$btnMessage.removeClass('active');
-          self.$boxMessage.slideUp(0);
+          self.$boxMessage.fadeOut(0);
           self.$arrMessage.hide();
         }
       });
       self.$btnCategory.on({
         mouseenter: function () {
           self.$btnCategory.addClass('active');
-          self.$boxCategory.slideDown(0);
+          self.$boxCategory.fadeIn(0);
         },
         mouseleave: function () {
           self.$btnCategory.removeClass('active');
-          self.$boxCategory.slideUp(0);
+          self.$boxCategory.fadeOut(0);
         }
       });
       self.$boxCategory.on({
         mouseenter: function () {
           self.$btnCategory.addClass('active');
-          self.$boxCategory.slideDown(0);
+          self.$boxCategory.fadeIn(0);
         },
         mouseleave: function () {
           self.$btnCategory.removeClass('active');
-          self.$boxCategory.slideUp(0);
+          self.$boxCategory.fadeOut(0);
         }
       });
       self.$btnAuthList.on('click', function () {

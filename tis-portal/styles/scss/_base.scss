@@ -15,6 +15,12 @@
  box-sizing: $prop;
 }
 
+@mixin borderRadius($prop) {
+ -webkit-border-radius: $prop;
+ -moz-border-radius: $prop;
+ border-radius: $prop;
+}
+
 @mixin opacity($prop) {
  opacity: $prop;
  filter: alpha(opacity = $prop * 100 );

@@ -97,9 +97,7 @@ header,footer,article,section,nav,aside,figure{
 }
 
 .frame-top-line {
- height:29px;
- line-height: 28px;
- border-bottom: 1px solid  #e1e1e1;
+ @include setHeightGroup(28px);
  background: $bgColor;
  width: 100%;
  position: relative;
@@ -130,7 +128,7 @@ header,footer,article,section,nav,aside,figure{
      border-left: 1px solid $bgColor;
      border-right: 1px solid $bgColor;
     }
-    & > div:hover {
+    & > div:hover, & > div.active {
      background: #fff;
      border-left: 1px solid $bdColor;
      border-right: 1px solid $bdColor;
@@ -250,7 +248,7 @@ header,footer,article,section,nav,aside,figure{
      background: url(images/icons_top_line.png) -16px center no-repeat;
     }
    }
-   &:hover{
+   &:hover,&.active{
     & > span{
      .icon-nav{
       background: url(images/icons_top_line.png) -40px center no-repeat;
@@ -424,7 +422,7 @@ header,footer,article,section,nav,aside,figure{
 .frame-logo-search{
  width:100%;
  height:81px;
- border-bottom: 1px solid #e1e1e1;
+ border-top: 1px solid #e1e1e1;
  .logo-box{
   float:left;
   height:80px;
@@ -518,26 +516,63 @@ header,footer,article,section,nav,aside,figure{
    margin: 0 auto;
   }
  }
- .btn{
-  display:inline-block;
+ .btn-prev-banner{
   width:50px;
   height:60px;
   position:absolute;
   top:50%;
   margin-top: -30px;
   z-index:15;
- }
- .btn-prev-banner{
   left:0;
+  @include opacity(0.8);
   background:url(images/icons_aside.png) 0 -192px no-repeat;
+  &:hover{
+   @include transition(all 0.3s ease-in-out);
+   @include opacity(1);
+   @include boxShadow(0 0 3px rgba(0,0,0,0.8));
+  }
  }
  .btn-next-banner{
+  width:50px;
+  height:60px;
+  position:absolute;
+  top:50%;
+  margin-top: -30px;
+  z-index:15;
   right:0;
+  @include opacity(0.8);
   background:url(images/icons_aside.png) -50px -192px no-repeat;
+  &:hover{
+   @include transition(all 0.3s ease-in-out);
+   @include opacity(1);
+   @include boxShadow(0 0 3px rgba(0,0,0,0.8));
+  }
+ }
+ .banner-btn-list{
+  position: absolute;
+  z-index:15;
+  width:100%;
+  text-align: center;
+  @include setHeightGroup(14px);
+  bottom:12px;
+  .btn-banner{
+   display: inline-block;
+   width:8px;
+   height:8px;
+   @include borderRadius(8px);
+   @include boxShadow(0,0,0,0.8);
+   background: #fff;
+   margin:0 3px;
+   @include transition(background 0.3s ease-in-out);
+   &:hover,&.active{
+    background: $themeColor;
+   }
+  }
  }
 }
 .frame-main-container{
  width:100%;
+ border-top: 1px solid #e1e1e1;
  zoom:1;
  &:after{
   content: '';
@@ -547,7 +582,7 @@ header,footer,article,section,nav,aside,figure{
 }
 .frame-footer{
  width:100%;
- padding:35px 20px 10px;
+ padding:15px 20px 10px;
  .box-links{
   font-size:12px;
   line-height: 24px;
@@ -644,7 +679,7 @@ header,footer,article,section,nav,aside,figure{
  background: url(images/icons_aside.png) 0 -152px no-repeat;
  &:hover{
   @include opacity(1);
-  @include boxShadow(0 0 3px #ccc);
+  @include boxShadow(0 0 3px rgba(0,0,0,0.8));
   @include transition(all 0.5s ease-in-out);
  }
  label{
@@ -661,8 +696,11 @@ header,footer,article,section,nav,aside,figure{
  font-size:12px;
  padding-right:510px;
  dl{
-  margin-top:20px;
-  :after{
+  margin-bottom:20px;
+  &:first-child{
+   margin-top:20px;
+  }
+  &:after{
    content: '';
    display: block;
    clear:left;
@@ -743,6 +781,9 @@ header,footer,article,section,nav,aside,figure{
  width:510px;
  padding:0 156px 0 14px;
  .box-information{
+  &:first-child{
+   margin-top:20px;
+  }
   margin-bottom:20px;
  }
  .information-title{
