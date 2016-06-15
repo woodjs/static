@@ -1,4 +1,4 @@
-define(['globalConfig', 'jquery', 'ajax', 'json2', 'domReady!'], function (globalConfig, $, ajax) {
+define(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, ajax) {
 	var path = globalConfig.context.path;
     var message = {
         init: function () {
@@ -47,18 +47,18 @@ define(['globalConfig', 'jquery', 'ajax', 'json2', 'domReady!'], function (globa
         },
         stampReaded: function (id) {
             var self = this;
-            //ajax.invoke({
-            //    url: path + '/user/msg/read',
-            //    type: 'post',
-            //    data: JSON.stringify([id]),
-            //    dataType: 'json',
-            //    success: function(res) {
-            //        console.log(res.success);
-            //    },
-            //    error: function (err) {
-            //        console.log(err);
-            //    }
-            //});
+            ajax.invoke({
+                url: path + '/user/msg/read',
+                type: 'post',
+                data: JSON.stringify([id]),
+                dataType: 'json',
+                success: function(res) {
+                    console.log(res.success);
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
         }
     };
 

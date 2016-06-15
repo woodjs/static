@@ -1,4 +1,4 @@
-define(['globalConfig', 'jquery', 'mustache', 'domReady!'], function (globalConfig, $, Mustache) {
+define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
 
   var banner = {
     init: function () {
@@ -11,7 +11,7 @@ define(['globalConfig', 'jquery', 'mustache', 'domReady!'], function (globalConf
       self.imgSrcList = [];
 
       self.$bannerImgList.each(function (index, item) {
-        self.imgSrcList.push(item[src]);
+        self.imgSrcList.push(item['src']);
       });
 
       self.timer = setInterval(function () {
@@ -60,12 +60,12 @@ define(['globalConfig', 'jquery', 'mustache', 'domReady!'], function (globalConf
     changeBannerByIndex: function (index) {
       var self = this;
       var prevIndex = index === 0 ? self.length - 1 : index - 1;
-      var prevImgSrc = 'url(' + self.imgSrcList[prevIndex] + ')';
+      var prevImg = '<img src="'+ self.imgSrcList[prevIndex] + '" />';
 
       self.transition = true;
-      self.bannerTemp.css({backgroundImage: prevImgSrc}).show();
+      self.$bannerTemp.html(prevImg).show();
       self.$bannerList.hide();
-      self.bannerTemp.fadeOut(1000);
+      self.$bannerTemp.fadeOut(1000);
 
       $(self.$bannerList[index]).fadeIn(1000, function () {
         self.transition = false;
@@ -79,7 +79,5 @@ define(['globalConfig', 'jquery', 'mustache', 'domReady!'], function (globalConf
     }
   };
 
-  return {
-    init: banner.init
-  };
+  return banner;
 });

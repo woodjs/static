@@ -1,4 +1,4 @@
-define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
+define(['globalConfig', 'jquery'], function (globalConfig, $) {
     var tabNews = {
         init: function () {
             var self = tabNews;
@@ -14,7 +14,7 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
         bindEvent: function () {
             var self = tabNews;
             self.$tabBtnList.on({
-                click: function () {
+                mouseenter: function () {
                     var $temp = $(this);
                     var target = $temp.data('target');
                     $temp.addClass('active').siblings('.btn').removeClass('active');

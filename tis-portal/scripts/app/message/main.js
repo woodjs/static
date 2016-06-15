@@ -1,4 +1,4 @@
-require(['globalConfig', 'toggleMessage', 'pagination', 'jquery', 'ajax', 'mustache', 'json2', 'domReady!'], function(globalConfig, toggleMessage, Pagination, $, ajax, Mustache) {
+require(['globalConfig', 'toggleMessage', 'pagination', 'jquery', 'ajax', 'mustache', 'json2'], function(globalConfig, toggleMessage, Pagination, $, ajax, Mustache) {
 	var path = globalConfig.context.path;
 	
 	var home = {
@@ -10,7 +10,7 @@ require(['globalConfig', 'toggleMessage', 'pagination', 'jquery', 'ajax', 'musta
         },
         initComponent: function() {
             var self = this;
-            //self.loadMessage(1);
+            self.loadMessage(1);
         },
         buildElement: function () {
             var self = this;
@@ -44,36 +44,36 @@ require(['globalConfig', 'toggleMessage', 'pagination', 'jquery', 'ajax', 'musta
         buildTemplate: function () {
             var self = this;
             self.template = $('#item-message-template').html();
+        },
+        loadMessage: function (pageNumber) {
+            var self = this;
+            ajax.invoke({
+                url: path + '/user/msg/list-page',
+                type: 'post',
+                data: JSON.stringify({
+                    filters: {
+                    	
+                    },
+                    sort: [
+                        {field: 'time', asc: false}
+                    ],
+                    paging: {
+                        page: pageNumber,
+                        size: 8
+                    }
+                }),
+                dataType: 'json',
+                success: function(res) {
+                	var self = home;
+                    self.$blockMessageBox.html(Mustache.render(self.template, res));
+                    self.buildPagination(pageNumber, parseInt(res.total));
+                    toggleMessage.init();
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
         }
-        //loadMessage: function (pageNumber) {
-        //    var self = this;
-        //    ajax.invoke({
-        //        url: path + '/user/msg/list-page',
-        //        type: 'post',
-        //        data: JSON.stringify({
-        //            filters: {
-        //
-        //            },
-        //            sort: [
-        //                {field: 'time', asc: false}
-        //            ],
-        //            paging: {
-        //                page: pageNumber,
-        //                size: 8
-        //            }
-        //        }),
-        //        dataType: 'json',
-        //        success: function(res) {
-        //        	var self = home;
-        //            self.$blockMessageBox.html(Mustache.render(self.template, res));
-        //            self.buildPagination(pageNumber, parseInt(res.total));
-        //            toggleMessage.init();
-        //        },
-        //        error: function (err) {
-        //            console.log(err);
-        //        }
-        //    });
-        //}
     };
     home.init();
 });

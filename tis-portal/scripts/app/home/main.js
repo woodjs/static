@@ -1,48 +1,91 @@
-require(['globalConfig', 'tabNews', 'userDynamic', 'jquery', 'domReady!'], function (globalConfig, tabNews, UserDynamic, $) {
+require(['globalConfig', 'jquery', 'tabNews', 'userActivity', 'banner', 'mustache'], function (globalConfig, $, tabNews, UserActivity, banner, Mustache) {
   var home = {
     init: function () {
       var self = this;
-      self.initComponent();
 
-      self.randomShow();
+      self.bannerTime = '';
+      self.index = 0;
+      self.initComponent();
+      self.controlDialog();
+      self.controlBannerShow();
     },
     initComponent: function () {
       var self = this;
+
+      // tis-home
       tabNews.init();
-      var userDynamic = new UserDynamic();
+      new UserActivity();
+
+      // tis-portal
+      banner.init();
     },
-    randomShow: function () {
-      var $boxColList = $('.box-col-1');
-      var htmlList = [];
+    controlDialog: function () {
+      var self = this;
+      if (globalConfig.context.oemCode === 'suzuki' && globalConfig.userState.needRemindUserUseLogger) {
+        var html = $('#system-introduction').html();
 
-      $boxColList.each(function (index, item) {
+        $('body').append(html);
 
-        htmlList.push($(item).html());
+        $('#dialog-btn-close-system').on('click', function () {
+          $('#dialog-bg-system').remove();
+          $('#dialog-box-system').remove();
 
-      });
+          self.isShowExpired();
+        });
 
-      var newHtmlList = [];
-
-      function getHtmlItem(htmlList) {
-        var len = htmlList.length;
-
-        if (len === 0) return;
-
-        var key = Math.floor(Math.random() * len);
-
-        newHtmlList.push(htmlList.splice(key, 1));
-
-        getHtmlItem(htmlList);
-
+      } else {
+        self.isShowExpired();
       }
+    },
+    isShowExpired: function () {
+      var self = this;
 
-      getHtmlItem(htmlList);
+      if (globalConfig.userState.needRemindUserExpireDate) {
+        var html = $('#expired-introduction').html();
+        var data = {
+          expiringServices: globalConfig.userState.expiringServices
+        };
 
-      $boxColList.each(function (index, item) {
-        $(item).html(newHtmlList[index]);
-      });
+        $('body').append(Mustache.render(html, data));
+        $('#dialog-btn-close').on('click', function () {
+          $('#dialog-bg').remove();
+          $('#dialog-box').remove();
+        });
+      }
+    },
+    controlBannerShow: function () {
+      var self = this;
+      if (globalConfig.context.oemCode === 'dfsk') {
 
+        var $bannerBtnList = $(".banner-btn-list span");
+
+        $bannerBtnList.click(function () {
+          var $this = $(this);
+
+          clearTimeout(self.bannerTime);
+
+          var index = parseInt($this.data("index"));
+
+          $this.addClass('active').siblings().removeClass('active');
+
+          $("#banner-wrapper li").eq(index).fadeIn().siblings().fadeOut();
+
+          self.index = index;
+
+          var nextIndex = (self.index + 1) % 4;
+
+          self.bannerTime = setTimeout(function () {
+
+            $bannerBtnList.eq(nextIndex).trigger('click');
+
+          }, 2000);
+
+        });
+
+        $bannerBtnList && $bannerBtnList.eq(self.index).trigger('click');
+      }
     }
+
   };
   home.init();
 });

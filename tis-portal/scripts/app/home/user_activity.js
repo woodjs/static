@@ -1,11 +1,11 @@
 define(['globalConfig', 'ajax', 'jquery', 'mustache'], function(globalConfig, ajax, $, Mustache) {
 
-	var UserDynamic = function() {
+	var UserActivity = function() {
 
 		this.init();
 	};
 
-	UserDynamic.prototype = {
+	UserActivity.prototype = {
 		init: function() {
 			var self = this;
 
@@ -15,31 +15,35 @@ define(['globalConfig', 'ajax', 'jquery', 'mustache'], function(globalConfig, aj
 
 			window.setInterval(function() {
 				self.load();
-			}, 1000 * 60 * 30); // 半小时获取一次用户动态
+			}, 1000 * 30); // 半分钟获取一次用户动态
 		},
 
 		buildEl: function() {
 			var self = this;
 
-			self.$userDynamicWrap = $('#user-dynamic-list');
-			self.$userDynamicTpl = $("#user-dynamic-tpl");
+			self.$userActivityWrap = $('#user-dynamic-list');
+			self.$userActivityTpl = $("#user-dynamic-tpl");
 		},
 
 		buildTpl: function() {
 			var self = this;
 
-			self.tpl = self.$userDynamicTpl.html();
+			self.tpl = self.$userActivityTpl.html();
 		},
 
 		load: function() {
 			var self = this;
-			//ajax.invoke({
-			//	url: globalConfig.context.path + '',
-			//	cache: false,
-			//	success: function(root) {
-			//		self.render(root.result || {});
-			//	}
-			//});
+			ajax.invoke({
+				url: globalConfig.context.userActivityPath,
+				type: 'get',
+				dataType: 'json',
+				success: function(root) {
+					self.render(root || {});
+				},
+				error: function (err) {
+					console.log(err);
+				}
+			});
 		},
 
 		render: function(result) {
@@ -49,9 +53,9 @@ define(['globalConfig', 'ajax', 'jquery', 'mustache'], function(globalConfig, aj
 					list: result
 				});
 
-			self.$userDynamicWrap.html(html);
+			self.$userActivityWrap.html(html);
 		}
 	};
 
-	return UserDynamic;
+	return UserActivity;
 });

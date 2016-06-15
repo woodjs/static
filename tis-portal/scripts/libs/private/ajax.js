@@ -25,7 +25,8 @@ define(["globalConfig", "json2"], function(globalConfig) {
         timeout: 60000,
         dataType: "json",
         type: "get",
-        traditional: false
+        traditional: false,
+        contentType: 'application/json'
     };
 
     return {
@@ -67,7 +68,6 @@ define(["globalConfig", "json2"], function(globalConfig) {
         "success": function(options, root) {
             var self = this,
                 root = root || {};
-
             if (typeof options.success === 'function') {
                 options.success.apply(self, [root]);
             }
@@ -81,21 +81,23 @@ define(["globalConfig", "json2"], function(globalConfig) {
         "error": function(options, error) {
             var self = this,
                 responseText = error.responseText;
-
             switch (error.status) {
                 case 0:
                     break;
                 case 401:
-                    alert(trans["101"]);
-                    location.href = location.href;
+                	console.log(trans["101"]);
+                    //location.href = location.href;
                     break;
                 default:
-                    error = JSON.parse(responseText || '{}');
-
+                    try {
+                        error = JSON.parse(responseText || '{}');
+                    } catch(e) {
+                        error = {};
+                    }
                     if (typeof options.failed === 'function') {
                         options.failed.apply(self, [error]);
                     } else {
-                        alert(error.message);
+                        console.log(error.message);
                     }
                     break;
             }
