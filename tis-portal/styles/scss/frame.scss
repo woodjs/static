@@ -30,10 +30,6 @@ a{
  color:$fontColor;
  text-decoration: none;
 }
-a:hover{
- color:$themeColor;
- text-decoration: underline;
-}
 
 input,textarea,a{
  outline: none;
@@ -101,6 +97,10 @@ header,footer,article,section,nav,aside,figure{
  background: $bgColor;
  width: 100%;
  position: relative;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
  .func-box-left{
    float:left;
    & > div {
@@ -423,6 +423,10 @@ header,footer,article,section,nav,aside,figure{
  width:100%;
  height:81px;
  border-top: 1px solid #e1e1e1;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
  .logo-box{
   float:left;
   height:80px;
@@ -452,6 +456,7 @@ header,footer,article,section,nav,aside,figure{
   input{
    display: block;
    height:34px;
+   line-height: 30px;
    float:left;
    width:458px;
    border:2px solid $themeColor;
@@ -491,6 +496,10 @@ header,footer,article,section,nav,aside,figure{
  overflow:hidden;
  position:relative;
  background: $bgColor;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
  ul{
   width:100%;
   height:100%;
@@ -579,10 +588,23 @@ header,footer,article,section,nav,aside,figure{
   display: block;
   clear:both;
  }
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
 }
 .frame-footer{
  width:100%;
  padding:15px 20px 10px;
+ &:before{
+  content: '';
+  display: block;
+  clear: both;
+ }
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
  .box-links{
   font-size:12px;
   line-height: 24px;
@@ -615,6 +637,10 @@ header,footer,article,section,nav,aside,figure{
  right:20px;
  top:35%;
  background: #fff;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
  .contact-header{
   width:116px;
   height:59px;
@@ -681,6 +707,10 @@ header,footer,article,section,nav,aside,figure{
   @include opacity(1);
   @include boxShadow(0 0 3px rgba(0,0,0,0.8));
   @include transition(all 0.5s ease-in-out);
+ }
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
  }
  label{
   display: inline-block;
@@ -879,6 +909,19 @@ header,footer,article,section,nav,aside,figure{
    padding:8px 0 15px;
    line-height: 20px;
    border-bottom:1px solid $bdColor;
+  }
+ }
+}
+
+/* begin english */
+body.en {
+ .portal-module{
+  dd{
+   a{
+    .icon-free{
+     background: url(images/icons_aside.png) 0 -296px no-repeat;
+    }
+   }
   }
  }
 }

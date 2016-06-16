@@ -4,9 +4,12 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
   var navigator = {
     init: function () {
       var self = this;
+
       self.buildElement();
 
-      if (self.$boxCategory.is('.site-nav')) {
+      self.$frameTopLine.length > 0 ? (self.isPortal = true) : (self.isPortal = false);
+
+      if (self.isPortal) {
         var $navColumnList = self.$boxCategory.find('.nav-column');
 
         self.$boxCategory.width($navColumnList.length * 194 + 2);
@@ -14,6 +17,7 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
           self.$boxCategory.height(self.$boxCategory.height());
         }
       }
+
       self.bindEvent();
       self.checkMessage();
       self.$inputSearch.placeholder();
@@ -40,9 +44,11 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
       self.$loadingMessage = $('#loading-message');
       self.$messageTemplateBox = $('#message-template-box');
       self.$backToTop = $('#back-to-top');
+      self.$frameTopLine = $('#frame-top-line');
     },
     bindEvent: function () {
       var self = this;
+
       self.$inputSearch.on('keypress', function (e) {
         if (e.keyCode === 13) {
           self.$btnSearch.click();
@@ -50,6 +56,7 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
           e.preventDefault();
         }
       });
+
       self.$btnSaveSite.on('click', function (e) {
         var $temp = self.$btnSaveSite;
         var title = $temp.data('title');
@@ -59,9 +66,11 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
         }
         self.addFavorite(title, url);
       });
+
       self.$backToTop.on('click', function () {
         $('html,body').animate({scrollTop: 0}, 300);
       });
+
       self.$btnLang.on({
         mouseenter: function () {
           self.$btnLang.addClass('active');
@@ -72,6 +81,7 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
           self.$boxLang.fadeOut(0);
         }
       });
+
       self.$btnMessage.on({
         mouseenter: function () {
           self.$btnMessage.addClass('active');
@@ -87,18 +97,7 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
           self.$arrMessage.hide();
         }
       });
-      self.$boxMessage.on({
-        mouseenter: function () {
-          self.$btnMessage.addClass('active');
-          self.$boxMessage.fadeIn(0);
-          self.$arrMessage.show();
-        },
-        mouseleave: function () {
-          self.$btnMessage.removeClass('active');
-          self.$boxMessage.fadeOut(0);
-          self.$arrMessage.hide();
-        }
-      });
+
       self.$btnCategory.on({
         mouseenter: function () {
           self.$btnCategory.addClass('active');
@@ -109,16 +108,33 @@ require(['globalConfig', 'jquery', 'ajax', 'dialog', 'jqPlaceHolder', 'mustache'
           self.$boxCategory.fadeOut(0);
         }
       });
-      self.$boxCategory.on({
-        mouseenter: function () {
-          self.$btnCategory.addClass('active');
-          self.$boxCategory.fadeIn(0);
-        },
-        mouseleave: function () {
-          self.$btnCategory.removeClass('active');
-          self.$boxCategory.fadeOut(0);
-        }
-      });
+
+      if (!self.isPortal) {
+
+        self.$boxMessage.on({
+          mouseenter: function () {
+            self.$btnMessage.addClass('active');
+            self.$boxMessage.fadeIn(0);
+            self.$arrMessage.show();
+          },
+          mouseleave: function () {
+            self.$btnMessage.removeClass('active');
+            self.$boxMessage.fadeOut(0);
+            self.$arrMessage.hide();
+          }
+        });
+
+        self.$boxCategory.on({
+          mouseenter: function () {
+            self.$btnCategory.addClass('active');
+            self.$boxCategory.fadeIn(0);
+          },
+          mouseleave: function () {
+            self.$btnCategory.removeClass('active');
+            self.$boxCategory.fadeOut(0);
+          }
+        });
+      }
       self.$btnAuthList.on('click', function () {
         var $temp = $(this);
         var auth = $temp.data('auth');

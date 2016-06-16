@@ -30,11 +30,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #007acd;
-  text-decoration: underline;
-}
-
 input, textarea, a {
   outline: none;
 }
@@ -111,6 +106,10 @@ header, footer, article, section, nav, aside, figure {
   background: #f7f7f7;
   width: 100%;
   position: relative;
+}
+.frame-top-line a:hover {
+  color: #007acd;
+  text-decoration: underline;
 }
 .frame-top-line .func-box-left {
   float: left;
@@ -432,6 +431,10 @@ header, footer, article, section, nav, aside, figure {
   height: 81px;
   border-top: 1px solid #e1e1e1;
 }
+.frame-logo-search a:hover {
+  color: #007acd;
+  text-decoration: underline;
+}
 .frame-logo-search .logo-box {
   float: left;
   height: 80px;
@@ -463,6 +466,7 @@ header, footer, article, section, nav, aside, figure {
 .frame-logo-search .search-box input {
   display: block;
   height: 34px;
+  line-height: 30px;
   float: left;
   width: 458px;
   border: 2px solid #007acd;
@@ -515,6 +519,10 @@ header, footer, article, section, nav, aside, figure {
   overflow: hidden;
   position: relative;
   background: #f7f7f7;
+}
+.frame-banner-box a:hover {
+  color: #007acd;
+  text-decoration: underline;
 }
 .frame-banner-box ul {
   width: 100%;
@@ -624,10 +632,23 @@ header, footer, article, section, nav, aside, figure {
   display: block;
   clear: both;
 }
+.frame-main-container a:hover {
+  color: #007acd;
+  text-decoration: underline;
+}
 
 .frame-footer {
   width: 100%;
   padding: 15px 20px 10px;
+}
+.frame-footer:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.frame-footer a:hover {
+  color: #007acd;
+  text-decoration: underline;
 }
 .frame-footer .box-links {
   font-size: 12px;
@@ -660,6 +681,10 @@ header, footer, article, section, nav, aside, figure {
   right: 20px;
   top: 35%;
   background: #fff;
+}
+.frame-contact a:hover {
+  color: #007acd;
+  text-decoration: underline;
 }
 .frame-contact .contact-header {
   width: 116px;
@@ -738,6 +763,10 @@ header, footer, article, section, nav, aside, figure {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+.frame-back-to-top a:hover {
+  color: #007acd;
+  text-decoration: underline;
 }
 .frame-back-to-top label {
   display: inline-block;
@@ -946,6 +975,11 @@ header, footer, article, section, nav, aside, figure {
   padding: 8px 0 15px;
   line-height: 20px;
   border-bottom: 1px solid #ebebeb;
+}
+
+/* begin english */
+body.en .portal-module dd a .icon-free {
+  background: url(images/icons_aside.png) 0 -296px no-repeat;
 }
 
 /*# sourceMappingURL=frame.css.map */
