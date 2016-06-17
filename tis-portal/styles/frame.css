@@ -100,6 +100,18 @@ header, footer, article, section, nav, aside, figure {
   background: url(images/icons_module.png) -144px 0 no-repeat;
 }
 
+.icon-fwsgl {
+  width: 18px;
+  height: 18px;
+  background: url(images/icons_module.png) -144px 0 no-repeat;
+}
+
+.icon-fwjs {
+  width: 18px;
+  height: 18px;
+  background: url(images/icons_module.png) -162px 0 no-repeat;
+}
+
 .frame-top-line {
   height: 28px;
   line-height: 28px;
@@ -495,6 +507,7 @@ header, footer, article, section, nav, aside, figure {
   font-size: 14px;
   color: #fff;
   padding: 0 18px 0 20px;
+  margin-right: 20px;
   background: #007acd;
   cursor: pointer;
 }
@@ -507,7 +520,7 @@ header, footer, article, section, nav, aside, figure {
 .frame-logo-search .search-box .btn-replace-search {
   font-size: 12px;
   text-decoration: underline;
-  margin: 0 20px;
+  margin: 0 20px 0 0;
 }
 .frame-logo-search .search-box .btn-replace-search:hover {
   color: #007acd;
@@ -829,7 +842,7 @@ header, footer, article, section, nav, aside, figure {
 }
 .portal-module dd a:hover {
   text-decoration: none;
-  color: #999;
+  color: #999 !important;
   border: 1px solid #007acd;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;

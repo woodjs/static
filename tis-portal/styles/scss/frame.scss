@@ -91,7 +91,16 @@ header,footer,article,section,nav,aside,figure{
  height:18px;
  background: url(images/icons_module.png) -144px 0 no-repeat;
 }
-
+.icon-fwsgl {
+ width: 18px;
+ height:18px;
+ background: url(images/icons_module.png) -144px 0 no-repeat;
+}
+.icon-fwjs{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_module.png) -162px 0 no-repeat;
+}
 .frame-top-line {
  @include setHeightGroup(28px);
  background: $bgColor;
@@ -473,6 +482,7 @@ header,footer,article,section,nav,aside,figure{
    font-size:14px;
    color:#fff;
    padding:0 18px 0 20px;
+   margin-right:20px;
    background: $themeColor;
    cursor:pointer;
    &:hover{
@@ -483,7 +493,7 @@ header,footer,article,section,nav,aside,figure{
   .btn-replace-search{
    font-size:12px;
    text-decoration: underline;
-   margin:0 20px;
+   margin:0 20px 0 0;
    &:hover{
     color:$themeColor;
    }
@@ -770,7 +780,7 @@ header,footer,article,section,nav,aside,figure{
    position: relative;
    &:hover{
     text-decoration: none;
-    color:$lightestFontColor;
+    color:$lightestFontColor !important;
     border:1px solid $themeColor;
     @include transition(all 0.4s ease-in-out);
     @include boxShadow(0 0 4px $themeColor);
