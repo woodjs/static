@@ -188,6 +188,9 @@ header, footer, article, section, nav, aside, figure {
   height: 26px;
   line-height: 26px;
 }
+.frame-top-line .func-box-left .change-lang a {
+  display: block;
+}
 .frame-top-line .func-box-left .change-lang a:hover {
   text-decoration: underline;
   color: #007acd;

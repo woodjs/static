@@ -101,7 +101,7 @@
 }
 
 .block-download .download-table a {
-  background: #007acd url(images/icons_download.png) 14px 0 no-repeat !important;
+  background-color: #007acd !important;
 }
 
 .block-download .download-intro a {
