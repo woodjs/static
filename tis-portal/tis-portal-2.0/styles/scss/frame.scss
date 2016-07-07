@@ -1,0 +1,936 @@
+@import "base";
+
+$themeColor: #007acd;
+$bdColor: #ebebeb;
+$bgColor: #f7f7f7;
+$fontColor: #333;
+$lighterFontColor: #666;
+$lightestFontColor: #999;
+
+body,div,ul,dl,ol,dt,dd,li,p,a,label,span,i,img,input,textarea,header,footer,article,section,nav,aside,figure{
+ padding:0;
+ margin: 0;
+ border:0;
+ @include boxSizing(border-box);
+}
+
+body{
+ font-size:14px;
+ min-width:980px;
+ font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+ background: #fff;
+ color:$fontColor;
+}
+
+ul,dl,ol{
+ list-style: none;
+}
+
+a{
+ color:$fontColor;
+ text-decoration: none;
+}
+
+input,textarea,a{
+ outline: none;
+}
+
+header,footer,article,section,nav,aside,figure{
+ display:block
+}
+
+.btn {
+ cursor:pointer;
+}
+
+.icon{
+ display: inline-block;
+}
+.icon-pjxx{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) 0 -340px no-repeat;
+}
+.icon-scsc{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -18px -340px no-repeat;
+}
+.icon-tzgg{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -36px -340px no-repeat;
+}
+.icon-wxzl{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -54px -340px no-repeat;
+}
+.icon-wdzx{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -72px -340px no-repeat;
+}
+.icon-qt{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -90px -340px no-repeat;
+}
+.icon-ggl{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -108px -340px no-repeat;
+}
+.icon-xwzx{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -126px -340px no-repeat;
+}
+.icon-yhdd{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -144px -340px no-repeat;
+}
+.icon-fwsgl {
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -144px -340px no-repeat;
+}
+.icon-fwjs{
+ width: 18px;
+ height:18px;
+ background: url(images/icons_portal.png) -162px -340px no-repeat;
+}
+.frame-top-line {
+ @include setHeightGroup(28px);
+ background: $bgColor;
+ width: 100%;
+ position: relative;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+ .func-box-left{
+   float:left;
+   & > div {
+    float:left;
+    padding:0 0 0 20px;
+    @include setHeightGroup(28px);
+   }
+   .change-brand{
+     .btn{
+      &:hover{
+       text-decoration: underline;
+       color:$themeColor;
+      }
+     }
+    }
+   .change-lang{
+    font-size:12px;
+    & > div {
+     width: 80px;
+     @include setHeightGroup(28px);
+     position: relative;
+     min-width: 80px;
+     padding: 0 8px;
+     cursor: pointer;
+     border-left: 1px solid $bgColor;
+     border-right: 1px solid $bgColor;
+    }
+    & > div:hover, & > div.active {
+     background: #fff;
+     border-left: 1px solid $bdColor;
+     border-right: 1px solid $bdColor;
+     .icon-arrow{
+      background: url(images/icons_portal.png) -8px -358px no-repeat;
+     }
+    }
+    label{
+     display: inline-block;
+     @include setHeightGroup(28px);
+     float:left;
+     cursor: pointer;
+    }
+    .icon-arrow{
+     width:8px;
+     height:28px;
+     float:left;
+     margin-left:10px;
+     background: url(images/icons_portal.png) 0 -358px no-repeat;
+    }
+    ul{
+     display: none;
+     position: absolute;
+     top: 28px;
+     left: -1px;
+     right: -1px;
+     background: #fff;
+     border: 1px solid $bdColor;
+     border-top:0;
+     padding:4px 0;
+    }
+    li{
+     padding:0 8px;
+     @include setHeightGroup(26px);
+    }
+    a{
+     display: block;
+     &:hover{
+      text-decoration: underline;
+      color:$themeColor;
+     }
+    }
+   }
+  }
+  .btn{
+   font-size:12px;
+   &:hover{
+    color: $themeColor;
+    text-decoration: underline;
+   }
+ }
+ .func-box-right{
+  float:right;
+  font-size:12px;
+  &>div{
+   float:left;
+   padding:0 14px;
+   position: relative;
+   &:before{
+    content: '';
+    height:12px;
+    width:1px;
+    background: #d7d7d7;
+    display: inline-block;
+    font-size:12px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+   }
+  }
+  .username{
+   margin:0 14px 0 2px;
+   text-decoration: underline;
+  }
+  &>div:first-child{
+   &:before{
+    width: 0;
+   }
+  }
+  .message-box{
+   cursor: pointer;
+   .red-dot{
+    display: inline-block;
+    width:5px;
+    height:5px;
+    background: url(images/icons.png) 0 -123px no-repeat;
+    position: absolute;
+    right:8px;
+    top:5px;
+   }
+   .arrow-up{
+    width:21px;
+    height:11px;
+    background: url(images/icons.png) 0 -112px no-repeat;
+    position: absolute;
+    left:50%;
+    bottom:-2px;
+    margin-left:-10px;
+    z-index:1000;
+    display:none;
+   }
+  }
+  .nav-box{
+   padding:0;
+   position: relative;
+   & > span{
+    cursor: pointer;
+    padding: 0 20px;
+    @include setHeightGroup(28px);
+    display: inline-block;
+    .icon-nav{
+     display:inline-block;
+     width:24px;
+     height:28px;
+     margin-right:8px;
+     float:left;
+     background: url(images/icons_portal.png) -16px -358px no-repeat;
+    }
+   }
+   &:hover,&.active{
+    & > span{
+     .icon-nav{
+      background: url(images/icons_portal.png) -40px -358px no-repeat;
+     }
+    }
+    background: #fff;
+    &:before{
+     content: '';
+     height:28px;
+     width:1px;
+     background: $bdColor;
+     display: inline-block;
+     font-size:12px;
+     position: absolute;
+     left: 0;
+     top: 0;
+     margin-top: 0;
+    }
+    &:after{
+     content: '';
+     height:1px;
+     width:100%;
+     background: #fff;
+     display: inline-block;
+     font-size:12px;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: -1px;
+    }
+   }
+  }
+  .site-nav{
+   display:none;
+   font-size: 12px;
+   border:1px solid $bdColor;
+   background: #fff;
+   padding: 18px 0;
+   border-top:none;
+   overflow: hidden;
+   position: absolute;
+   right:0;
+   top: 29px;
+   z-index:999;
+   .nav-column{
+    width: 194px;
+    height:100%;
+    padding:0 20px;
+    float:left;
+    position: relative;
+    &:before{
+     content: '';
+     width:1px;
+     display: block;
+     border-top:2px solid transparent;
+     border-bottom:2px solid transparent;
+     background: $bdColor;
+     position: absolute;
+     left:0;
+     top:0;
+     bottom:0;
+    }
+    &:first-child:before{
+     display: none;
+    }
+   }
+   dt{
+    font-weight:bold;
+    display: block;
+    line-height: 18px;
+    margin-bottom: 14px;
+    position: relative;
+    .icon{
+     position: absolute;
+     left:0;
+     top:0;
+    }
+    label{
+     display: block;
+     width:100%;
+     padding:0 0 0 26px;
+     line-height: 18px;
+    }
+   }
+   dd{
+    display: block;
+    line-height: 16px;
+    margin-top:8px;
+   }
+  }
+ }
+ .box-message-list{
+  cursor: auto;
+  display: none;
+  position: absolute;
+  top:28px;
+  right:-115px;
+  border:1px solid $bdColor;
+  width:362px;
+  padding:0 12px 0 20px;
+  min-height:130px;
+  background: #fff;
+  z-index:999;
+  ul{
+   width: 100%;
+   float:left;
+  }
+  li{
+   width:100%;
+   float:left;
+   @include setHeightGroup(32px);
+  }
+  .no-message{
+   display: none;
+   margin-top:36px;
+   .icon-no-msg{
+    display: block;
+    margin:0 auto;
+    width:48px;
+    height:37px;
+    background: url(images/icons.png) 0 -505px no-repeat;
+   }
+   .text{
+    color:$lightestFontColor;
+    font-size:12px;
+    text-align: center;
+    margin-top:5px;
+    @include setHeightGroup(24px);
+   }
+  }
+  .loading-message{
+   margin-top:34px;
+   .icon-loading{
+    display: block;
+    margin:0 auto;
+    width:32px;
+    height:32px;
+    background: url(images/loading.gif) center center no-repeat;
+   }
+   .text{
+    color:$lightestFontColor;
+    font-size:12px;
+    text-align: center;
+    margin-top:4px;
+    @include setHeightGroup(24px);
+   }
+  }
+  a{
+   display: block;
+   width:100%;
+   float:left;
+   @include setHeightGroup(32px);
+   @extend %textOverflowEllipsis;
+  }
+  a:hover{
+   text-decoration: underline;
+   color:$themeColor;
+  }
+  .more-message{
+   display: inline-block;
+   width:auto;
+   float:left;
+   padding-left:18px;
+   background: url(images/icons.png) 0 -128px no-repeat;
+   color:$lightestFontColor;
+   cursor: pointer;
+  }
+ }
+}
+
+.frame-logo-search{
+ width:100%;
+ height:81px;
+ border-top: 1px solid #e1e1e1;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+ .logo-box{
+  float:left;
+  height:80px;
+  padding: 10px 20px;
+  .logo{
+   display: block;
+   min-width: 200px;
+   height:40px;
+  }
+  img{
+   display: block;
+   height:40px;
+  }
+  .text-site-intro{
+   display: block;
+   letter-spacing: 6px;
+   font-size:12px;
+   color:#a1a1a1;
+   margin-top:4px;
+   @include setHeightGroup(16px);
+  }
+ }
+ .search-box{
+  float:right;
+  height:80px;
+  padding:23px 0;
+  input{
+   display: block;
+   height:34px;
+   line-height: 30px;
+   float:left;
+   width:458px;
+   border:2px solid $themeColor;
+   border-right:none;
+   padding:0 10px;
+   @include placeholderColor(#ccc);
+  }
+  .btn{
+   display: inline-block;
+   float:left;
+   @include setHeightGroup(34px);
+  }
+  .btn-search{
+   font-size:14px;
+   color:#fff;
+   padding:0 18px 0 20px;
+   margin-right:20px;
+   background: $themeColor;
+   cursor:pointer;
+   &:hover{
+    background: darken($themeColor,8%);
+    @include transition(all 0.4s ease-in-out);
+   }
+  }
+  .btn-replace-search{
+   font-size:12px;
+   text-decoration: underline;
+   margin:0 20px 0 0;
+   &:hover{
+    color:$themeColor;
+   }
+  }
+ }
+}
+.frame-banner-box{
+ width:100%;
+ height:280px;
+ overflow:hidden;
+ position:relative;
+ background: $bgColor;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+ ul{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  position:absolute;
+  z-index:10;
+ }
+ li{
+  width:100%;
+  height:100%;
+  float:left;
+  img{
+   display: block;
+   margin: 0 auto;
+  }
+ }
+ .banner-temp{
+  width:100%;
+  height:100%;
+  background-position: center center;
+  img{
+   display: block;
+   margin: 0 auto;
+  }
+ }
+ .btn-prev-banner{
+  width:50px;
+  height:60px;
+  position:absolute;
+  top:50%;
+  margin-top: -30px;
+  z-index:15;
+  left:0;
+  @include opacity(0.8);
+  background:url(images/icons_portal.png) 0 -192px no-repeat;
+  &:hover{
+   @include transition(all 0.3s ease-in-out);
+   @include opacity(1);
+   @include boxShadow(0 0 3px rgba(0,0,0,0.8));
+  }
+ }
+ .btn-next-banner{
+  width:50px;
+  height:60px;
+  position:absolute;
+  top:50%;
+  margin-top: -30px;
+  z-index:15;
+  right:0;
+  @include opacity(0.8);
+  background:url(images/icons_portal.png) -50px -192px no-repeat;
+  &:hover{
+   @include transition(all 0.3s ease-in-out);
+   @include opacity(1);
+   @include boxShadow(0 0 3px rgba(0,0,0,0.8));
+  }
+ }
+ .banner-btn-list{
+  position: absolute;
+  z-index:15;
+  width:100%;
+  text-align: center;
+  @include setHeightGroup(14px);
+  bottom:12px;
+  .btn-banner{
+   display: inline-block;
+   width:8px;
+   height:8px;
+   @include borderRadius(8px);
+   @include boxShadow(0,0,0,0.8);
+   background: #fff;
+   margin:0 3px;
+   @include transition(background 0.3s ease-in-out);
+   &:hover,&.active{
+    background: $themeColor;
+   }
+  }
+ }
+}
+.frame-main-container{
+ width:100%;
+ border-top: 1px solid #e1e1e1;
+ zoom:1;
+ &:after{
+  content: '';
+  display: block;
+  clear:both;
+ }
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+}
+.frame-footer{
+ width:100%;
+ padding:15px 20px 10px;
+ &:before{
+  content: '';
+  display: block;
+  clear: both;
+ }
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+ .box-links{
+  font-size:12px;
+  line-height: 24px;
+  color:$fontColor;
+  margin-top:10px;
+  a{
+   padding:0 8px;
+   border-left:1px solid #d3d3d3;
+   &:hover{
+    text-decoration: underline;
+    color:$themeColor;
+   }
+  }
+  label + a, a:first-child{
+   padding: 0 8px 0 0;
+   border:none;
+  }
+ }
+ .site-statement{
+  color:$lightestFontColor;
+  font-size:12px;
+  line-height: 24px;
+  margin-top:8px;
+ }
+}
+
+.frame-contact{
+ position: fixed;
+ z-index: 555;
+ right:20px;
+ top:35%;
+ background: #fff;
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+ .contact-header{
+  width:116px;
+  height:59px;
+  display: block;
+  background: url(images/icons_portal.png) 0 0 no-repeat;
+  label{
+   display: inline-block;
+   @include setHeightGroup(16px);
+   margin:11px 0 0 48px;
+   color:#fff;
+  }
+ }
+ .contact-content{
+  width:116px;
+  background: #ff7749;
+  padding:0 10px 5px 10px;
+  font-size:12px;
+  color:#fff;
+  line-height: 16px;
+  dt{
+   margin-bottom:4px;
+  }
+  dd{
+   margin-bottom:4px;
+  }
+ }
+ .contact-footer{
+  width:116px;
+  height:93px;
+  margin-top:2px;
+  display: block;
+  background: url(images/icons_portal.png) 0 -59px no-repeat;
+  cursor: pointer;
+  label{
+   display: inline-block;
+   cursor: pointer;
+   @include setHeightGroup(20px);
+   color:#fff;
+   width:100%;
+   text-align: center;
+   font-size:14px;
+   margin-top:38px;
+  }
+ }
+}
+
+.frame-back-to-top{
+ display: block;
+ position: fixed;
+ right:20px;
+ bottom:20px;
+ @include setHeightGroup(40px);
+ z-index:500;
+ min-width: 116px;
+ color:#fff;
+ font-size:12px;
+ cursor: pointer;
+ @include opacity(0.8);
+ @include boxShadow(0 0 3px $bdColor);
+ background: url(images/icons_portal.png) 0 -152px no-repeat;
+ &:hover{
+  @include opacity(1);
+  @include boxShadow(0 0 3px rgba(0,0,0,0.8));
+  @include transition(all 0.5s ease-in-out);
+ }
+ a:hover{
+  color:$themeColor;
+  text-decoration: underline;
+ }
+ label{
+  display: inline-block;
+  height:40px;
+  float:left;
+  margin-left:42px;
+  cursor: pointer;
+ }
+}
+
+/* begin index */
+.portal-module{
+ font-size:12px;
+ padding-right:510px;
+ dl{
+  margin-bottom:20px;
+  &:first-child{
+   margin-top:20px;
+  }
+  &:after{
+   content: '';
+   display: block;
+   clear:left;
+  }
+ }
+ dt{
+  height:24px;
+  padding-bottom:6px;
+  line-height:18px;
+  font-size:14px;
+  display: block;
+  zoom:1;
+  .icon{
+   width:18px;
+   height:18px;
+   margin:0 12px 0 14px;
+   float:left;
+  }
+  label{
+   display: inline-block;
+   @include setHeightGroup(18px);
+   float:left;
+  }
+ }
+ dd{
+  display: block;
+  zoom:1;
+  a{
+   display: block;
+   float:left;
+   width:240px;
+   height:120px;
+   border:1px solid #f3f3f3;
+   zoom:1;
+   margin:20px 0 0 20px;
+   color:$lightestFontColor;
+   position: relative;
+   &:hover{
+    text-decoration: none;
+    color:$lightestFontColor !important;
+    border:1px solid $themeColor;
+    @include transition(all 0.4s ease-in-out);
+    @include boxShadow(0 0 4px $themeColor);
+   }
+   .icon-free{
+    width:48px;
+    height:44px;
+    position: absolute;
+    top: -4px;
+    left:-3px;
+    background: url(images/icons_portal.png) 0 -252px no-repeat;
+   }
+  }
+  .left-icon{
+   width: 50px;
+   height:50px;
+   margin:20px 0 0 20px;
+   float:left;
+  }
+  .right-text{
+   width:138px;
+   margin:25px 10px 10px 20px;
+   height: 83px;
+   float:right;
+   overflow: hidden;
+   li:first-child{
+    color:$fontColor;
+    margin-bottom:5px;
+   }
+   li{
+    line-height:20px;
+   }
+  }
+ }
+}
+.portal-information{
+ float:right;
+ width:510px;
+ padding:0 156px 0 14px;
+ .box-information{
+  &:first-child{
+   margin-top:20px;
+  }
+  margin-bottom:20px;
+ }
+ .information-title{
+  font-size:14px;
+  line-height: 18px;
+  height:24px;
+  padding-bottom:6px;
+  .icon{
+   margin-right:12px;
+  }
+  &>i,&label,&a{
+   display: inline-block;
+   @include setHeightGroup(18px);
+   float:left;
+  }
+  a{
+   float:right !important;
+   color:$themeColor;
+   font-size:12px;
+   &:hover{
+    text-decoration: underline;
+   }
+  }
+ }
+ .information-content{
+  margin-top:15px;
+  li{
+   @include setHeightGroup(24px);
+   font-size:12px;
+   padding:0 0 0 35px;
+   display: block;
+   width: 100%;
+   position: relative;
+   .icon-dot{
+    position: absolute;
+    display: inline-block;
+    width:35px;
+    height: 24px;
+    left:0;
+    top:0;
+    background: url(images/icons_portal.png) 0 -386px no-repeat;
+   }
+   a{
+    display: block;
+    width: 100%;
+    @extend %textOverflowEllipsis;
+   }
+  }
+  dl{
+   padding:0 0 0 35px;
+   font-size:12px;
+   margin-bottom: 15px;
+  }
+  dt{
+   @include setHeightGroup(32px);
+   zoom:1;
+  }
+  .user-icon{
+   display: inline-block;
+   width: 32px;
+   height:32px;
+   border-radius: 2px;
+   background: $bdColor;
+   float:left;
+   img{
+    display: block;
+    width: 30px;
+    height:30px;
+    border-radius: 2px;
+    margin:1px;
+    float:left;
+   }
+  }
+  .user-name{
+   display: inline-block;
+   @include setHeightGroup(32px);
+   color:$lightestFontColor;
+   margin-left:20px;
+   float:left;
+   max-width: 160px;
+   @extend %textOverflowEllipsis;
+  }
+  .time{
+   display: inline-block;
+   @include setHeightGroup(32px);
+   color:$lightestFontColor;
+   margin-left:5px;
+   padding-left:20px;
+   float:left;
+   background: url(images/icons_portal.png) 0 -410px no-repeat;
+  }
+  dd{
+   padding:8px 0 15px;
+   line-height: 20px;
+   border-bottom:1px solid $bdColor;
+  }
+ }
+}
+
+/* begin english */
+body.en {
+ .portal-module{
+  dd{
+   a{
+    .icon-free{
+     background: url(images/icons_portal.png) 0 -296px no-repeat;
+    }
+   }
+  }
+ }
+}
