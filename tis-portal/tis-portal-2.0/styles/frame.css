@@ -104,6 +104,7 @@ header, footer, article, section, nav, aside, figure {
 }
 .frame-top-line .func-box-left .change-brand label {
   display: inline-block;
+  font-size: 14px;
   height: 30px;
   line-height: 30px;
   float: left;
@@ -331,6 +332,7 @@ header, footer, article, section, nav, aside, figure {
 .frame-logo-search {
   width: 100%;
   height: 81px;
+  background: #fff;
   border-bottom: 1px solid #eae9ec;
 }
 .frame-logo-search a:hover {
@@ -465,13 +467,13 @@ header, footer, article, section, nav, aside, figure {
   display: inline-block;
   width: 30px;
   height: 26px;
-  padding: 10px 0;
-  background: #fff;
+  padding: 10px 0 0;
   margin: 0 4px;
 }
 .frame-banner-box .banner-btn-list .btn-banner i {
   display: inline-block;
   width: 100%;
+  float: left;
   height: 6px;
   border-radius: 6px;
   background: #e4e6e7;
@@ -689,14 +691,18 @@ header, footer, article, section, nav, aside, figure {
   width: 1200px;
   margin: 0 auto;
 }
+.portal-information:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .portal-information .box-information:first-child {
-  margin-right: 0;
+  margin-right: 10px;
 }
 .portal-information .box-information {
   width: 595px;
-  margin: 0 10px 15px 0;
+  margin: 0 0 15px 0;
   padding: 10px 0 15px;
-  background: #fefefe;
   float: left;
 }
 .portal-information .information-title {
@@ -708,6 +714,19 @@ header, footer, article, section, nav, aside, figure {
 .portal-information .information-title h2 {
   font-size: 20px;
   font-weight: normal;
+}
+.portal-information .information-content {
+  padding: 16px 0;
+  background: #fefefe;
+}
+.portal-information .information-content:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.portal-information .information-content ul {
+  height: 160px;
+  overflow: hidden;
 }
 .portal-information .information-content li {
   height: 32px;
@@ -730,6 +749,86 @@ header, footer, article, section, nav, aside, figure {
 .portal-information .information-content li a {
   display: block;
   width: 100%;
+}
+.portal-information .information-content li a a:hover {
+  color: #353751;
+}
+
+.portal-entrance-wrapper {
+  background: #fafafa;
+  padding: 30px 0 100px;
+}
+
+.portal-entrance {
+  width: 1200px;
+  margin: 0 auto;
+}
+.portal-entrance dl {
+  width: 1215px;
+  padding: 10px 0 15px;
+  margin: 0 auto;
+}
+.portal-entrance dl:after {
+  content: '';
+  display: block;
+  clear: left;
+}
+.portal-entrance dt {
+  display: block;
+  zoom: 1;
+  height: 60px;
+  line-height: 60px;
+}
+.portal-entrance dt .icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 12px 0 14px;
+  float: left;
+}
+.portal-entrance dt h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.portal-entrance dd {
+  display: block;
+  zoom: 1;
+}
+.portal-entrance dd a {
+  float: left;
+  width: 290px;
+  height: 100px;
+  zoom: 1;
+  margin: 0 10px 10px 0;
+  position: relative;
+  background: #fff;
+}
+.portal-entrance dd a:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.portal-entrance dd .left-icon {
+  width: 50px;
+  height: 50px;
+  margin: 25px 35px 25px 35px;
+  float: left;
+}
+.portal-entrance dd .right-text {
+  width: 150px;
+  height: 100px;
+  float: none;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+}
+.portal-entrance dd .right-text h3 {
+  max-height: 100px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  overflow: hidden;
 }
 
 /* begin english */

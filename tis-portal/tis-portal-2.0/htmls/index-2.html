@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>tis-portal 2.0</title>
+  <link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../scripts/libs/public/html5shiv.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="../scripts/libs/public/require.js"></script>
+  <script type="text/javascript" src="../scripts/local_config.js"></script>
+  <script type="text/javascript">
+    var pageConfig = {
+      pageCode: 'pageIndex',
+      //isLocal: ${isLocal} TODO
+      isLocal: true
+    };
+  </script>
+</head>
+<body>
+<header class="frame-top-line" id="frame-top-line">
+  <div class="func-box-left">
+    <div class="change-brand">
+      <div id="btn-brand">
+        <label>切换品牌</label>
+        <i class="icon icon-arrow"></i>
+        <ul id="box-brand">
+          <li><a href="#">上海五菱</a></li>
+          <li><a href="#">长安铃木</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="save-site">
+      <span class="btn" id="btn-save-site">收藏站点</span>
+    </div>
+  </div>
+  <div class="func-box-right">
+    <div>
+      <a href="#">登录</a>
+    </div>
+    <div>
+      <a href="#">注册</a>
+    </div>
+    <div>
+      <label>您好，欢迎使用技术信息发布平台！</label><a href="#" class="username">session</a><a href="#">退出</a>
+    </div>
+    <div>
+      <a href="#">信息管理</a>
+    </div>
+    <div class="change-lang">
+      <div id="btn-lang">
+        <label>语言</label>
+        <i class="icon icon-arrow"></i>
+        <ul id="box-lang">
+          <li><a href="#">中文</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <a href="#">产品大全</a>
+    </div>
+    <div class="message-box" id="btn-message">
+      <a href="#">消息</a>
+      <label class="red-dot" id="red-dot"></label>
+      <label class="arrow-up" id="message-arrow"></label>
+
+      <div class="box-message-list" id="box-message">
+        <div id="message-template-box" style="display:none;"></div>
+        <script type="text/template" id="message-template">
+          <ul>
+            {{#list}}
+            <li><a href="${path}/user/msg" target="_blank"><b>[ {{title}} ] </b>{{content}}</a></li>
+            {{/list}}
+          </ul>
+          <a class="more-message" href="${path}/user/msg" target="_blank">${varText1079}</a>
+        </script>
+
+        <!--暂无消息-->
+        <ul class="no-message" id="no-message">
+          <li><span class="icon-no-msg"></span></li>
+          <li class="text">暂无消息</li>
+        </ul>
+
+        <!--正在加载-->
+        <ul class="loading-message" id="loading-message">
+          <li><span class="icon-loading"></span></li>
+          <li class="text">Loading...</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="user-survey">
+      <a href="#">用户调查</a>
+    </div>
+  </div>
+</header>
+
+<section class="frame-logo-search">
+  <div class="logo-box">
+    <a href="#" class="logo"><img src="../images/logo/logo_sgmw.png"/></a>
+    <span class="text-site-intro">TIS售后信息发布系统</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="input-search" placeholder="请输入VIN码/VSN码/零件编号/零件名称"/>
+    <span class="btn btn-search" id="btn-search">搜索</span>
+    <span class="btn btn-replace-search" id="btn-replace-search">替换查询</span>
+  </div>
+</section>
+
+<section class="frame-main-container">
+  <div class="portal-entrance-wrapper">
+   <div class="portal-entrance">
+     <dl>
+       <dt><h2>配件信息</h2></dt>
+       <dd>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+       </dd>
+     </dl>
+
+     <dl>
+       <dt><h2>配件信息</h2></dt>
+       <dd>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+       </dd>
+     </dl>
+
+
+     <dl>
+       <dt><h2>配件信息</h2></dt>
+       <dd>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+       </dd>
+     </dl>
+
+     <dl>
+       <dt><h2>配件信息</h2></dt>
+       <dd>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+       </dd>
+     </dl>
+
+     <dl>
+       <dt><h2>配件信息</h2></dt>
+       <dd>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+       </dd>
+     </dl>
+
+     <dl>
+       <dt><h2>配件信息</h2></dt>
+       <dd>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+
+         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
+           <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+           <div class="right-text">
+             <h3>电子配件目录EPC电子配件目录EPC</h3>
+           </div>
+         </a>
+
+       </dd>
+     </dl>
+
+
+   </div>
+  </div>
+
+
+</section>
+
+<footer class="frame-footer">
+  <div class="box-links">
+    <a href="http://help.tis.dev.servision.com.cn/CRM/tutorial/" target="_blank">新手上路</a>
+    <a href="http://help.tis.dev.servision.com.cn/SGMW/home/manual/" target="_blank">用户帮助</a>
+    <a href="/tis-home/version" target="_blank">版本历程</a>
+    <a href="http://my.tis.servision.com.cn/help/service-agreement" target="_blank">服务协议</a>
+    <a href="http://www.servision.com.cn/" target="_blank">关于事成</a>
+    <a href="/tis-home/contact" target="_blank">联系方式</a>
+    <a href="/tis-home/standard" target="_blank">收费标准</a>
+  </div>
+  <div class="box-links-2">
+    <label>友情链接：</label>
+    <a href="http://www.moc.gov.cn/" target="_blank" rel="nofollow">交通运输部</a>
+    <a href="http://www.zhb.gov.cn/" target="_blank" rel="nofollow">环境保护部</a>
+    <a href="http://www.mofcom.gov.cn/" target="_blank" rel="nofollow">商务部</a>
+    <a href="http://www.saic.gov.cn/" target="_blank" rel="nofollow">国家工商行政管理总局</a>
+    <a href="http://www.aqsiq.gov.cn/" target="_blank" rel="nofollow">国家质量监督检验检疫总局</a>
+    <a href="http://www.cnca.gov.cn/" target="_blank" rel="nofollow">中国国家认证认可监督管理委员会</a>
+  </div>
+  <ul class="site-statement">
+    <li>声明：本网站为上汽通用五菱官方指定汽车维修技术信息公开唯一平台；该网址所有公开维修技术信息归上汽通用五菱汽车股份有限公司版权所有</li>
+    <li>©2015 Copyright by 上海事成软件股份有限公司 沪ICP备15055698号</li>
+  </ul>
+</footer>
+
+<figure class="frame-back-to-top" id="back-to-top">
+  <i></i>
+</figure>
+
+<script type="text/javascript" src="../scripts/local_bootstrap.js"></script>
+</body>
+</html>
