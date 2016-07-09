@@ -100,7 +100,7 @@ header, footer, article, section, nav, aside, figure {
     color: $themeColor;
     background: #fff;
     .icon-arrow {
-     background: url(images/icons_portal.png) -8px -358px no-repeat;
+     background: url(images/icons.png) -8px -652px no-repeat;
     }
    }
    label {
@@ -115,7 +115,7 @@ header, footer, article, section, nav, aside, figure {
     height: 30px;
     float: left;
     margin-left: 12px;
-    background: url(images/icons_portal.png) 0 -358px no-repeat;
+    background: url(images/icons.png) 0 -652px no-repeat;
    }
    ul {
     display: none;
@@ -186,7 +186,7 @@ header, footer, article, section, nav, aside, figure {
     color: $themeColor;
     background: #fff;
     .icon-arrow {
-     background: url(images/icons_portal.png) -8px -358px no-repeat;
+     background: url(images/icons.png) -8px -652px no-repeat;
     }
    }
    label {
@@ -200,7 +200,7 @@ header, footer, article, section, nav, aside, figure {
     height: 30px;
     float: left;
     margin-left: 12px;
-    background: url(images/icons_portal.png) 0 -358px no-repeat;
+    background: url(images/icons.png) 0 -652px no-repeat;
    }
    ul {
     display: none;
@@ -560,7 +560,7 @@ header, footer, article, section, nav, aside, figure {
  bottom: 20px;
  width:57px;
  height:114px;
- background: url(images/car.png) 0 0 no-repeat;
+ background: url(images/icons.png) 0 -786px no-repeat;
  z-index: 500;
  cursor: pointer;
  &:hover {
@@ -577,7 +577,7 @@ header, footer, article, section, nav, aside, figure {
   top:-94px;
   z-index: 499;
   margin-left:-56px;
-  background: url(images/light.png) 0 0 no-repeat;
+  background: url(images/icons.png) 0 -900px no-repeat;
  }
 }
 
@@ -624,6 +624,13 @@ header, footer, article, section, nav, aside, figure {
    &:hover {
     text-decoration: none;
     @include boxShadow(0 0 20px rgba(0,0,0,.2));
+    .btn-enter{
+     border-color:$themeColor;
+     color:$themeColor;
+     .icon{
+      background: url(images/icons.png) -34px -682px no-repeat;
+     }
+    }
    }
    .icon-free {
     width: 48px;
@@ -631,7 +638,7 @@ header, footer, article, section, nav, aside, figure {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(images/free_cn.png) 0 0 no-repeat;
+    background: url(images/icons.png) 0 -742px no-repeat;
    }
   }
   .left-icon {
@@ -661,11 +668,22 @@ header, footer, article, section, nav, aside, figure {
     margin-top:8px;
    }
    .btn-enter{
+    position: relative;
     display: inline-block;
     @include setHeightGroup(30px);
     border:1px solid #ababab;
     padding:0 12px 0 34px;
     color: #a8a8a8;
+    .icon{
+     display: inline-block;
+     width: 34px;
+     height:28px;
+     background: url(images/icons.png) 0 -682px no-repeat;
+     position: absolute;
+     left:0;
+     top:0;
+     @include transition(background .3s ease-in-out);
+    }
    }
   }
  }
@@ -719,9 +737,9 @@ header, footer, article, section, nav, aside, figure {
     display: inline-block;
     width: 30px;
     height: 32px;
-    left: 0;
+    left: 20px;
     top: 0;
-    background: url(images/icons_portal.png) 0 -386px no-repeat;
+    background: url(images/icons.png) 0 -710px no-repeat;
    }
    a {
     display: block;
@@ -808,6 +826,30 @@ header, footer, article, section, nav, aside, figure {
   }
  }
 }
+.frame-nav-crumb{
+ width:100%;
+ height:34px;
+ background: #eff0f0;
+ .nav-crumb{
+  width: 1200px;
+  @include setHeightGroup(34px);
+  margin:0 auto;
+ }
+ span,a{
+  display: inline-block;
+  margin-right:10px;
+  float:left;
+ }
+ a:hover{
+  text-decoration: underline;
+  color:$themeColor;
+ }
+ .icon-arrow{
+  width:4px;
+  height: 34px;
+  background: url(images/icons.png) 0 -994px no-repeat;
+ }
+}
 
 /* begin english */
 body.en {
@@ -815,7 +857,7 @@ body.en {
   dd {
    a {
     .icon-free {
-     background: url(images/free_en.png) 0 0 no-repeat;
+     background: url(images/icons.png) -48px -742px no-repeat;
     }
    }
   }
