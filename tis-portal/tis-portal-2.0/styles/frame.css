@@ -464,7 +464,7 @@ header, footer, article, section, nav, aside, figure {
   left: 50%;
   top: 50%;
   margin-top: -40px;
-  margin-left: -50px;
+  margin-left: -40px;
 }
 .frame-banner-box .banner-btn-list {
   position: absolute;
