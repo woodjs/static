@@ -6,7 +6,7 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
 
       self.buildElement();
 
-      self.gap = 8000;
+      self.gap = 3000;
       self.index = 0;
       self.length = self.$bannerList.length;
       self.imgSrcList = [];
@@ -28,23 +28,54 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
 
         return;
       }
-
-      self.timer = setInterval(function () {
-        self.autoPlay();
-      }, self.gap);
-
+      self.checkLoading();
       self.bindEvent();
     },
     buildElement: function () {
       var self = this;
 
       self.$bannerBox = $('#frame-banner-box');
+      self.$bannerListBox = $('#frame-banner-list');
       self.$bannerList = $('#frame-banner-list li');
       self.$bannerImgList = $('#frame-banner-list li img');
       self.$bannerTemp = $('#frame-banner-temp');
+      self.$bannerLoading = $('#frame-banner-loading');
       self.$btnPrev = $('#frame-btn-prev');
       self.$btnNext = $('#frame-btn-next');
+      self.$btnListBox = $('#frame-btn-list');
       self.$btnList = $('#frame-btn-list .btn-banner');
+    },
+    checkLoading: function () {
+      var self = this;
+      var count = 0;
+
+      for (var i = 0; i < self.$bannerImgList.length; i++) {
+        if (self.$bannerImgList[i].complete || self.$bannerImgList[i].width) {
+          count++;
+          if (count === self.length) {
+            self.showBanner();
+          }
+        } else {
+          self.$bannerImgList[i].onload = function () {
+            count++;
+            if (count === self.length) {
+              self.showBanner();
+            }
+          };
+        }
+      }
+    },
+    showBanner: function () {
+      var self = this;
+
+      self.$bannerLoading.fadeOut(300);
+      self.$bannerListBox.fadeIn(300);
+      self.$bannerTemp.fadeIn(300);
+      self.$btnListBox.fadeIn(300);
+
+      self.timer = setInterval(function () {
+        self.autoPlay();
+      }, self.gap);
     },
     bindEvent: function () {
       var self = this;

@@ -113,14 +113,15 @@
 </section>
 
 <section class="frame-banner-box" id="frame-banner-box">
-  <ul id="frame-banner-list">
+  <ul id="frame-banner-list" style="display: none;">
     <li><a href="#" target="_blank"><img src="../images/banner/banner_hy.jpg"/></a></li>
     <li><a href="#" target="_blank"><img src="../images/banner/banner_lf.jpg"/></a></li>
     <li><a href="#" target="_blank"><img src="../images/banner/banner_rc.jpg"/></a></li>
     <li><a href="#" target="_blank"><img src="../images/banner/banner_xk.jpg"/></a></li>
   </ul>
-  <div class="banner-temp" id="frame-banner-temp"></div>
-  <div class="banner-btn-list" id="frame-btn-list">
+  <div class="banner-temp" id="frame-banner-temp" style="display: none;"></div>
+  <div class="banner-loading" id="frame-banner-loading"></div>
+  <div class="banner-btn-list" id="frame-btn-list" style="display: none;">
     <span class="btn btn-banner active"><i></i></span>
     <span class="btn btn-banner"><i></i></span>
     <span class="btn btn-banner"><i></i></span>
@@ -136,7 +137,7 @@
 
         <a href="javascript:void(0);" class="btn-auth" data-auth="true" data-href="/">
           <i class="icon icon-free"></i>
-          <div class="left-icon"><img src="../images/icon/dzpjml_epc.png"/></div>
+          <div class="left-icon" style="background: url(../styles/images/module_icons.png) 0 -50px no-repeat"></div>
           <div class="right-text">
             <h3>电子配件目录EPC</h3>
             <p>过万元器件精准定位</p>
@@ -311,17 +312,6 @@
     <div class="portal-information">
 
       <div class="box-information">
-        <div class="information-title"><h2>公告栏</h2></div>
-        <div class="information-content">
-          <ul>
-            <li><i class="icon icon-dot"></i><a href="#" target="_blank"><b>[ 公告 ] </b>顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</a></li>
-            <li><i class="icon icon-dot"></i><a href="#" target="_blank"><b>[ 公告 ] </b>顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</a></li>
-            <li><i class="icon icon-dot"></i><a href="#" target="_blank"><b>[ 公告 ] </b>顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="box-information">
         <div class="information-title"><h2>新闻资讯</h2></div>
         <div class="information-content">
           <ul>
@@ -336,6 +326,19 @@
           </ul>
         </div>
       </div>
+
+      <div class="box-information">
+        <div class="information-title"><h2>最新公告</h2></div>
+        <div class="information-content">
+          <ul>
+            <li><i class="icon icon-dot"></i><a href="#" target="_blank"><b>[ 公告 ] </b>顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</a></li>
+            <li><i class="icon icon-dot"></i><a href="#" target="_blank"><b>[ 公告 ] </b>顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</a></li>
+            <li><i class="icon icon-dot"></i><a href="#" target="_blank"><b>[ 公告 ] </b>顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</a></li>
+          </ul>
+        </div>
+      </div>
+
+
     </div>
   </div>
 
@@ -366,9 +369,7 @@
   </ul>
 </footer>
 
-<figure class="frame-back-to-top" id="back-to-top">
-  <i></i>
-</figure>
+<figure class="frame-back-to-top" id="back-to-top"  title="回到顶部"><i></i></figure>
 
 <script type="text/javascript" src="../scripts/local_bootstrap.js"></script>
 </body>

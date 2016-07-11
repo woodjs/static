@@ -4,9 +4,9 @@ $themeColor: #353751;
 $lighterThemeColor: #65677f;
 $bdColor: #eae9ec;
 $bgColor: #fff;
-$whiteBgColor: #fefefe;
-$blockDarkColor: #eeefef;
-$blockWhiteColor: #f9f9f9;
+$whiteBgColor: #fff;
+$blockDarkColor: #e5e7e8;
+$blockWhiteColor: #f6f6f6;
 $fontColor: #333;
 $lighterFontColor: #666;
 $lightestFontColor: #999;
@@ -409,6 +409,7 @@ header, footer, article, section, nav, aside, figure {
  height: 388px;
  overflow: hidden;
  position: relative;
+ background: $blockWhiteColor;
  a:hover {
   color: $themeColor;
   text-decoration: underline;
@@ -437,6 +438,17 @@ header, footer, article, section, nav, aside, figure {
    display: block;
    margin: 0 auto;
   }
+ }
+ .banner-loading{
+  display: inline-block;
+  width:80px;
+  height:80px;
+  background: url(images/banner_loading.gif) center center no-repeat;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-top:-40px;
+  margin-left:-40px;
  }
  .banner-btn-list {
   position: absolute;
@@ -491,7 +503,7 @@ header, footer, article, section, nav, aside, figure {
 
 .frame-footer {
  width: 100%;
- padding: 20px 20px 80px;
+ padding: 20px 20px 30px;
  background: $themeColor;
  &:before {
   content: '';
@@ -620,10 +632,11 @@ header, footer, article, section, nav, aside, figure {
    zoom: 1;
    margin: 0 15px 15px 0;
    position: relative;
+   border:1px solid $whiteBgColor;
    background: $whiteBgColor;
    &:hover {
     text-decoration: none;
-    @include boxShadow(0 0 20px rgba(0,0,0,.2));
+    @include boxShadow(0 0 20px rgba(0,0,0,.25));
     .btn-enter{
      border-color:$themeColor;
      color:$themeColor;
@@ -636,24 +649,24 @@ header, footer, article, section, nav, aside, figure {
     width: 48px;
     height: 44px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -1px;
     background: url(images/icons.png) 0 -742px no-repeat;
    }
   }
   .left-icon {
    width: 50px;
    height: 50px;
-   margin: 55px 50px 55px 30px;
+   margin: 54px 50px 54px 29px;
    float: left;
   }
   .right-text {
    width: 230px;
-   height:160px;
+   height:158px;
    float: left;
    overflow: hidden;
    h3{
-    margin-top:45px;
+    margin-top:44px;
     font-size:16px;
     line-height: 18px;
     font-weight: normal;
@@ -670,8 +683,9 @@ header, footer, article, section, nav, aside, figure {
    .btn-enter{
     position: relative;
     display: inline-block;
-    @include setHeightGroup(30px);
     border:1px solid #ababab;
+    height:30px;
+    line-height:28px;
     padding:0 12px 0 34px;
     color: #a8a8a8;
     .icon{
@@ -716,7 +730,7 @@ header, footer, article, section, nav, aside, figure {
   }
  }
  .information-content {
-  padding:16px 0;
+  padding:20px 0;
   background: $whiteBgColor;
   &:hover{
    @include boxShadow(0 0 20px rgba(0,0,0,.2));
@@ -745,8 +759,9 @@ header, footer, article, section, nav, aside, figure {
     display: block;
     width: 100%;
     @extend %textOverflowEllipsis;
-    a:hover{
+    &:hover{
      color:$themeColor;
+     font-weight: bold;
     }
    }
   }
@@ -754,7 +769,7 @@ header, footer, article, section, nav, aside, figure {
 }
 
 .portal-entrance-wrapper{
- background: #fafafa;
+ background: #f6f6f6;
  padding: 30px 0 100px;
 }
 
@@ -796,27 +811,28 @@ header, footer, article, section, nav, aside, figure {
    zoom: 1;
    margin: 0 10px 10px 0;
    position: relative;
+   border:1px solid #fff;
    background: #fff;
    &:hover {
     text-decoration: none;
-    @include boxShadow(0 0 20px rgba(0,0,0,.2));
+    @include boxShadow(0 0 20px rgba(0,0,0,.25));
    }
   }
   .left-icon {
    width: 50px;
    height: 50px;
-   margin: 25px 35px 25px 35px;
+   margin: 24px 35px 24px 34px;
    float: left;
   }
   .right-text {
    width: 150px;
-   height:100px;
+   height:98px;
    float: none;
    overflow: hidden;
    display: table-cell;
    vertical-align: middle;
    h3{
-    max-height: 100px;
+    max-height: 98px;
     display: inline-block;
     font-size:16px;
     line-height: 20px;
@@ -858,6 +874,27 @@ body.en {
    a {
     .icon-free {
      background: url(images/icons.png) -48px -742px no-repeat;
+    }
+   }
+   .right-text {
+    float: none;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    h3{
+     max-height: 158px;
+     display: inline-block;
+     font-size: 16px;
+     line-height: 20px;
+     margin:0;
+     font-weight: normal;
+     overflow: hidden;
+    }
+    p{
+     display:none;
+    }
+    div {
+     display:none;
     }
    }
   }
