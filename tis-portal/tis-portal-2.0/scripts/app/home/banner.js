@@ -24,12 +24,7 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
         $temp.data('index', index);
       });
 
-      if (self.length <= 1) {
-
-        return;
-      }
       self.checkLoading();
-      self.bindEvent();
     },
     buildElement: function () {
       var self = this;
@@ -71,11 +66,15 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
       self.$bannerLoading.fadeOut(300);
       self.$bannerListBox.fadeIn(300);
       self.$bannerTemp.fadeIn(300);
-      self.$btnListBox.fadeIn(300);
 
-      self.timer = setInterval(function () {
-        self.autoPlay();
-      }, self.gap);
+      if (self.length > 1) {
+        self.$btnListBox.fadeIn(300);
+        self.bindEvent();
+        self.timer = setInterval(function () {
+          self.autoPlay();
+        }, self.gap);
+      }
+
     },
     bindEvent: function () {
       var self = this;

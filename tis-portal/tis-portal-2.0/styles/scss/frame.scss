@@ -121,15 +121,15 @@ header, footer, article, section, nav, aside, figure {
     display: none;
     position: absolute;
     top: 30px;
-    left: -1px;
-    right: -1px;
+    left: -21px;
+    right: -13px;
     background: #fff;
     border: 1px solid $bdColor;
     border-top: 0;
     padding: 2px 0 4px;
    }
    li {
-    padding: 0 2px 0 12px;
+    padding: 0 2px 0 20px;
     @include setHeightGroup(26px);
    }
    a {
@@ -450,7 +450,7 @@ header, footer, article, section, nav, aside, figure {
   margin-top:-40px;
   margin-left:-40px;
  }
- .banner-btn-list {
+ .banner-btn-list-box {
   position: absolute;
   z-index: 15;
   width: 100%;
@@ -505,6 +505,7 @@ header, footer, article, section, nav, aside, figure {
  width: 100%;
  padding: 20px 20px 30px;
  background: $themeColor;
+ overflow: hidden;
  &:before {
   content: '';
   display: block;

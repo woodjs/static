@@ -121,15 +121,15 @@ header, footer, article, section, nav, aside, figure {
   display: none;
   position: absolute;
   top: 30px;
-  left: -1px;
-  right: -1px;
+  left: -21px;
+  right: -13px;
   background: #fff;
   border: 1px solid #eae9ec;
   border-top: 0;
   padding: 2px 0 4px;
 }
 .frame-top-line .func-box-left .change-brand li {
-  padding: 0 2px 0 12px;
+  padding: 0 2px 0 20px;
   height: 26px;
   line-height: 26px;
 }
@@ -466,7 +466,7 @@ header, footer, article, section, nav, aside, figure {
   margin-top: -40px;
   margin-left: -40px;
 }
-.frame-banner-box .banner-btn-list {
+.frame-banner-box .banner-btn-list-box {
   position: absolute;
   z-index: 15;
   width: 100%;
@@ -475,14 +475,14 @@ header, footer, article, section, nav, aside, figure {
   line-height: 26px;
   bottom: 12px;
 }
-.frame-banner-box .banner-btn-list .btn-banner {
+.frame-banner-box .banner-btn-list-box .btn-banner {
   display: inline-block;
   width: 30px;
   height: 26px;
   padding: 10px 0 0;
   margin: 0 4px;
 }
-.frame-banner-box .banner-btn-list .btn-banner i {
+.frame-banner-box .banner-btn-list-box .btn-banner i {
   display: inline-block;
   width: 100%;
   float: left;
@@ -493,7 +493,7 @@ header, footer, article, section, nav, aside, figure {
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
-.frame-banner-box .banner-btn-list .btn-banner:hover i, .frame-banner-box .banner-btn-list .btn-banner.active i {
+.frame-banner-box .banner-btn-list-box .btn-banner:hover i, .frame-banner-box .banner-btn-list-box .btn-banner.active i {
   background: #067cfe;
 }
 
@@ -521,6 +521,7 @@ header, footer, article, section, nav, aside, figure {
   width: 100%;
   padding: 20px 20px 30px;
   background: #353751;
+  overflow: hidden;
 }
 .frame-footer:before {
   content: '';
