@@ -503,7 +503,7 @@ header, footer, article, section, nav, aside, figure {
 
 .frame-footer {
  width: 100%;
- padding: 20px 20px 30px;
+ padding: 20px 100px 30px;
  background: $themeColor;
  overflow: hidden;
  &:before {
@@ -569,7 +569,7 @@ header, footer, article, section, nav, aside, figure {
 .frame-back-to-top {
  display: block;
  position: fixed;
- right: 50px;
+ right: 30px;
  bottom: 20px;
  width:57px;
  height:114px;
@@ -843,6 +843,7 @@ header, footer, article, section, nav, aside, figure {
   }
  }
 }
+
 .frame-nav-crumb{
  width:100%;
  height:34px;
@@ -868,8 +869,25 @@ header, footer, article, section, nav, aside, figure {
  }
 }
 
+.frame-contact{
+ position: fixed;
+ z-index: 555;
+ right:20px;
+ top:50%;
+ margin-top:-100px;
+ width:90px;
+ height:182px;
+ background: url(images/icons.png) 0 -1028px no-repeat;
+}
+
 /* begin english */
 body.en {
+ .frame-contact{
+  background: url(images/icons.png) -90px -1028px no-repeat;
+ }
+ .frame-logo-search .logo-box .text-site-intro{
+  letter-spacing: 0;
+ }
  .portal-module {
   dd {
    a {
