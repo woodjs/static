@@ -503,7 +503,7 @@ header, footer, article, section, nav, aside, figure {
 
 .frame-footer {
  width: 100%;
- padding: 20px 100px 30px;
+ padding: 20px 100px 20px;
  background: $themeColor;
  overflow: hidden;
  &:before {
@@ -526,15 +526,16 @@ header, footer, article, section, nav, aside, figure {
   }
  }
  .box-links-2 {
-  font-size: 12px;
-  line-height: 24px;
-  color: $lighterThemeColor;
+  font-size: 0;
+  color: #fff;
   text-align: center;
   margin-top:16px;
   a {
+   font-size:12px;
    display: inline-block;
-   padding: 0 8px;
-   color:$lighterThemeColor;
+   line-height: 24px;
+   padding: 0 8px 0 9px;
+   color:#fff;
    position: relative;
    &:before {
     content: '';
@@ -551,6 +552,10 @@ header, footer, article, section, nav, aside, figure {
     text-decoration: underline;
    }
   }
+  label{
+   font-size:12px;
+   line-height: 24px;
+  }
   label + a, a:first-child {
    &:before {
     display: none;
@@ -559,10 +564,10 @@ header, footer, article, section, nav, aside, figure {
  }
  .site-statement {
   text-align: center;
-  color: $lighterThemeColor;
+  color: #fff;
   font-size: 12px;
   line-height: 24px;
-  margin-top: 8px;
+  margin-top: 10px;
  }
 }
 

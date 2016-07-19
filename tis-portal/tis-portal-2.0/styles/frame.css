@@ -519,7 +519,7 @@ header, footer, article, section, nav, aside, figure {
 
 .frame-footer {
   width: 100%;
-  padding: 20px 100px 30px;
+  padding: 20px 100px 20px;
   background: #353751;
   overflow: hidden;
 }
@@ -543,16 +543,17 @@ header, footer, article, section, nav, aside, figure {
   text-decoration: underline;
 }
 .frame-footer .box-links-2 {
-  font-size: 12px;
-  line-height: 24px;
-  color: #65677f;
+  font-size: 0;
+  color: #fff;
   text-align: center;
   margin-top: 16px;
 }
 .frame-footer .box-links-2 a {
+  font-size: 12px;
   display: inline-block;
-  padding: 0 8px;
-  color: #65677f;
+  line-height: 24px;
+  padding: 0 8px 0 9px;
+  color: #fff;
   position: relative;
 }
 .frame-footer .box-links-2 a:before {
@@ -569,15 +570,19 @@ header, footer, article, section, nav, aside, figure {
 .frame-footer .box-links-2 a:hover {
   text-decoration: underline;
 }
+.frame-footer .box-links-2 label {
+  font-size: 12px;
+  line-height: 24px;
+}
 .frame-footer .box-links-2 label + a:before, .frame-footer .box-links-2 a:first-child:before {
   display: none;
 }
 .frame-footer .site-statement {
   text-align: center;
-  color: #65677f;
+  color: #fff;
   font-size: 12px;
   line-height: 24px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .frame-back-to-top {
