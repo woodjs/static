@@ -22,3 +22,345 @@ a {
 .icon {
  display: inline-block;
 }
+
+.frame-top-line {
+ height: 80px;
+ border-bottom: 4px solid $themeColor;
+ .box-title {
+  float: left;
+  padding-left: 20px;
+  dt {
+   line-height: 38px;
+   font-size: 26px;
+   color: $lighterFontColor;
+   margin-top:8px;
+   font-weight:normal;
+   letter-spacing: 2px;
+  }
+  dd {
+   font-size: 14px;
+   color:$lightestFontColor;
+   line-height: 20px;
+   padding-left:2px;
+   margin-top:1px;
+  }
+ }
+ .box-lang{
+  float:right;
+  height:28px;
+  border:1px solid $bdColor;
+  padding:0 30px 0 12px;
+  margin: 38px 20px 0 0;
+  position: relative;
+  line-height:26px;
+  font-size:12px;
+  cursor: pointer;
+  .icon-arrow{
+   position: absolute;
+   right:12px;
+   top: 11px;
+   width:8px;
+   height:4px;
+   background: url(images/icons.png) 0 -55px no-repeat;
+  }
+  .lang-list{
+   position:absolute;
+   background: #fff;
+   top:28px;
+   left:-1px;
+   right:-1px;
+   border:1px solid $bdColor;
+   border-top:none;
+   padding: 2px 0;
+   li{
+    display: block;
+    width: 100%;
+   }
+   a{
+    display: block;
+    width:100%;
+    padding:0 5px 0 12px;
+    line-height: 26px;
+    &:hover{
+     color:$hoverColor;
+    }
+   }
+   .active{
+    color: $hoverColor;
+    font-weight: bold;
+   }
+  }
+ }
+}
+.frame-container{
+ width:980px;
+ margin: 20px auto;
+}
+.frame-nav{
+ width: 110px;
+ float:left;
+ padding-right:5px;
+ font-size:12px;
+ dt{
+  display: block;
+  width: 100%;
+  margin-top:2px;
+  line-height: 20px;
+  padding:5px 0;
+  font-weight: bold;
+ }
+ dd{
+  display: block;
+  width:100%;
+ }
+ a{
+  display: block;
+  line-height: 20px;
+  padding:8px 0 8px 15px;
+  position: relative;
+  font-weight: bold;
+  color:$lighterFontColor;
+  &::before{
+   content: '';
+   position: absolute;
+   width:5px;
+   height:5px;
+   background: #dbdbdb;
+   left:0;
+   top:16px;
+  }
+  &:hover, &.active{
+   color:$hoverColor;
+   &::before{
+    background: $hoverColor;
+   }
+  }
+ }
+}
+.frame-content{
+ width:870px;
+ float:right;
+ border:1px solid $lighterBdColor;
+ min-height:180px;
+}
+.step-line{
+ width:100%;
+ padding:50px 0 25px 50px;
+ overflow:hidden;
+ dl{
+  width: 155px;
+  float:left;
+  dt{
+   height:23px;
+  }
+  dd{
+   color:$nextStepColor;
+   font-size:12px;
+   text-align: center;
+   line-height: 20px;
+   padding:0 10px;
+  }
+  .line{
+   width: 100%;
+   height:5px;
+   display: block;
+   background: $nextStepColor;
+   position: relative;
+   label{
+    position: absolute;
+    text-align: center;
+    line-height: 23px;
+    height:23px;
+    width:23px;
+    background: url(images/icons.png) -46px 0 no-repeat;
+    left:50%;
+    top:50%;
+    margin-left:-11px;
+    margin-top:-11px;
+    color:#fff;
+    font-weight:bold;
+    font-size:10px;
+   }
+  }
+  &:first-child{
+   .line{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+   }
+  }
+  &:last-child, &.last-step{
+   .line{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+   }
+  }
+  &.cur-step{
+   dd{
+    color:$curStepColor;
+   }
+   .line{
+    background: $curStepColor;
+    label{
+     background: url(images/icons.png) 0 0 no-repeat;
+    }
+   }
+  }
+  &.prev-step{
+   dd{
+    color: $prevStepColor;
+   }
+   .line{
+    background: $prevStepColor;
+    label{
+     background: url(images/icons.png) -23px 0 no-repeat;
+    }
+   }
+  }
+ }
+}
+
+.table-form{
+ margin:0 0 25px 30px;
+ table-layout: fixed;
+ vertical-align: top;
+ border-collapse: collapse;
+ td:first-child{
+  text-align: right;
+  line-height: 36px;
+  padding-left:0;
+ }
+ td{
+  padding-left:15px;
+ }
+ input{
+  display: inline-block;
+  border:1px solid $bdColor;
+  width:186px;
+  padding:0 5px;
+  height:36px;
+  line-height:34px;
+  float:left;
+  @include transition(all .3s ease-in-out);
+  &:focus{
+   border-color: $themeColor;
+   @include boxShadow(0 0 3px $themeColor);
+  }
+ }
+ .w-100{
+  width:100px;
+ }
+ .identifying-code{
+  width:76px;
+  height:36px;
+  display: inline-block;
+  float:left;
+  margin-left:10px;
+  img{
+   display: inline-block;
+   width: 76px;
+   height:36px;
+  }
+ }
+ .invisibility{
+  display: inline-block;
+  float:left;
+  line-height: 36px;
+  font-size:12px;
+  color:$blueColor;
+  margin-left:10px;
+  cursor: pointer;
+ }
+ .error-info{
+  float:left;
+  margin-left: 10px;
+  line-height: 36px;
+  color:$redColor;
+  .icon-error{
+   display: inline-block;
+   width:16px;
+   height:16px;
+   margin-right:3px;
+   vertical-align: text-bottom;
+   position: relative;
+   top:-1px;
+   background: url(images/icons.png) 0 -73px no-repeat;
+  }
+ }
+ .btn-send{
+  float:left;
+  height:28px;
+  padding:4px 18px;
+  margin:4px 0 0 15px;
+  background: $themeColor;
+  color:#fff;
+  cursor: pointer;
+ }
+ .btn-send-disabled{
+  background: $nextStepColor;
+ }
+ .btn-submit{
+  display: inline-block;
+  width:100px;
+  line-height: 36px;
+  background: $themeColor;
+  color:#fff;
+  font-size:12px;
+  text-align: center;
+  @include transition(all .3s ease-in-out);
+  &:hover{
+   background: darken($themeColor, 8%);
+  }
+ }
+}
+
+.success-info{
+ padding:20px 30px 25px;
+ overflow: hidden;
+ .icon-success{
+  width:32px;
+  height:32px;
+  float:left;
+  background: url(images/icons.png) 0 -23px no-repeat;
+ }
+ dl{
+  float:left;
+  margin-left:15px;
+  dt{
+   font-size:14px;
+   line-height: 20px;
+  }
+  dd{
+   margin-top:18px;
+   font-size:12px;
+   line-height: 18px;
+  }
+ }
+}
+
+.prompt-info{
+ padding:20px 30px 25px;
+ font-size:12px;
+ dt{
+  .icon-prompt{
+   width:16px;
+   height:14px;
+   margin-right:6px;
+   vertical-align: text-bottom;
+   position: relative;
+   top:-2px;
+   background: url(images/icons.png) -14px -59px no-repeat;
+  }
+  line-height: 24px;
+  color:$themeColor;
+ }
+ dd{
+  line-height: 24px;
+ }
+ .red{
+  color:$redColor;
+ }
+ .dark-red{
+  color:$darkRedColor;
+  margin-right:15px;
+ }
+}
