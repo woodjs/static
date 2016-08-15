@@ -312,6 +312,7 @@ header, footer, article, section, nav, aside, figure {
   display: block;
   width: 100%;
   float: left;
+  color: #333;
   height: 32px;
   line-height: 32px;
 }

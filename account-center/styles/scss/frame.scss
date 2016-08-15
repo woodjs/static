@@ -1,22 +1,6 @@
-@import "base";
-
-$themeColor: #353751;
-$lighterThemeColor: #65677f;
-$bdColor: #eae9ec;
-$bgColor: #fff;
-$whiteBgColor: #fff;
-$blockDarkColor: #e5e7e8;
-$blockWhiteColor: #f6f6f6;
-$fontColor: #333;
-$lighterFontColor: #666;
-$lightestFontColor: #999;
-
-body, div, ul, dl, ol, dt, dd, li, p, a, label, span, i, img, input, textarea, header, footer, article, section, nav, aside, figure, h1, h2, h3, h4, h5, h6 {
- padding: 0;
- margin: 0;
- border: 0;
- @include boxSizing(border-box);
-}
+@import "./core/base";
+@import "./core/reset";
+@import "./core/config";
 
 body {
  font-size: 14px;
@@ -26,21 +10,9 @@ body {
  color: $fontColor;
 }
 
-ul, dl, ol {
- list-style: none;
-}
-
 a {
  color: $fontColor;
  text-decoration: none;
-}
-
-input, textarea, a {
- outline: none;
-}
-
-header, footer, article, section, nav, aside, figure {
- display: block
 }
 
 .btn {
