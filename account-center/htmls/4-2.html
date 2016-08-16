@@ -46,13 +46,13 @@
     </nav>
     <section class="frame-content">
       <div class="step-line">
-        <dl class="cur-step">
+        <dl class="prev-step">
           <dt>
             <span class="line"><label>1</label></span>
           </dt>
           <dd>填写账户名</dd>
         </dl>
-        <dl>
+        <dl class="cur-step">
           <dt>
             <span class="line"><label>2</label></span>
           </dt>
@@ -74,26 +74,55 @@
 
       <table  class="table-form">
         <tbody>
+
         <tr>
-          <td>用户名/邮箱/手机号：</td>
+          <td>验证方式：</td>
           <td>
             <div class="input-line">
-              <input type="text" />
+              <div class="verify-type">
+                <span class="type-wrapper">手机</span>
+                <span class="icon icon-arrow"></span>
+                <ul class="type-list">
+                  <li><a href="#" class="active">手机</a></li>
+                  <li><a href="#">邮箱</a></li>
+                </ul>
+              </div>
             </div>
             <div class="guide-line"></div>
           </td>
         </tr>
+
+        <tr>
+          <td>用户名：</td>
+          <td>
+            <div class="input-line">
+              <span class="text-wrapper">139000882822</span>
+            </div>
+            <div class="guide-line"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>手机号：</td>
+          <td>
+            <div class="input-line">
+              <span class="text-wrapper">139*******22</span>
+            </div>
+            <div class="guide-line"></div>
+          </td>
+        </tr>
+
         <tr>
           <td>验证码：</td>
           <td>
             <div class="input-line">
-              <input type="text" class="w-100" />
-              <span class="identifying-code"><img src="../images/logo/logo_dfsk.png" /></span>
-              <span class="invisibility">看不清，换一张</span>
+              <input class="w-100" type="text" />
+              <span class="btn btn-send">获取短信验证码</span>
             </div>
             <div class="guide-line"></div>
           </td>
         </tr>
+
         <tr>
           <td></td>
           <td>
@@ -105,6 +134,7 @@
         </tr>
         </tbody>
       </table>
+
     </section>
   </section>
 
