@@ -48,6 +48,8 @@
       </dl>
     </nav>
     <section class="frame-content">
+      <div class="warn-line"><i class="icon icon-warn"></i>您的密码已过期，请修改密码！</div>
+
       <div class="step-line">
         <dl class="prev-step">
           <dt>
@@ -77,6 +79,7 @@
 
       <table  class="table-form">
         <tbody>
+
         <tr>
           <td>用户名/邮箱/手机号：</td>
           <td>
@@ -85,8 +88,10 @@
               <span class="btn btn-send">免费获取验证码</span>
               <span class="btn btn-send btn-send-disabled">免费获取验证码</span>
             </div>
+            <div class="guide-line">校验码已发出，请注意查收短信，如果没有收到，你可以在60秒后要求系统重新发送。</div>
           </td>
         </tr>
+
         <tr>
           <td>验证码：</td>
           <td>
@@ -96,13 +101,44 @@
               <span class="invisibility">看不清，换一张</span>
               <span class="error-info"><i class="icon icon-error"></i>错误信息！！！！！！！！！！！！</span>
             </div>
-            <div></div>
+            <div class="guide-line"></div>
           </td>
         </tr>
+
+        <tr>
+          <td>原手机号：</td>
+          <td>
+            <div class="input-line">
+              <span class="text-wrapper">139000882822</span>
+            </div>
+            <div class="guide-line"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>验证方式：</td>
+          <td>
+            <div class="input-line">
+              <div class="verify-type">
+                <span class="type-wrapper">手机</span>
+                <span class="icon icon-arrow"></span>
+                <ul class="type-list">
+                  <li><a href="#" class="active">手机</a></li>
+                  <li><a href="#">邮箱</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="guide-line"></div>
+          </td>
+        </tr>
+
         <tr>
           <td></td>
           <td>
-            <span class="btn btn-submit">下一步</span>
+            <div class="input-line">
+              <span class="btn btn-submit">下一步</span>
+            </div>
+            <div class="guide-line"></div>
           </td>
         </tr>
         </tbody>
@@ -113,6 +149,11 @@
           <dt>密码修改成功！</dt>
           <dd>请用登录器用新密码重新登陆！</dd>
         </dl>
+      </div>
+
+      <div class="success-info">
+        <div class="icon icon-success"></div>
+        <div class="success-text">恭喜你，修改成功！</div>
       </div>
 
       <dl class="prompt-info">

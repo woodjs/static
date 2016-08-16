@@ -1,0 +1,67 @@
+<html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style>
+    body,p,span,div,em,ul,li{
+      padding:0;
+      margin:0;
+      border:0;
+    }
+    ul{
+      list-style: none;
+    }
+    body{
+      font-size: 14px;
+      font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+      color: #333;
+    }
+    .header{
+      padding:10px;
+      line-height: 30px;
+    }
+    .header span{
+      font-weight: bold;
+      margin: 0 4px;
+    }
+    .content{
+      padding:5px 10px;
+      line-height: 30px;
+      text-indent: 2em;
+    }
+    .content  em{
+      font-weight: bold;
+      color:#529bea;
+      margin:0 4px;
+    }
+    .footer{
+      padding:10px;
+      line-height: 20px;
+    }
+    .footer li{
+      margin:5px 0;
+    }
+    .info{
+      border-top:1px dashed #ccc;
+      line-height: 30px;
+      padding:10px;
+      color:#999;
+    }
+  </style>
+</head>
+<body>
+<p class="header">尊敬的<span>{{username}}</span>, 您好！</p>
+<p class="content">
+  您于 {{dateTime}} 点击找回密码获取验证码按钮，该验证码如下，在页面上输入以上验证码即可完成验证：<em>{{authCode}}</em>
+</p>
+<p class="content">
+  TIS是一个便捷的信息查询与配件订购系统。可以使用VIN对配件进行定位，阅读维修资料，选择合适的配件等功能，显著提升售后效率。
+</p>
+<ul class="footer">
+  <li>上海事成软件股份有限公司</li>
+  <li>{{date}}</li>
+</ul>
+<p class="info">
+  这是一封系统自动发出的邮件，请不要直接回复，如您有任何疑问，请联系客服！
+</p>
+</body>
+</html>
