@@ -1,12 +1,10 @@
-require(['globalConfig', 'jquery', 'ajax', 'jqPlaceHolder', 'json2'], function (globalConfig, $, ajax, jqPlaceHolder) {
+require(['globalConfig', 'jquery'], function (globalConfig, $) {
 
-  var navigator = {
+  var changePassword = {
 
     init: function () {
       var self = this;
 
-      self.buildElement();
-      self.bindEvent();
     },
 
     buildElement: function () {
@@ -28,7 +26,8 @@ require(['globalConfig', 'jquery', 'ajax', 'jqPlaceHolder', 'json2'], function (
         }
       });
     }
+
   };
 
-  navigator.init();
+  changePassword.init();
 });

@@ -1,7 +1,19 @@
 var loadScriptPaths = {
-  pageIndex: {
-    development: ['app/common/navigator.js', 'app/home/main.js'],
-    release: ['release/navigator.min.js']
+  findPassword1: {
+    development: ['app/common/navigator.js', 'app/find_password_1/main.js'],
+    release: ['release/find_password_1.min.js']
+  },
+  findPassword2: {
+    development: ['app/common/navigator.js', 'app/find_password_2/main.js'],
+    release: ['release/find_password_2.min.js']
+  },
+  findPassword3: {
+    development: ['app/common/navigator.js', 'app/find_password_3/main.js'],
+    release: ['release/find_password_3.min.js']
+  },
+  findPassword4: {
+    development: ['app/common/navigator.js', 'app/find_password_4/main.js'],
+    release: ['release/find_password_4.min.js']
   }
 };
 

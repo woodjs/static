@@ -85,6 +85,7 @@ a {
 .frame-top-line .box-lang .lang-list {
   position: absolute;
   background: #fff;
+  display: none;
   top: 27px;
   left: -1px;
   right: -1px;
@@ -235,7 +236,7 @@ a {
 }
 
 .table-form {
-  margin: 0 0 25px 30px;
+  margin: 10px 0 25px 30px;
   table-layout: fixed;
   vertical-align: top;
   border-collapse: collapse;
@@ -273,9 +274,8 @@ a {
 }
 .table-form .guide-line {
   clear: both;
-  line-height: 20px;
-  padding: 6px 0;
-  min-height: 32px;
+  line-height: 18px;
+  padding: 10px 0;
 }
 .table-form .verify-type {
   float: left;
@@ -298,6 +298,7 @@ a {
 }
 .table-form .verify-type .type-list {
   position: absolute;
+  display: none;
   z-index: 100;
   background: #fff;
   top: 35px;
@@ -315,7 +316,7 @@ a {
   display: block;
   width: 100%;
   padding: 0 5px 0 10px;
-  line-height: 26px;
+  line-height: 34px;
 }
 .table-form .verify-type .type-list a:hover {
   color: #f04300;
@@ -356,6 +357,7 @@ a {
   display: inline-block;
   width: 76px;
   height: 36px;
+  cursor: pointer;
 }
 .table-form .invisibility {
   display: inline-block;
@@ -488,6 +490,13 @@ a {
   position: relative;
   top: -1px;
   margin: 0 10px 0 18px;
+}
+
+.no-bind {
+  font-size: 14px;
+  color: #EC1B4F;
+  line-height: 22px;
+  padding: 30px 50px;
 }
 
 /*# sourceMappingURL=frame.css.map */

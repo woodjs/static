@@ -15,7 +15,7 @@
   <script type="text/javascript" src="../scripts/local_config.js"></script>
   <script type="text/javascript">
     var pageConfig = {
-      pageCode: 'pageIndex',
+      pageCode: 'findPassword3',
       //isLocal: ${isLocal} TODO
       isLocal: true
     };
@@ -79,9 +79,10 @@
           <td>新密码：</td>
           <td>
             <div class="input-line">
-              <input type="text" />
+              <input type="password" id="password" autocomplete="off" />
+              <span class="error-info" id="password-error"></span>
             </div>
-            <div class="guide-line">校验码已发出，请注意查收短信，如果没有收到，你可以在60秒后要求系统重新发送。</div>
+            <div class="guide-line" id="guide-password">8-20位，必须要要包含字母、数字和特殊字符（@，！，#，&）例如：<span class="blue">xie98@12</span></div>
           </td>
         </tr>
 
@@ -89,9 +90,10 @@
           <td>确认密码：</td>
           <td>
             <div class="input-line">
-              <input type="text" />
+              <input type="password" id="repeat-password" autocomplete="off" />
+              <span class="error-info" id="repeat-password-error"></span>
             </div>
-            <div class="guide-line"></div>
+            <div class="guide-line">8-20位，必须要要包含字母、数字 ，例如：<span class="blue">xie982312</span></div>
           </td>
         </tr>
 
@@ -99,7 +101,7 @@
           <td></td>
           <td>
             <div class="input-line">
-              <span class="btn btn-submit">提交</span>
+              <span class="btn btn-submit" id="submit">提交</span>
             </div>
             <div class="guide-line"></div>
           </td>
