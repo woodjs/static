@@ -394,8 +394,21 @@ a {
   background: #353751;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.table-form .btn-send:hover {
+  background: #252638;
 }
 .table-form .btn-send-disabled {
+  float: left;
+  line-height: 28px;
+  height: 28px;
+  padding: 0 18px;
+  margin: 4px 0 0 10px;
+  color: #fff;
+  cursor: auto;
   background: #ccc;
 }
 .table-form .btn-submit {

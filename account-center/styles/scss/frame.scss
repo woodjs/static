@@ -376,8 +376,19 @@ a {
   background: $themeColor;
   color:#fff;
   cursor: pointer;
+  @include transition(all .3s ease-in-out);
+  &:hover{
+   background: darken($themeColor, 8%);
+  }
  }
  .btn-send-disabled{
+  float:left;
+  line-height: 28px;
+  height:28px;
+  padding:0 18px;
+  margin:4px 0 0 10px;
+  color:#fff;
+  cursor: auto;
   background: $nextStepColor;
  }
  .btn-submit{
