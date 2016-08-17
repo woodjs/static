@@ -27,68 +27,12 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
     bindEvent: function () {
       var self = this;
 
-      self.$boxVerifyType.on('click', function () {
-
-        if (self.$listType.is(":visible")) {
-          self.$listType.hide();
-        } else {
-          self.$listType.show();
-        }
+      self.$inputPassword.on('blur', function () {
+        self.checkPasswordInput();
       });
 
-      self.$listTypeItems.on('click', function () {
-        var $this = $(this);
-        var value = $this.data('value');
-        var text = $this.html();
-
-        self.$curVerifyType.data('value', value);
-        self.$curVerifyType.html(text);
-
-        if (value === 'mobile') {
-          self.$boxMobile.show();
-          self.$boxEmail.hide();
-          self.$boxMobileIdentify.show();
-          self.$boxEmailIdentify.hide();
-        } else {
-          self.$boxMobile.hide();
-          self.$boxEmail.show();
-          self.$boxMobileIdentify.hide();
-          self.$boxEmailIdentify.show();
-        }
-      });
-
-      self.$btnFetchMobileCode.on('click', function () {
-        self.$btnFetchMobileCode.hide();
-        self.$btnFetchingMobileCode.show();
-
-        if (lang === 'zh_CN') {
-          self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
-        } else {
-          self.$mobileGuide.html(_i18n_error['4_2_2']);
-        }
-        self.sendMobileRequest();
-        self.beginMobileTimer();
-      });
-
-      self.$btnFetchEmailCode.on('click', function () {
-        self.$btnFetchEmailCode.hide();
-        self.$btnFetchingEmailCode.show();
-
-        if (lang === 'zh_CN') {
-          self.$emailGuide.html(_i18n_error['4_2_3'].replace('5分钟', '<span class="red">5分钟</span>'));
-        } else {
-          self.$emailGuide.html(_i18n_error['4_2_3']);
-        }
-        self.sendEmailRequest();
-        self.beginEmailTimer();
-      });
-
-      self.$inputMobileAuthCode.on('blur', function () {
-        self.checkMobileAuthCodeInput();
-      });
-
-      self.$inputEmailAuthCode.on('blur', function () {
-        self.checkEmailAuthCodeInput();
+      self.$inputRepeatPassword.on('blur', function () {
+        self.checkRepeatPasswordInput();
       });
 
       self.$btnSubmit.on('click', function () {
@@ -97,33 +41,68 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
     },
 
-    checkMobileAuthCodeInput: function () {
+    checkPasswordInput: function () {
       var self = this;
 
-      if (self.checkIsEmpty(self.$inputMobileAuthCode)) {
+      if (self.checkIsEmpty(self.$inputPassword)) {
 
-        self.$errorMobile.html(errorIcon + _i18n_error['4_1_2']);
+        self.$errorPassword.html(errorIcon + _i18n_error['4_3_1']);
 
         return false;
       } else {
-        self.$errorMobile.html('');
+        var str = self.$inputPassword.val();
+
+        if (str.length > 20 || str.length < 8) {
+          self.$errorPassword.html(errorIcon + _i18n_error['4_3_3']);
+
+          return false;
+        } else {
+          self.$errorPassword.html('');
+        }
       }
 
       return true;
     },
 
-    checkEmailAuthCodeInput: function () {
+    checkRepeatPasswordInput: function () {
       var self = this;
 
-      if (self.checkIsEmpty(self.$inputEmailAuthCode)) {
+      self.checkPasswordInput();
 
-        self.$errorEmail.html(errorIcon + _i18n_error['4_1_2']);
+      if (self.checkIsEmpty(self.$inputRepeatPassword)) {
+
+        self.$errorRepeatPassword.html(errorIcon + _i18n_error['4_3_2']);
 
         return false;
       } else {
-        self.$errorEmail.html('');
+
+        var str = self.$inputRepeatPassword.val();
+
+        if (str.length > 20 || str.length < 8) {
+          self.$errorRepeatPassword.html(errorIcon + _i18n_error['4_3_3']);
+
+          return false;
+        } else {
+
+          if (self.checkIsSamePassword()) {
+            self.$errorRepeatPassword.html('');
+          } else {
+            self.$errorRepeatPassword.html(errorIcon + _i18n_error['4_3_4']);
+
+            return false;
+          }
+        }
       }
 
+      return true;
+    },
+
+    checkIsSamePassword: function () {
+      var self = this;
+
+      if (self.$inputRepeatPassword.val() !== self.$inputPassword.val()) {
+        return false;
+      }
       return true;
     },
 
@@ -139,163 +118,43 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
     checkAllInput: function () {
       var self = this;
-      var value = self.$curVerifyType.data('value');
 
-      if (value === 'mobile') {
-        return self.checkMobileAuthCodeInput()
-      } else {
-        return self.checkEmailAuthCodeInput();
-      }
-    },
-
-    beginMobileTimer: function () {
-      var self = this;
-
-      self.mobileInter = setInterval(function () {
-        var time = parseInt(self.$labelMobileTime.html());
-
-        if (time > 0) {
-          time--;
-          self.$labelMobileTime.html(time);
-          return;
-        }
-
-        self.$labelMobileTime.html(time);
-        self.resetMobileTimer();
-      }, 1000);
-    },
-
-    resetMobileTimer: function () {
-      var self = this;
-
-      self.$btnFetchMobileCode.show();
-      self.$btnFetchingMobileCode.hide();
-      self.$labelMobileTime.html('60');
-      clearInterval(self.mobileInter);
-    },
-
-    beginEmailTimer: function () {
-      var self = this;
-
-      self.emailInter = setInterval(function () {
-        var time = parseInt(self.$labelEmailTime.html());
-
-        if (time > 0) {
-          time--;
-          self.$labelEmailTime.html(time);
-          return;
-        }
-
-        self.$labelEmailTime.html(time);
-        self.resetEmailTimer();
-      }, 1000);
-
-    },
-
-    resetEmailTimer: function () {
-      var self = this;
-
-      self.$btnFetchEmailCode.show();
-      self.$btnFetchingEmailCode.hide();
-      self.$labelEmailTime.html('60');
-
-      clearInterval(self.emailInter);
-    },
-
-    sendMobileRequest: function () {
-      var self = this;
-
-      ajax.invoke({
-        url: path + '/find-pwd/send-mobile-auth-code',
-        type: 'POST',
-        dataType: 'json',
-        data: null,
-        success: function (res) {
-        },
-        failed: function (res) {
-          var code = res.code;
-
-          if ('UN_AUTH' === code) {
-            self.$errorMobile.html(errorIcon + _i18n_error['4_2_4']);
-          } else if ('SEND_AUTH_CODE_ERROR' === code) {
-            self.$errorMobile.html(errorIcon + _i18n_error['4_2_5']);
-          }
-
-        }
-      });
-    },
-
-    sendEmailRequest: function () {
-      var self = this;
-
-      ajax.invoke({
-        url: path + '/find-pwd/send-email-auth-code',
-        type: 'POST',
-        dataType: 'json',
-        data: null,
-        success: function (res) {
-        },
-        failed: function (res) {
-          var code = res.code;
-
-          if ('UN_AUTH' === code) {
-            self.$errorEmail.html(errorIcon + _i18n_error['4_2_4']);
-          } else if ('SEND_AUTH_CODE_ERROR' === code) {
-            self.$errorEmail.html(errorIcon + _i18n_error['4_2_5']);
-          }
-        }
-      });
+      return self.checkPasswordInput() && self.checkRepeatPasswordInput();
     },
 
     submit: function () {
       var self = this;
       var data = self.collectInputValue();
-      var value = self.$curVerifyType.data('value');
-      var partUrl = (value === 'mobile' ? '/find-pwd/do-check-mobile-auth-code' : '/find-pwd/do-check-email-auth-code');
 
       if (self.checkAllInput()) {
         ajax.invoke({
-          url: path + partUrl,
+          url: path + '/find-pwd/do-reset-pwd',
           type: 'POST',
           dataType: 'json',
           data: JSON.stringify(data),
           success: function (res) {
-            window.location.href = path + '/find-pwd/reset-pwd';
+            window.location.href = path + '/find-pwd/success';
           },
           failed: function (res) {
             var code = res.code;
-            if ('AUTH_CODE_ERROR' === code) {
-              value === 'mobile' ? self.$errorMobile.html(errorIcon + _i18n_error['4_2_1']) : self.$errorEmail.html(errorIcon + _i18n_error['4_2_1']);
+
+            self.$errorPassword.html(errorIcon + self.$passwordGuide.html());
+            self.$errorRepeatPassword.html(errorIcon + self.$passwordGuide.html());
+
+            if ('PASSWORD_NOT_PASS' === code) {
+              self.$errorPassword.html(errorIcon + self.$passwordGuide.html());
+              self.$errorRepeatPassword.html(errorIcon + self.$passwordGuide.html());
             }
           }
         });
-
-        //$.ajax({
-        //  url : path + "/find-pwd/do-reset-pwd",
-        //  method : 'POST',
-        //  data : {
-        //    pwd : $('#password2').val()
-        //  },
-        //  dataType : 'json',
-        //  success : function(res) {
-        //    location.href = path + '/find-pwd/success';
-        //  },
-        //  error : function(res) {
-        //    var code = res.responseJSON.code;
-        //    if ('PASSWORD_NOT_PASS' == code) {
-        //      alert('新密码不符合要求，请按说明重新编写');
-        //    }
-        //  }
-        //});
       }
     },
 
     collectInputValue: function () {
       var self = this;
-      var value = self.$curVerifyType.data('value');
 
       return {
-        val: value === 'mobile' ? self.$inputMobileAuthCode.val() : self.$inputEmailAuthCode.val()
+        val: self.$inputRepeatPassword.val()
       };
     }
   };

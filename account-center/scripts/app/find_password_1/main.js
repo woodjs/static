@@ -69,6 +69,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
     checkIdentifyInput: function () {
       var self = this;
 
+      self.checkAccountInput();
       if (self.checkIsEmpty(self.$identifyInput)) {
 
         self.$identifyError.html(errorIcon + _i18n_error['4_1_2']);
