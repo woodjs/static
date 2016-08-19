@@ -158,6 +158,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       self.$btnFetchEmailCode.show();
       self.$btnFetchingEmailCode.hide();
       self.$labelEmailTime.html(self.originalEmailTime);
+      self.$emailGuide.html('');
 
       clearInterval(self.emailInter);
     },
@@ -205,7 +206,9 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
             if ('AUTH_CODE_ERROR' === code) {
               self.$errorEmail.html(errorIcon + _i18n_error['4_2_1']);
             } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL'  === code) {
-              self.$errorEmail.html(errorIcon + _i18n_error['4_2_1']);
+              self.$errorEmail.html(errorIcon + _i18n_error['4_2_6']);
+            } else if ('VAL_SAME_ERROR' === code) {
+              self.$errorEmail.html(errorIcon + _i18n_error['2_2_4']);
             }
           }
         });

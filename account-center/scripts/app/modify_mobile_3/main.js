@@ -158,6 +158,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       self.$btnFetchMobileCode.show();
       self.$btnFetchingMobileCode.hide();
       self.$labelMobileTime.html(self.originalMobileTime);
+      self.$mobileGuide.html('');
 
       clearInterval(self.mobileInter);
     },
@@ -205,7 +206,9 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
             if ('AUTH_CODE_ERROR' === code) {
               self.$errorMobile.html(errorIcon + _i18n_error['4_2_1']);
             } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL'  === code) {
-              self.$errorMobile.html(errorIcon + _i18n_error['4_2_1']);
+              self.$errorMobile.html(errorIcon + _i18n_error['4_2_7']);
+            } else if ('VAL_SAME_ERROR' === code) {
+              self.$errorMobile.html(errorIcon + _i18n_error['3_3_4']);
             }
           }
         });
