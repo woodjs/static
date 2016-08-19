@@ -75,29 +75,11 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       });
 
       self.$btnFetchMobileCode.on('click', function () {
-        self.$btnFetchMobileCode.hide();
-        self.$btnFetchingMobileCode.show();
-
-        if (lang === 'zh_CN') {
-          self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
-        } else {
-          self.$mobileGuide.html(_i18n_error['4_2_2']);
-        }
         self.sendMobileRequest();
-        self.beginMobileTimer();
       });
 
       self.$btnFetchEmailCode.on('click', function () {
-        self.$btnFetchEmailCode.hide();
-        self.$btnFetchingEmailCode.show();
-
-        if (lang === 'zh_CN') {
-          self.$emailGuide.html(_i18n_error['4_2_3'].replace('5分钟', '<span class="red">5分钟</span>'));
-        } else {
-          self.$emailGuide.html(_i18n_error['4_2_3']);
-        }
         self.sendEmailRequest();
-        self.beginEmailTimer();
       });
 
       self.$inputMobileAuthCode.on('blur', function () {
@@ -112,6 +94,36 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         self.submit();
       });
 
+    },
+
+    showMobileTimer: function () {
+      var self = this;
+
+      self.$btnFetchMobileCode.hide();
+      self.$btnFetchingMobileCode.show();
+
+      if (lang === 'zh_CN') {
+        self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
+      } else {
+        self.$mobileGuide.html(_i18n_error['4_2_2']);
+      }
+
+      self.beginMobileTimer();
+    },
+
+    showEmailTimer: function () {
+      var self = this;
+
+      self.$btnFetchEmailCode.hide();
+      self.$btnFetchingEmailCode.show();
+
+      if (lang === 'zh_CN') {
+        self.$emailGuide.html(_i18n_error['4_2_3'].replace('5分钟', '<span class="red">5分钟</span>'));
+      } else {
+        self.$emailGuide.html(_i18n_error['4_2_3']);
+      }
+
+      self.beginEmailTimer();
     },
 
     checkMobileAuthCodeInput: function () {
@@ -239,10 +251,15 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
             self.$errorMobile.html(errorIcon + _i18n_error['4_2_4']);
           } else if ('SEND_AUTH_CODE_ERROR' === code) {
             self.$errorMobile.html(errorIcon + _i18n_error['4_2_5']);
+          } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL' === code) {
+            self.$errorMobile.html(errorIcon + _i18n_error['4_2_7']);
           }
 
+          self.resetMobileTimer();
         }
       });
+
+      self.showMobileTimer();
     },
 
     sendEmailRequest: function () {
@@ -262,9 +279,15 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
             self.$errorEmail.html(errorIcon + _i18n_error['4_2_4']);
           } else if ('SEND_AUTH_CODE_ERROR' === code) {
             self.$errorEmail.html(errorIcon + _i18n_error['4_2_5']);
+          } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL' === code) {
+            self.$errorEmail.html(errorIcon + _i18n_error['4_2_6']);
           }
+
+          self.resetEmailTimer();
         }
       });
+
+      self.showEmailTimer();
     },
 
     submit: function () {

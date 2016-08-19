@@ -37,16 +37,8 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         if (!self.checkNewMobileInput()) {
           return false;
         }
-        self.$btnFetchMobileCode.hide();
-        self.$btnFetchingMobileCode.show();
 
-        if (lang === 'zh_CN') {
-          self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
-        } else {
-          self.$mobileGuide.html(_i18n_error['4_2_2']);
-        }
         self.sendMobileRequest();
-        self.beginMobileTimer();
       });
 
 
@@ -62,6 +54,21 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         self.submit();
       });
 
+    },
+
+    showMobileTimer: function () {
+      var self = this;
+
+      self.$btnFetchMobileCode.hide();
+      self.$btnFetchingMobileCode.show();
+
+      if (lang === 'zh_CN') {
+        self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
+      } else {
+        self.$mobileGuide.html(_i18n_error['4_2_2']);
+      }
+
+      self.beginMobileTimer();
     },
 
     checkNewMobileInput: function () {
@@ -181,10 +188,18 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
           if ('MOBILE_HAS_BIND_TO_OTHER_USER' === code) {
             self.$errorNewMobile.html(errorIcon + _i18n_error['3_3_3']);
           } else if ('SEND_AUTH_CODE_ERROR' === code) {
-            self.$errorMobile.html(errorIcon + _i18n_error['4_2_5']);
+            self.$errorNewMobile.html(errorIcon + _i18n_error['4_2_5']);
+          } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL'  === code) {
+            self.$errorNewMobile.html(errorIcon + _i18n_error['4_2_7']);
+          } else if ('VAL_SAME_ERROR' === code) {
+            self.$errorNewMobile.html(errorIcon + _i18n_error['3_3_4']);
           }
+
+          self.resetMobileTimer();
         }
       });
+
+      self.showMobileTimer();
     },
 
     submit: function () {

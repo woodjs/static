@@ -37,16 +37,8 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         if (!self.checkNewEmailInput()) {
           return false;
         }
-        self.$btnFetchEmailCode.hide();
-        self.$btnFetchingEmailCode.show();
 
-        if (lang === 'zh_CN') {
-          self.$emailGuide.html(_i18n_error['4_2_3'].replace('5分钟', '<span class="red">5分钟</span>'));
-        } else {
-          self.$emailGuide.html(_i18n_error['4_2_3']);
-        }
         self.sendEmailRequest();
-        self.beginEmailTimer();
       });
 
 
@@ -62,6 +54,21 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         self.submit();
       });
 
+    },
+
+    showEmailTimer: function () {
+      var self = this;
+
+      self.$btnFetchEmailCode.hide();
+      self.$btnFetchingEmailCode.show();
+
+      if (lang === 'zh_CN') {
+        self.$emailGuide.html(_i18n_error['4_2_3'].replace('5分钟', '<span class="red">5分钟</span>'));
+      } else {
+        self.$emailGuide.html(_i18n_error['4_2_3']);
+      }
+
+      self.beginEmailTimer();
     },
 
     checkNewEmailInput: function () {
@@ -127,7 +134,6 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       return true;
     },
 
-
     checkAllInput: function () {
       var self = this;
 
@@ -181,10 +187,18 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
           if ('EMAIL_HAS_BIND_TO_OTHER_USER' === code) {
             self.$errorNewEmail.html(errorIcon + _i18n_error['2_2_1']);
           } else if ('SEND_AUTH_CODE_ERROR' === code) {
-            self.$errorEmail.html(errorIcon + _i18n_error['4_2_5']);
+            self.$errorNewEmail.html(errorIcon + _i18n_error['4_2_5']);
+          } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL' === code) {
+            self.$errorNewEmail.html(errorIcon + _i18n_error['4_2_6']);
+          } else if ('VAL_SAME_ERROR' === code) {
+            self.$errorNewEmail.html(errorIcon + _i18n_error['2_2_4']);
           }
+
+          self.resetEmailTimer();
         }
       });
+
+      self.showEmailTimer();
     },
 
     submit: function () {
@@ -205,7 +219,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
             if ('AUTH_CODE_ERROR' === code) {
               self.$errorEmail.html(errorIcon + _i18n_error['4_2_1']);
-            } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL'  === code) {
+            } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL' === code) {
               self.$errorEmail.html(errorIcon + _i18n_error['4_2_6']);
             } else if ('VAL_SAME_ERROR' === code) {
               self.$errorEmail.html(errorIcon + _i18n_error['2_2_4']);

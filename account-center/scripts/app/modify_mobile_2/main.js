@@ -34,17 +34,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       var self = this;
 
       self.$btnFetchMobileCode.on('click', function () {
-   
-        self.$btnFetchMobileCode.hide();
-        self.$btnFetchingMobileCode.show();
-
-        if (lang === 'zh_CN') {
-          self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
-        } else {
-          self.$mobileGuide.html(_i18n_error['4_2_2']);
-        }
         self.sendMobileRequest();
-        self.beginMobileTimer();
       });
 
       self.$inputMobileAuthCode.on('blur', function () {
@@ -55,6 +45,21 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         self.submit();
       });
 
+    },
+
+    showMobileTimer: function () {
+      var self = this;
+
+      self.$btnFetchMobileCode.hide();
+      self.$btnFetchingMobileCode.show();
+
+      if (lang === 'zh_CN') {
+        self.$mobileGuide.html(_i18n_error['4_2_2'].replace('60', '<span class="red">60</span>'));
+      } else {
+        self.$mobileGuide.html(_i18n_error['4_2_2']);
+      }
+
+      self.beginMobileTimer();
     },
 
     checkMobileAuthCodeInput: function () {
@@ -132,9 +137,15 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
           if ('SEND_AUTH_CODE_ERROR' === code) {
             self.$errorMobile.html(errorIcon + _i18n_error['4_2_5']);
+          } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL' === code) {
+            self.$errorMobile.html(errorIcon + _i18n_error['4_2_7']);
           }
+
+          self.resetMobileTimer();
         }
       });
+
+      self.showMobileTimer();
     },
 
     submit: function () {
