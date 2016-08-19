@@ -56,15 +56,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
         return false;
       } else {
-        var str = self.$inputOriginalPassword.val();
-
-        if (str.length > 20 || str.length < 8) {
-          self.$errorOriginalPassword.html(errorIcon + _i18n_error['4_3_3']);
-
-          return false;
-        } else {
-          self.$errorOriginalPassword.html('');
-        }
+        self.$errorOriginalPassword.html('');
       }
 
       return true;
