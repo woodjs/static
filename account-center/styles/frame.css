@@ -457,12 +457,18 @@ a {
   font-size: 12px;
   line-height: 18px;
 }
+.success-info a {
+  color: #130ad1;
+  text-decoration: underline;
+  margin-left: 2px;
+}
 
 .prompt-info {
   padding: 20px 30px 25px;
   font-size: 12px;
 }
 .prompt-info dt {
+  font-weight: bold;
   line-height: 24px;
   color: #353751;
 }
@@ -472,7 +478,7 @@ a {
   margin-right: 6px;
   vertical-align: text-bottom;
   position: relative;
-  top: -2px;
+  top: -1px;
   background: url(images/icons.png) -14px -59px no-repeat;
 }
 .prompt-info dd {

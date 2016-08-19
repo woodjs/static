@@ -11,6 +11,8 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
       self.buildElement();
       self.bindEvent();
+      self.originalMobileTime = self.$labelMobileTime.html();
+      self.originalEmailTime = self.$labelEmailTime.html();
     },
 
     buildElement: function () {
@@ -185,7 +187,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
       self.$btnFetchMobileCode.show();
       self.$btnFetchingMobileCode.hide();
-      self.$labelMobileTime.html('60');
+      self.$labelMobileTime.html(self.originalMobileTime);
       clearInterval(self.mobileInter);
     },
 
@@ -212,7 +214,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
       self.$btnFetchEmailCode.show();
       self.$btnFetchingEmailCode.hide();
-      self.$labelEmailTime.html('60');
+      self.$labelEmailTime.html(self.originalEmailTime);
 
       clearInterval(self.emailInter);
     },
@@ -280,6 +282,8 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
           failed: function (res) {
             var code = res.code;
             if ('AUTH_CODE_ERROR' === code) {
+              value === 'mobile' ? self.$errorMobile.html(errorIcon + _i18n_error['4_2_1']) : self.$errorEmail.html(errorIcon + _i18n_error['4_2_1']);
+            } else if ('SEND_ONLY_ONCE_IN_A_INTERVAL'  === code) {
               value === 'mobile' ? self.$errorMobile.html(errorIcon + _i18n_error['4_2_1']) : self.$errorEmail.html(errorIcon + _i18n_error['4_2_1']);
             }
           }

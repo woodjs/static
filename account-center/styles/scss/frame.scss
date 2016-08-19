@@ -435,6 +435,11 @@ a {
    line-height: 18px;
   }
  }
+ a{
+  color:$blueColor;
+  text-decoration: underline;
+  margin-left:2px;
+ }
 }
 
 .prompt-info{
@@ -447,9 +452,10 @@ a {
    margin-right:6px;
    vertical-align: text-bottom;
    position: relative;
-   top:-2px;
+   top:-1px;
    background: url(images/icons.png) -14px -59px no-repeat;
   }
+  font-weight: bold;
   line-height: 24px;
   color:$themeColor;
  }

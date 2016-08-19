@@ -15,7 +15,7 @@
   <script type="text/javascript" src="../scripts/local_config.js"></script>
   <script type="text/javascript">
     var pageConfig = {
-      pageCode: 'findPassword3',
+      pageCode: 'modifyEmail2',
       //isLocal: ${isLocal} TODO
       isLocal: true
     };
@@ -41,7 +41,9 @@
     <nav class="frame-nav">
       <dl>
         <dt>账号安全管理</dt>
-        <dd><a href="#" class="active">找回密码</a></dd>
+        <dd><a href="#">修改密码</a></dd>
+        <dd><a href="#"  class="active">修改绑定邮箱</a></dd>
+        <dd><a href="#">修改绑定手机</a></dd>
       </dl>
     </nav>
     <section class="frame-content">
@@ -50,23 +52,17 @@
           <dt>
             <span class="line"><label>1</label></span>
           </dt>
-          <dd>填写账户名</dd>
-        </dl>
-        <dl class="prev-step">
-          <dt>
-            <span class="line"><label>2</label></span>
-          </dt>
-          <dd>验证身份</dd>
+          <dd>验证密码</dd>
         </dl>
         <dl class="cur-step">
           <dt>
-            <span class="line"><label>3</label></span>
+            <span class="line"><label>2</label></span>
           </dt>
-          <dd>设置新密码</dd>
+          <dd>修改邮箱</dd>
         </dl>
         <dl class="last-step">
           <dt>
-            <span class="line"><label>4</label></span>
+            <span class="line"><label>3</label></span>
           </dt>
           <dd>完成</dd>
         </dl>
@@ -76,26 +72,36 @@
         <tbody>
 
         <tr>
-          <td>新密码：</td>
+          <td>原邮箱：</td>
           <td>
             <div class="input-line">
-              <input type="password" id="password" autocomplete="off" />
-              <span class="error-info" id="password-error"></span>
+              <span class="text-wrapper" id="original-email">1@qq.com</span>
             </div>
-            <!--控制渲染-->
-            <div class="guide-line" id="guide-password">8-20位，必须要要包含字母、数字和特殊字符（@，！，#，&）例如：<span class="blue">xie98@12</span></div>
-            <!--<div class="guide-line" id="guide-password">8-20位，必须要要包含字母、数字 ，例如：<span class="blue">xie982312</span></div>-->
+            <div class="guide-line"></div>
           </td>
         </tr>
 
         <tr>
-          <td>确认密码：</td>
+          <td>新邮箱：</td>
           <td>
             <div class="input-line">
-              <input type="password" id="repeat-password" autocomplete="off" />
-              <span class="error-info" id="repeat-password-error"></span>
+              <input type="text"  id="new-email" />
+              <span class="btn btn-send" id="fetch-email-auth-code">发送验证码</span>
+              <span class="btn btn-send-disabled" id="fetching-email-auth-code" style="display: none;">获取邮箱验证码(<label>300</label>s)</span>
+              <span class="error-info" id="new-email-error"></span>
             </div>
-            <div class="guide-line"></div>
+            <div class="guide-line" id="email-guide"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>验证码：</td>
+          <td>
+            <div class="input-line">
+              <input class="w-100" type="text"  id="email-auth-code" />
+              <span class="error-info" id="email-error"></span>
+            </div>
+            <div class="guide-line">请输入邮件中的验证码</div>
           </td>
         </tr>
 
@@ -110,6 +116,7 @@
         </tr>
         </tbody>
       </table>
+
     </section>
   </section>
 

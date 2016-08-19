@@ -69,7 +69,10 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
     checkIdentifyInput: function () {
       var self = this;
 
-      self.checkAccountInput();
+      if (!self.checkAccountInput()) {
+        return false;
+      }
+
       if (self.checkIsEmpty(self.$identifyInput)) {
 
         self.$identifyError.html(errorIcon + _i18n_error['4_1_2']);
@@ -95,7 +98,7 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
     checkAllInput: function () {
       var self = this;
 
-      return self.checkAccountInput() && self.checkIdentifyInput();
+      return self.checkIdentifyInput();
     },
 
     submit: function () {
@@ -119,6 +122,8 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
             } else if ('USER_NOT_EXISTS' === code) {
               self.$accountError.html(errorIcon + _i18n_error['4_1_3']);
             }
+
+            self.$btnInvisibility.click();
           }
         });
       }
