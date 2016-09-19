@@ -45,6 +45,13 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         self.submit();
       });
 
+      $('input').on('keypress', function (e) {
+        if (e.keyCode === 13) {
+          self.$btnSubmit.click();
+          $(this).blur();
+          e.preventDefault();
+        }
+      });
     },
 
     checkOriginalPasswordInput: function () {

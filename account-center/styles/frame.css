@@ -261,6 +261,9 @@ a {
 .table-form .blue {
   color: #130ad1;
 }
+.table-form .security-hl {
+  color: #130ad1;
+}
 .table-form .input-line {
   zoom: 1;
 }
