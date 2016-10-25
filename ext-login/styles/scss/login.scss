@@ -49,7 +49,7 @@ a {
    margin:0 auto;
    width:86px;
    height:100px;
-   background:  url(images/logo_bg.png) center center no-repeat;
+   background:  url(images/login_icons.png) 0 0 no-repeat;
    vertical-align: middle;
    text-align: center;
    line-height: 86px;
@@ -67,7 +67,7 @@ a {
   text-align: center;
   span{
    padding-left:22px;
-   background: url(images/error.png) left center no-repeat;
+   background: url(images/login_icons.png) 0 -204px no-repeat;
   }
  }
  .input-box{
@@ -99,12 +99,12 @@ a {
   &.username{
    margin-top:6px;
    .icon{
-    background: url(images/user.png) center center no-repeat;
+    background: url(images/login_icons.png) 0 -100px no-repeat;
    }
   }
   &.password{
    .icon{
-    background: url(images/password.png) center center no-repeat;
+    background: url(images/login_icons.png) 0 -136px no-repeat;
    }
   }
  }
@@ -113,17 +113,17 @@ a {
   font-size:12px;
   color: $iconColor;
   font-style: normal;
-  &.selected{
-   .icon{
-    background: url(images/selected.png) center center no-repeat;
-   }
-  }
   .icon{
    float:left;
    display: inline-block;
    padding:8px;
    vertical-align: middle;
-   background: url(images/checkbox.png) center center no-repeat;
+   background: url(images/login_icons.png) 0 -172px  no-repeat;
+  }
+  &.selected{
+   .icon{
+    background: url(images/login_icons.png) 0 -188px no-repeat;
+   }
   }
   label{
    float:left;
