@@ -1,0 +1,279 @@
+body, div, ul, dl, ol, dt, dd, li, p, a, label, span, i, img, input, textarea, header, footer, article, section, nav, aside, figure, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+ul, dl, ol {
+  list-style: none;
+}
+
+input, textarea, a {
+  outline: none;
+}
+
+header, footer, article, section, nav, aside, figure {
+  display: block;
+}
+
+body {
+  font-size: 14px;
+  min-width: 1200px;
+  font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body * {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.wrapper-home {
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  min-width: 1010px;
+  background: #EEF1F8;
+}
+.wrapper-home .block-line {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.wrapper-home .wrapper-panel {
+  padding-left: 10px;
+}
+.wrapper-home .chart-holder {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-home .color-black {
+  color: #000 !important;
+}
+.wrapper-home .no-padding {
+  padding: 0 !important;
+}
+.wrapper-home .col {
+  float: left;
+  height: 100%;
+  padding-left: 10px;
+}
+.wrapper-home .col-1 {
+  width: 25%;
+}
+.wrapper-home .col-2 {
+  width: 50%;
+}
+.wrapper-home .col-3 {
+  width: 75%;
+}
+.wrapper-home .col-4 {
+  width: 100%;
+}
+.wrapper-home .dl-1 dl {
+  width: 100%;
+}
+.wrapper-home .dl-2 dl {
+  width: 50%;
+}
+.wrapper-home .dl-3 dl {
+  width: 33%;
+}
+.wrapper-home .dl-4 dl {
+  width: 25%;
+}
+.wrapper-home .panel {
+  background: #fff;
+  border: 1px solid #dee6ed;
+  overflow: hidden;
+  height: 100%;
+}
+.wrapper-home .panel .panel-header {
+  height: 31px;
+  border-bottom: 1px solid #dee6ed;
+  font-size: 14px;
+  color: #6f787f;
+  padding: 5px 8px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.wrapper-home .panel .panel-header span {
+  display: inline-block;
+  font-weight: bold;
+  border-left: 2px solid #00b172;
+  height: 16px;
+  line-height: 16px;
+  padding: 0 0 0 4px;
+}
+.wrapper-home .panel .panel-content {
+  overflow: hidden;
+  padding: 24px 0 28px;
+}
+.wrapper-home .panel .panel-content dl:first-child {
+  border: none;
+}
+.wrapper-home .panel .panel-content dl {
+  float: left;
+  border-left: 2px solid #F0F2F6;
+  padding: 0 16px;
+  font-size: 12px;
+}
+.wrapper-home .panel .panel-content dt {
+  height: 16px;
+  line-height: 16px;
+}
+.wrapper-home .panel .panel-content dt i {
+  font-size: 6px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+.wrapper-home .panel .panel-content dd {
+  line-height: 26px;
+  margin-top: 10px;
+}
+.wrapper-home .panel .panel-content dd label {
+  font-size: 17px;
+  font-weight: bold;
+}
+.wrapper-home .panel .panel-content dd span {
+  margin-left: 8px;
+}
+.wrapper-home .panel .panel-content .box-progress {
+  padding: 0 16px 15px 16px;
+  font-size: 12px;
+}
+.wrapper-home .panel .panel-content .box-progress .progress-title {
+  height: 29px;
+  margin-top: 20px;
+  line-height: 28px;
+  border-bottom: 1px solid #eaedf1;
+}
+.wrapper-home .panel .panel-content .box-progress .progress-title i {
+  font-size: 6px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+  color: #8A6AD5;
+}
+.wrapper-home .panel .panel-content .box-progress ul {
+  margin-top: 15px;
+}
+.wrapper-home .panel .panel-content .box-progress ul li {
+  display: block;
+  width: 100%;
+}
+.wrapper-home .panel .panel-content .box-progress ul li:first-child {
+  line-height: 26px;
+  height: 26px;
+}
+.wrapper-home .panel .panel-content .left {
+  float: left;
+}
+.wrapper-home .panel .panel-content .left i {
+  font-size: 6px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+.wrapper-home .panel .panel-content .right {
+  float: right;
+}
+.wrapper-home .panel .panel-content .right .number {
+  margin-right: 6px;
+}
+.wrapper-home .panel .panel-content .progress-wrapper {
+  height: 4px;
+}
+.wrapper-home .panel .panel-content .progress-wrapper .progress-bar-bg {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background: #EEF1F7;
+}
+.wrapper-home .panel .panel-content .progress-wrapper .progress-bar {
+  position: absolute;
+  width: 1%;
+  height: 4px;
+  left: 0;
+  top: 0;
+  background: #8A6AD5;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.wrapper-home .panel .panel-content .no-progress {
+  margin-top: 30px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.wrapper-home .panel .panel-content .no-progress i {
+  color: #F5B300;
+  margin-right: 8px;
+  font-size: 15px;
+}
+.wrapper-home .panel-blue .panel-header span {
+  border-left: 2px solid #05C1C7;
+}
+.wrapper-home .panel-blue dd label {
+  color: #05C1C7;
+}
+.wrapper-home .progress-blue .number {
+  color: #05C1C7;
+}
+.wrapper-home .progress-blue .progress-bar {
+  background: #05C1C7 !important;
+}
+.wrapper-home .panel-green .panel-header span {
+  border-left: 2px solid #00b172;
+}
+.wrapper-home .panel-green dd label {
+  color: #00b172;
+}
+.wrapper-home .progress-green .number {
+  color: #00b172;
+}
+.wrapper-home .progress-green .progress-bar {
+  background: #00b172 !important;
+}
+.wrapper-home .panel-dark-blue .panel-header span {
+  border-left: 2px solid #8A6AD5;
+}
+.wrapper-home .panel-dark-blue dd label {
+  color: #8A6AD5;
+}
+.wrapper-home .progress-dark-blue .number {
+  color: #8A6AD5;
+}
+.wrapper-home .progress-dark-blue .progress-bar {
+  background: #8A6AD5 !important;
+}
+.wrapper-home .panel-yellow .panel-header span {
+  border-left: 2px solid #F5B300;
+}
+.wrapper-home .panel-yellow dd label {
+  color: #F5B300;
+}
+.wrapper-home .progress-yellow .number {
+  color: #F5B300;
+}
+.wrapper-home .progress-yellow .progress-bar {
+  background: #F5B300 !important;
+}
+.wrapper-home .panel-red .panel-header span {
+  border-left: 2px solid #E75038;
+}
+.wrapper-home .panel-red dd label {
+  color: #E75038;
+}
+.wrapper-home .progress-red .number {
+  color: #E75038;
+}
+.wrapper-home .progress-red .progress-bar {
+  background: #E75038 !important;
+}
+
+/*# sourceMappingURL=home.css.map */

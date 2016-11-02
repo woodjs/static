@@ -1,0 +1,227 @@
+@import "./core/reset";
+@import "./core/base";
+@import "./core/config";
+
+
+body {
+ font-size: 14px;
+ min-width: 1200px;
+ font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+ @include boxSizing(border-box);
+ position: relative;
+}
+body * {
+ @include boxSizing(inherit);
+}
+.wrapper-home{
+ width: 100%;
+ padding:10px 10px 10px 0;
+ min-width:1010px;
+ background: $homeBgColor;
+ .block-line{
+  margin-bottom:10px;
+  overflow: hidden;
+ }
+ .wrapper-panel{
+  padding-left:10px;
+ }
+ .chart-holder{
+  width: 100%;
+  height: 100%;
+ }
+ .color-black{
+  color:$homeBoxBlack !important;
+ }
+ .no-padding{
+  padding: 0 !important;
+ }
+ .col{
+  float:left;
+  height:100%;
+  padding-left:10px;
+ }
+ .col-1{
+  width: 25%;
+ }
+ .col-2{
+  width: 50%;
+ }
+ .col-3{
+  width: 75%;
+ }
+ .col-4{
+  width: 100%;
+ }
+ .dl-1{
+  dl{
+   width: 100%;
+  }
+ }
+ .dl-2{
+  dl{
+   width: 50%;
+  }
+ }
+ .dl-3{
+  dl{
+   width: 33%;
+  }
+ }
+ .dl-4{
+  dl{
+   width: 25%;
+  }
+ }
+ .panel{
+  background: #fff;
+  border:1px solid $homeBoxBdColor;
+  overflow: hidden;
+  height:100%;
+  .panel-header{
+   height:31px;
+   border-bottom:1px solid $homeBoxBdColor;
+   font-size:14px;
+   color:$homeBoxHeaderColor;
+   padding:5px 8px;
+   line-height: 20px;
+   font-weight: 500;
+   span{
+    display: inline-block;
+    font-weight: bold;
+    border-left: 2px solid $homeBoxGreen;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 0 0 4px;
+   }
+  }
+  .panel-content{
+   overflow: hidden;
+   padding: 24px 0 28px;
+   dl:first-child{
+    border: none;
+   }
+   dl{
+    float:left;
+    border-left:2px solid $homeBoxItemBdColor;
+    padding:0 16px;
+    font-size:12px;
+   }
+   dt{
+    height: 16px;
+    line-height:16px;
+    i{
+     font-size:6px;
+     margin-right:5px;
+     position: relative;
+     top:-1px;
+    }
+   }
+   dd{
+    line-height: 26px;
+    margin-top:10px;
+    label{
+     font-size:17px;
+     font-weight: bold;
+    }
+    span{
+     margin-left:8px;
+    }
+   }
+   .box-progress{
+    padding:0 16px 15px 16px;
+    font-size:12px;
+    .progress-title{
+     height:29px;
+     margin-top:20px;
+     line-height: 28px;
+     border-bottom: 1px solid $homeBoxHeaderBdColor;
+     i{
+      font-size:6px;
+      margin-right:5px;
+      position: relative;
+      top:-1px;
+      color: $homeBoxDarkBlue;
+     }
+    }
+    ul{
+     margin-top:15px;
+     li{
+      display: block;
+      width: 100%;
+      &:first-child{
+       line-height: 26px;
+       height:26px;
+      }
+     }
+    }
+   }
+   .left{
+    float:left;
+    i{
+     font-size:6px;
+     margin-right:5px;
+     position: relative;
+     top:-1px;
+    }
+   }
+   .right{
+    float:right;
+    .number{
+     margin-right:6px;
+    }
+   }
+   .progress-wrapper{
+    height:4px;
+    .progress-bar-bg{
+     position: relative;
+     height:4px;
+     width:100%;
+     background: $homeProgressBarBgColor;
+    }
+    .progress-bar{
+     position: absolute;
+     width:1%;
+     height:4px;
+     left:0;
+     top:0;
+     background: $homeBoxDarkBlue;
+     @include transition(width .3s ease-in-out);
+    }
+   }
+   .no-progress{
+    margin-top:30px;
+    @include setHeightGroup(20px);
+    text-align: center;
+    i{
+     color:$homeBoxYellow;
+     margin-right:8px;
+     font-size:15px;
+    }
+   }
+  }
+ }
+
+ $colors: (blue: $homeBoxBlue, green: $homeBoxGreen, dark-blue: $homeBoxDarkBlue, yellow: $homeBoxYellow, red: $homeBoxRed);
+ @each $color, $value in $colors{
+  .panel-#{$color}{
+   .panel-header{
+    span{
+     border-left: 2px solid $value;
+    }
+   }
+   dd{
+    label{
+     color: $value;
+    }
+   }
+  }
+  .progress-#{$color}{
+   .number{
+    color: $value;
+   }
+   .progress-bar{
+    background: $value !important;
+   }
+  }
+ }
+}
