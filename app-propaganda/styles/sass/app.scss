@@ -1,0 +1,383 @@
+@import "./common/reset";
+@import "./common/base";
+@import "./common/config";
+
+html {
+ -webkit-text-size-adjust: none;
+ text-size-adjust: none;
+ font-size: 10px;
+ -webkit-overflow-scrolling: touch;
+}
+
+@media only screen and (min-width: 750px) {
+ html {
+  font-size: 20px !important;
+  .block-step {
+   .icon-ball {
+    background: url(images/ball@2x.png) center center no-repeat !important;
+   }
+  }
+  .block-footer {
+   .phone {
+    background: url(images/phone@2x.png) left top no-repeat !important;
+   }
+   .qq {
+    background: url(images/qq@2x.png) left top no-repeat !important;
+   }
+  }
+  .block-module {
+   .icon-circle {
+    background: url(images/circle@2x.png) left center no-repeat;
+   }
+  }
+ }
+}
+
+body {
+ font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+ color: $fontColor;
+ font-size: 1.3rem;
+ @include boxSizing(border-box);
+ -webkit-overflow-scrolling: touch;
+ background: $bgColor;
+ @include linearGradient($bodyBgBeginColor, $bodyBgEndColor);
+}
+
+a, input, textarea, .btn {
+ -webkit-tap-highlight-color: rgba(1, 122, 204, 0.5);
+}
+
+a {
+ color: $fontColor;
+ text-decoration: none;
+}
+
+.btn {
+ display: inline-block;
+}
+
+.icon {
+ display: inline-block;
+}
+
+.container {
+ min-width: 350px;
+ max-width: 768px;
+ padding-bottom: 2.4rem;
+ margin: 0 auto;
+ overflow: auto;
+ background: $bgColor;
+ @include linearGradient($bodyBgBeginColor, $bodyBgEndColor);
+}
+
+.block-header {
+ padding: 2.5rem 1.5rem 0;
+ line-height: 2rem;
+
+ .username {
+  background: $usernameBgColor;
+  display: inline-block;
+  @include setHeightGroup(2rem);
+  padding: 0 1rem;
+  margin: 0 .4rem;
+ }
+}
+
+.block-step {
+ margin-top: .6rem;
+ padding: 0 1rem;
+ position: relative;
+
+ .line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: .1rem;
+  height: 100%;
+  z-index: 0;
+  left: 2.2rem;
+  border-left: .1rem dashed #fff;
+ }
+
+ dt {
+  @include setHeightGroup(2rem);
+  padding: .2rem 0 .2rem 3rem;
+  position: relative;
+  text-align: center;
+
+  .icon-ball {
+   width: 2.4rem;
+   height: 2.4rem;
+   text-align: center;
+   line-height: 2.4rem;
+   font-weight: bolder;
+   background: url(images/ball@1x.png) center center no-repeat;
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: 10;
+  }
+ }
+
+ .qrcode-wrapper {
+  padding: 2rem 0;
+ }
+
+ .qrcode {
+  display: block;
+  width: 21.5rem;
+  height: 21.5rem;
+  margin: 0 auto;
+  vertical-align: top;
+ }
+
+ .popularize-wrapper {
+  padding: 1.5rem 0 8.5rem;
+  position: relative;
+
+  .popularize-title {
+   font-size: 1.7rem;
+   text-align: center;
+   line-height: 2.6rem;
+  }
+
+  .popularize-code-wrapper {
+   padding-top: .8rem;
+   text-align: center;
+  }
+
+  .popularize-code {
+   padding: 0 1rem;
+   font-size: 1.8rem;
+   font-weight: bolder;
+   @include setHeightGroup(3.6rem);
+   display: inline-block;
+   background: $codeBgEndColor;
+   @include linearGradient($codeBgBeginColor, $codeBgEndColor, left-right);
+  }
+
+  .activity {
+   position: absolute;
+   right: -1rem;
+   bottom: .5rem;
+   z-index: 10;
+   width: 8.7rem;
+   height: 11.8rem;
+  }
+ }
+}
+
+.block-main-img {
+ margin-top: 6rem;
+ img {
+  display: block;
+  vertical-align: top;
+  height: 17.5rem;
+  margin: 0 auto;
+ }
+}
+
+.block-main-intro {
+ padding: 0 1.5rem;
+ margin-top: 3.8rem;
+ line-height: 2rem;
+ text-indent: 2em;
+}
+
+.block-module {
+ dt{
+  position: relative;
+  font-weight: bold;
+ }
+ .icon-circle {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left:0;
+  background: url(images/circle@1x.png) left center no-repeat;
+  z-index: 10;
+ }
+}
+
+.block-module-1 {
+ margin-top: 1.8rem;
+ position: relative;
+ height: 25.9rem;
+
+ .left-wrapper {
+  width: 16rem;
+  height: 25.9rem;
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  z-index: 10;
+
+  img {
+   display: block;
+   width: 16rem;
+   height: 25.9rem;
+   vertical-align: top;
+  }
+ }
+
+ .right-wrapper {
+  position: absolute;
+  right: 0;
+  width: 19.3rem;
+  height: 25.9rem;
+  top: 0;
+  z-index: 15;
+
+  img {
+   display: block;
+   width: 19.3rem;
+   height: 13.6rem;
+   vertical-align: top;
+   margin-top: 2rem;
+  }
+
+  dl {
+   margin-top: .5rem;
+   padding: 0 3rem;
+
+   dt {
+    padding-left: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+   }
+
+   dd {
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+   }
+  }
+ }
+}
+
+.block-module-2 {
+ margin-top: .5rem;
+ position: relative;
+ height: 13.6rem;
+
+ .left-wrapper {
+  width: 15.5rem;
+  height: 13.6rem;
+  position: absolute;
+  left: 2.2rem;
+  top: 0;
+  z-index: 15;
+  dl {
+   margin-top: 3.5rem;
+
+   dt {
+    padding-left: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+   }
+
+   dd {
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+   }
+  }
+ }
+
+ .right-wrapper {
+  position: absolute;
+  right: 0;
+  width: 19.3rem;
+  height: 13.6rem;
+  top: 0;
+  z-index: 10;
+  img {
+   display: block;
+   width: 19.3rem;
+   height: 13.6rem;
+   vertical-align: top;
+  }
+ }
+}
+
+.block-module-3 {
+ margin-top: 1rem;
+ position: relative;
+ height: 25.9rem;
+
+ .left-wrapper {
+  position: absolute;
+  left: 0;
+  width: 19.3rem;
+  height: 25.9rem;
+  top: 0;
+  z-index: 15;
+
+  img {
+   display: block;
+   width: 19.3rem;
+   height: 13.6rem;
+   vertical-align: top;
+   margin-top: 3rem;
+  }
+
+  dl {
+   margin-top: .5rem;
+   padding: 0 3rem;
+
+   dt {
+    padding-left: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+   }
+
+   dd {
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+   }
+  }
+ }
+
+ .right-wrapper {
+
+  width: 16rem;
+  height: 25.9rem;
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  z-index: 10;
+
+  img {
+   display: block;
+   width: 16rem;
+   height: 25.9rem;
+   vertical-align: top;
+  }
+ }
+}
+
+.block-footer {
+ margin-top: 1.5rem;
+ padding: 0 1.5rem;
+
+ li {
+  padding: .4rem 0;
+  text-align: center;
+
+  .phone {
+   background: url(images/phone@1x.png) left top no-repeat;
+  }
+
+  .qq {
+   background: url(images/qq@1x.png) left top no-repeat;
+  }
+
+  span {
+   display: inline-block;
+   min-height: 1.8rem;
+   line-height: 1.8rem;
+   padding-left: 3rem;
+  }
+ }
+}

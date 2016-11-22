@@ -1,0 +1,93 @@
+@mixin setHeightGroup($height) {
+ height: $height;
+ line-height: $height;
+}
+
+@mixin boxShadow($prop...) {
+ -webkit-box-shadow: $prop;
+ box-shadow: $prop;
+}
+
+@mixin boxSizing($prop) {
+ -webkit-box-sizing: $prop;
+ box-sizing: $prop;
+}
+
+@mixin borderRadius($prop) {
+ -webkit-border-radius: $prop;
+ border-radius: $prop;
+}
+
+@mixin opacity($prop) {
+ opacity: $prop;
+}
+
+@mixin transition($prop...) { // ie10+
+ -webkit-transition: $prop;
+ transition: $prop;
+}
+
+@mixin transform($prop...) {
+ -webkit-transform: $prop;
+ transform: $prop;
+}
+
+@mixin inputPlaceholderColor($color, $fontSize: 12px) {
+ input::-webkit-input-placeholder {
+  color: $color;
+  font-size: $fontSize;
+ }
+}
+
+@mixin selection($bgColor, $color) {
+ ::selection {
+  background: $bgColor;
+  color: $color;
+ }
+}
+
+@mixin linearGradient($beginColor: #f9f9f9, $endColor: #eaeaea, $direction: top-bottom) {
+ @if $direction == top-bottom {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$beginColor), color-stop(100%,$endColor));  // Chrome,Safari4+
+  background: -webkit-linear-gradient(top,  $beginColor 0%,$endColor 100%);  // Chrome10+,Safari5.1+
+  background: linear-gradient(to bottom,  $beginColor 0%,$endColor 100%);  // W3C
+ } @else if $direction == left-right {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$beginColor), color-stop(100%,$endColor));  // Chrome,Safari4+
+  background: -webkit-linear-gradient(left,  $beginColor 0%,$endColor 100%);  // Chrome10+,Safari5.1+
+  background: linear-gradient(to right,  $beginColor 0%,$endColor 100%);  // W3C
+ }
+}
+
+$prefixList: '-webkit-' '';
+@mixin createAnimation($name, $duration: 1s, $func: ease-in-out, $delay: 0, $count: infinite, $direction: normal, $state: running, $mode: none) { // ie10+
+ @each $prefix in $prefixList {
+  #{$prefix}animation-name: $name;
+  #{$prefix}animation-duration: $duration;
+  #{$prefix}animation-timing-function: $func;
+  #{$prefix}animation-delay: $delay;
+  #{$prefix}animation-iteration-count: $count;
+  #{$prefix}animation-direction: $direction;
+  #{$prefix}animation-play-state: $state;
+  #{$prefix}animation-fill-mode: $mode;
+ }
+}
+
+@mixin createKeyframes($name) { // ie10+
+ @-webkit-keyframes #{$name} {
+  @content;
+ }
+ @keyframes #{$name} {
+  @content;
+ }
+}
+
+%textOverflowEllipsis {
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+
+%borderBox {
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
