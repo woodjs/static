@@ -10,6 +10,7 @@ body {
  @include boxSizing(border-box);
  position: relative;
 }
+
 body * {
  @include boxSizing(inherit);
 }
