@@ -152,12 +152,16 @@ table {
   font-size: 5px;
 }
 .frame-top-line .block-func .lang-list-wrapper {
+  display: none;
   position: absolute;
   top: 55px;
   width: 94px;
   left: 50%;
   margin-left: -47px;
   z-index: 100;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  animation-duration: 0.3s;
 }
 .frame-top-line .block-func .lang-list-wrapper ul {
   padding: 2px;
@@ -193,11 +197,15 @@ table {
   background: #015C92;
 }
 .frame-top-line .block-func .setting-wrapper {
+  display: none;
   position: absolute;
   top: 55px;
   min-width: 400px;
   right: -20px;
   z-index: 100;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  animation-duration: 0.3s;
 }
 .frame-top-line .block-func .setting-wrapper .block-setting {
   position: relative;
@@ -572,12 +580,18 @@ table {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .module-content .block-products table a:hover {
   background: #E4F6FA;
+}
+.module-content .block-products table a:hover img {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 .module-content .block-products table a img {
   position: absolute;
@@ -585,6 +599,13 @@ table {
   top: 10px;
   width: 60px;
   height: 60px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .module-content .block-products table a dt {
   color: #01A3DA;

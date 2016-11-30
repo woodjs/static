@@ -12,23 +12,49 @@ require(['globalConfig', 'jquery', 'ajax', 'jqPlaceHolder', 'json2'], function (
     buildElement: function () {
       var self = this;
 
-      self.$boxLang = $('#box-lang');
-      self.$langList = $('#lang-list');
+      self.$btnLangList = $('#btn-lang-list');
+      self.$wrapperLangList = $('#wrapper-lang-list');
+      self.$btnSetting = $('#btn-setting');
+      self.$wrapperSetting = $('#wrapper-setting');
     },
 
     bindEvent: function () {
       var self = this;
 
-      self.$boxLang.on({
+      self.$btnLangList.on({
         mouseenter: function () {
-          self.$langList.fadeIn(0);
+          self.$wrapperLangList.show().animateCss('fadeInDown');
         },
         mouseleave: function () {
-          self.$langList.fadeOut(0);
+          self.$wrapperLangList.animateCss('fadeOutUp', function () {
+            self.$wrapperLangList.hide();
+          });
+        }
+      });
+
+      self.$btnSetting.on({
+        mouseenter: function () {
+          self.$wrapperSetting.show().animateCss('fadeInDown');
+        },
+        mouseleave: function () {
+          self.$wrapperSetting.animateCss('fadeOutUp', function () {
+            self.$wrapperSetting.hide();
+          });
         }
       });
     }
   };
 
   navigator.init();
+
+  $.fn.extend({
+    animateCss: function (animationName, callback) {
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+
+        callback && callback();
+      });
+    }
+  });
 });

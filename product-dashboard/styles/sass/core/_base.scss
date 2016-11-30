@@ -79,6 +79,12 @@ $prefixList: '-webkit-' '-moz-' '';
  }
 }
 
+@mixin setAnimationDuration($duration) {
+ @each $prefix in $prefixList {
+  #{$prefix}animation-duration: $duration;
+ }
+}
+
 @mixin createKeyframes($name) { // ie10+
  @-webkit-keyframes #{$name} {
   @content;
