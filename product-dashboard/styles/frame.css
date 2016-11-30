@@ -258,6 +258,7 @@ table {
 .frame-top-line .block-func .setting-wrapper .table-wrapper td {
   padding: 7px 30px 7px 0;
   width: 33%;
+  vertical-align: top;
 }
 .frame-top-line .block-func .setting-wrapper .table-wrapper td:first-child {
   width: 34%;
@@ -565,6 +566,8 @@ table {
 .module-content .block-products table td {
   padding: 10px 20px 10px 0;
   width: 33%;
+  height: 100%;
+  vertical-align: top;
 }
 .module-content .block-products table td:first-child {
   width: 34%;
