@@ -1,0 +1,593 @@
+@import "./core/base";
+@import "./core/reset";
+@import "./core/config";
+
+html, body {
+ height:100%;
+ min-height: 500px;
+}
+body {
+ font-size: 14px;
+ min-width: 1000px;
+ font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+ background: url(images/bg_blue.png) left top repeat;
+ color: $font-color;
+
+ &.offline{
+  background: url(images/bg_white.png) left top repeat;
+ }
+}
+
+a {
+ color: $font-color;
+ text-decoration: none;
+}
+
+.btn {
+ cursor: pointer;
+}
+
+.m-r-30{
+ margin-right:30px;
+}
+
+.m-r-50{
+ margin-right:50px;
+}
+
+.p-l-180{
+ padding-left: 180px;
+}
+
+.icon {
+ display: inline-block;
+}
+
+table{
+ table-layout:fixed;
+}
+
+.frame-top-line {
+ height:53px;
+ background: #fff;
+ position:fixed;
+ top:0;
+ left:0;
+ width: 100%;
+ border-bottom:3px solid $top-line-color;
+ z-index: 100;
+
+ .block-logo{
+  height:50px;
+  margin: 0 20px;
+  float:left;
+
+  span{
+   color:$logo-font-color;
+   font-size:18px;
+   margin-left:12px;
+   line-height: 50px;
+  }
+ }
+
+ .block-func{
+  height:50px;
+  margin-right:15px;
+  float:right;
+  text-align: right;
+
+  .btn-wrapper{
+   padding:8px 0;
+   margin-right:30px;
+   display: inline-block;
+   vertical-align: middle;
+
+   .btn{
+    display: inline-block;
+    height:34px;
+    line-height: 30px;
+    background: #fff;
+    padding: 0 15px;
+    border:2px solid $theme-color;
+    @include borderRadius(5px);
+    font-size:14px;
+    color: $theme-color;
+    @include transition(all .3s ease-in-out);
+
+    &:hover, &.active{
+     background: $theme-color;
+     color: #fff;
+    }
+   }
+
+   i{
+    font-size:16px;
+    margin-right:10px;
+    vertical-align: middle;
+   }
+  }
+
+  .list-wrapper{
+   margin-right:20px;
+   display: inline-block;
+   vertical-align: middle;
+   position:relative;
+   .btn{
+    display: block;
+    font-size:14px;
+    color: $theme-color;
+    @include setHeightGroup(50px);
+   }
+   i{
+    font-size:16px;
+    margin-right:10px;
+    vertical-align: middle;
+   }
+   .arrow{
+    margin-left:8px;
+    margin-right:0;
+    font-size:5px;
+   }
+  }
+
+  .lang-list-wrapper{
+   position: absolute;
+   top:55px;
+   width:94px;
+   left:50%;
+   margin-left:-47px;
+   z-index: 100;
+
+   ul{
+    padding:2px;
+    background: #fff;
+    @include borderRadius(5px);
+
+    li{
+     width:100%;
+     &:first-child{
+      margin-bottom: 2px;
+     }
+    }
+
+    a{
+     display: block;
+     width: 100%;
+     color: $theme-color;
+     background: #fff;
+     font-size:12px;
+     text-align: center;
+     @include borderRadius(5px);
+     @include setHeightGroup(28px);
+     @include transition(all .3s ease-in-out);
+
+     &:hover,&.active{
+      color:#fff;
+      background: $theme-color;
+     }
+    }
+   }
+  }
+
+  .setting-wrapper{
+   position: absolute;
+   top:55px;
+   min-width:400px;
+   right:-20px;
+   z-index: 100;
+
+   .block-setting{
+    position: relative;
+    padding: 10px 15px;
+    background: #fff;
+    @include borderRadius(5px);
+
+    &:before{
+     content: '';
+     position: absolute;
+     top: -10px;
+     right:45px;
+     border: 10px solid #fff;
+     border-top:0;
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
+    }
+
+    p{
+     text-align: left;
+     margin-top:10px;
+     font-size:12px;
+     line-height: 22px;
+     color:$lightest-font-color;
+     span{
+      margin-right:30px;
+      color: $theme-font-color;
+     }
+    }
+   }
+
+   h3{
+    color:$theme-font-color;
+    line-height: 30px;
+    text-align: center;
+    font-size:16px;
+    font-weight: normal;
+    height:31px;
+    border-bottom: 1px dotted $bd-color;
+   }
+
+   .options{
+    margin-top:10px;
+    text-align: left;
+
+    h4{
+     font-size:14px;
+     line-height: 24px;
+     font-weight: normal;
+     color: $theme-font-color;
+    }
+   }
+
+   .table-wrapper{
+
+    td{
+     padding:7px 30px 7px 0;
+     width: 33%;
+
+     &:first-child{
+      width: 34%;
+     }
+
+     div {
+      padding-left:23px;
+      position: relative;
+      line-height: 18px;
+      font-size:12px;
+      color:$lighter-font-color;
+      cursor: pointer;
+      white-space: nowrap;
+     }
+
+     i{
+      width:18px;
+      height:18px;
+      font-size:16px;
+      position: absolute;
+      left:0;
+      top:0;
+      margin-right: 0;
+     }
+
+     .icon-checked-2{
+      color: $checked-color;
+     }
+
+     .icon-unchecked-2{
+      color: $unchecked-color;
+     }
+    }
+   }
+
+   .btn-line{
+    margin-top: 20px;
+    text-align: center;
+
+    .btn{
+     display: inline-block;
+     margin:0 19px;
+     padding:0 30px;
+     height: 34px;
+     line-height: 30px;
+     border:2px solid $theme-color;
+     color: $theme-color;
+     @include borderRadius(5px);
+     @include transition(all .3s ease-in-out);
+     vertical-align: middle;
+     &:hover,&.active{
+      background: $theme-color;
+      color:#fff;
+     }
+    }
+   }
+  }
+ }
+
+ .logo{
+   float:left;
+   display: inline-block;
+   width:140px;
+   height:50px;
+   background: url(images/logo.png) left center no-repeat;
+ }
+}
+
+.frame-nav{
+ position: fixed;
+ left:0;
+ top: 53px;
+ bottom: 0;
+ width:180px;
+ background: $aside-bg-color;
+ z-index: 95;
+ padding:0 10px;
+ h2{
+  @include setHeightGroup(54px);
+  color: $nav-title-color;
+  font-size:16px;
+  padding:0 0 0 10px;
+  font-weight: normal;
+  i{
+   float:right;
+   color: $nav-icon-color;
+  }
+ }
+ .nav-grade-2{
+  padding-left:10px;
+ }
+ .link{
+  display: block;
+  @include borderRadius(5px);
+  font-size:12px;
+  line-height: 22px;
+  padding:3px 0 3px 36px;
+  position: relative;
+  margin-bottom: 2px;
+  color: $nav-font-color;
+  @include transition(all .3s ease-in-out);
+
+  &:hover, &.active{
+   background: $nav-hover-bg-color;
+   color: #fff;
+
+   i{
+    color: #fff;
+   }
+  }
+
+  i{
+   color:$nav-icon-color;
+   font-size:14px;
+   position: absolute;
+   left:12px;
+   top: 5px;
+  }
+
+  .icon-arrow-left{
+   font-size:6px;
+  }
+
+ }
+}
+
+.frame-main-body{
+  padding-top:53px;
+  height:100%;
+}
+
+.module-login{
+ width: 100%;
+ height: 100%;
+
+ .block-banner{
+  width: 100%;
+  background: $banner-bg-color url(images/banner.png) center center no-repeat;
+  height: 50%;
+  position: relative;
+  text-align: center;
+
+  &:before{
+   content: '';
+   display: inline-block;
+   height:100%;
+   vertical-align: middle;
+   margin-right:-0.25em;
+  }
+
+  .banner-info{
+   font-size:36px;
+   height:72px;
+   line-height: 72px;
+   display: inline-block;
+   color:#fff;
+   background: $banner-info-bg-color;
+   padding: 0 25px;
+   vertical-align: middle;
+   max-width: 90%;
+   @extend %textOverflowEllipsis;
+  }
+ }
+
+ .block-login{
+  text-align: center;
+  position: relative;
+
+  .login{
+   display: inline-block;
+   margin: 30px;
+  }
+
+  .box-input{
+   display:inline-block;
+   vertical-align: top;
+
+   & > span{
+    display: inline-block;
+    font-size:16px;
+    color: #fff;
+    @include  setHeightGroup(40px);
+    vertical-align: middle;
+    margin-right:15px;
+    float:left;
+   }
+
+   & > div {
+    display: inline-block;
+    @include placeholderColor($input-font-color, 14px);
+    position: relative;
+    input {
+     display: block;
+     width: 200px;
+     height:40px;
+     line-height: 36px;
+     background: #fff;
+     border:2px solid #fff;
+     padding:0 8px;
+     color: $input-font-color;
+     font-size:14px;
+     @include borderRadius(5px);
+    }
+
+    .error{
+     border:2px solid $error-bd-color;
+    }
+   }
+
+   .error-info{
+    position: absolute;
+    left:0;
+    top:48px;
+    line-height: 18px;
+    text-align: left;
+    font-size:12px;
+    color:$error-text-color;
+    white-space: nowrap;
+
+    i{
+     font-size:16px;
+     color:$error-icon-color;
+     margin-right:6px;
+     vertical-align: middle;
+    }
+   }
+
+   .btn-login{
+    margin:0;
+    @include setHeightGroup(40px);
+    color: #fff;
+    padding:0 33px;
+    @include borderRadius(5px);
+    font-size:16px;
+    background: $btn-login-color;
+    @include transition(all .3s ease-in-out);
+
+    &:hover{
+     background: darken($btn-login-color, 2%);
+    }
+
+    &:active{
+     background: darken($btn-login-color, 4%);
+    }
+   }
+  }
+ }
+}
+
+.block-banner-index{
+ width: 100%;
+ background: $banner-bg-color url(images/banner.png) center center no-repeat;
+ height: 360px;
+ position: relative;
+ text-align: center;
+
+ &:before{
+  content: '';
+  display: inline-block;
+  height:100%;
+  vertical-align: middle;
+  margin-right:-0.25em;
+ }
+
+ .banner-info{
+  font-size:36px;
+  height:72px;
+  line-height: 72px;
+  display: inline-block;
+  color:#fff;
+  background: $banner-info-bg-color;
+  padding: 0 25px;
+  vertical-align: middle;
+  max-width: 90%;
+  @extend %textOverflowEllipsis;
+ }
+}
+
+.module-content{
+  padding:24px 36px 24px 24px;
+
+ .block-intro{
+  margin-bottom:24px;
+  p{
+   color: #fff;
+   text-indent: 2em;
+   font-size:14px;
+   line-height: 32px;
+  }
+ }
+
+ .block-products{
+  background: #fff;
+  margin-bottom: 30px;
+  @include borderRadius(5px);
+  padding:10px;
+  h3{
+   color: $theme-font-color;
+   font-size:18px;
+   padding-bottom: 6px;
+   font-weight: normal;
+   line-height: 24px;
+   height: 31px;
+   border-bottom: 1px dotted $bd-color;
+   text-align: center;
+  }
+  table{
+   width: 100%;
+
+   td{
+    padding: 10px 20px 10px 0;
+    width: 33%;
+
+    &:first-child{
+     width: 34%;
+    }
+   }
+
+   a{
+    display: block;
+    position: relative;
+    min-height: 80px;
+    height: 100%;
+    padding:10px 10px 10px 90px;
+    background: #fff;
+    color: $lighter-font-color;
+    @include borderRadius(5px);
+    @include transition(all .3s ease-in-out);
+
+    &:hover{
+     background: $product-hover-color;
+    }
+
+    img{
+     position: absolute;
+     left:10px;
+     top:10px;
+     width: 60px;
+     height:60px;
+    }
+
+    dt{
+     color:$product-title-color;
+     font-size:16px;
+     line-height: 24px;
+    }
+
+    dd{
+     margin-top:8px;
+     color: $lighter-font-color;
+     font-size:14px;
+     line-height: 20px;
+    }
+   }
+  }
+ }
+
+}
