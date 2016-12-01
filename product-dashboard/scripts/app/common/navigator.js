@@ -31,7 +31,7 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
         mouseenter: function () {
           var $this = $(this);
 
-          self.$wrapperSetting.fadeOut(200);
+          self.$wrapperSetting.fadeOut(50);
           self.$wrapperLangList.fadeIn(200);
 
           self.toggleToArrowUp($this);
@@ -40,10 +40,10 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
           var $this = $(this);
 
           langTimeoutId = setTimeout(function () {
-            self.$wrapperLangList.fadeOut(200);
+            self.$wrapperLangList.fadeOut(50);
 
             self.toggleToArrowDown($this);
-          }, 300);
+          }, 200);
         }
       });
 
@@ -57,7 +57,7 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
         mouseenter: function () {
           var $this = $(this);
 
-          self.$wrapperLangList.fadeOut(200);
+          self.$wrapperLangList.fadeOut(50);
           self.$wrapperSetting.fadeIn(200);
 
           self.toggleToArrowUp($this);
@@ -66,9 +66,9 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
           var $this = $(this);
 
           settingTimeoutId = setTimeout(function () {
-            self.$wrapperSetting.fadeOut(200);
+            self.$wrapperSetting.fadeOut(50);
             self.toggleToArrowDown($this);
-          }, 300);
+          }, 200);
         }
       });
 
@@ -128,7 +128,7 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
 
           if ($this.is('.disable')) return;
 
-          self.$wrapperSetting.fadeOut(200);
+          self.$wrapperSetting.fadeOut(50);
         }
       });
     },
