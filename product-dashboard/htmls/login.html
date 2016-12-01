@@ -29,8 +29,6 @@
       <a class="logo" href="#"></a><span>软件产品dashboard</span>
     </div>
     <div class="block-func">
-      <div class="btn-wrapper"><span class="btn"><i class="iconfont icon-link"></i>线上</span></div>
-      <div class="btn-wrapper"><span class="btn"><i class="iconfont icon-code"></i>线下</span></div>
       <div class="list-wrapper" id="btn-lang-list">
         <div class="btn"><i class="iconfont icon-earth"></i>语言 <i class="iconfont icon-arrow-down arrow"></i></div>
         <div class="lang-list-wrapper" id="wrapper-lang-list">
@@ -38,57 +36,6 @@
             <li><a href="#" class="active">中文</a></li>
             <li><a href="#">English</a></li>
           </ul>
-        </div>
-      </div>
-      <div class="list-wrapper" id="btn-setting">
-        <div class="btn"><i class="iconfont icon-setting"></i>设置<i class="iconfont icon-arrow-down arrow"></i></div>
-        <div class="setting-wrapper" id="wrapper-setting">
-          <div class="block-setting">
-            <h3>设置</h3>
-            <p>
-              <span>账号：</span>1111111111
-            </p>
-            <p>
-              <span>密码：</span>1111111111
-            </p>
-            <div class="options">
-              <h4>显示设置：</h4>
-              <div class="table-wrapper">
-                <table>
-                  <tbody>
-                  <tr>
-                    <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                  </tr>
-                  <tr>
-                    <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                  </tr>
-                  <tr>
-                    <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                  </tr>
-                  <tr>
-                    <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                    <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                  </tr>
-                  <tr>
-                    <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="btn-line">
-              <span class="btn">确定</span>
-              <span class="btn">取消</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -103,19 +50,19 @@
           <div class="box-input m-r-50">
             <span>账号：</span>
             <div>
-              <input type="text" placeholder="请输入账号" />
-              <div class="error-info"><i class="iconfont icon-error"></i>账户或密码输入不正确</div>
+              <input type="text" id="username" placeholder="请输入账号" />
+              <div class="error-info" id="username-error"></div>
             </div>
           </div>
           <div class="box-input m-r-30">
             <span>密码：</span>
             <div>
-              <input class="error" type="password" autocomplete="off" placeholder="请输入密码" />
-              <div class="error-info"><i class="iconfont icon-error"></i>请输入密码</div>
+              <input type="password" id="password" autocomplete="off" placeholder="请输入密码" />
+              <div class="error-info" id="password-error"></div>
             </div>
           </div>
           <div class="box-input">
-            <span class="btn btn-login">登录</span>
+            <span class="btn btn-login" id="login">登录</span>
           </div>
         </div>
       </div>

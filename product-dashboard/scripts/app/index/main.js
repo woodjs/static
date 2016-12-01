@@ -11,17 +11,26 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
     buildElement: function () {
       var self = this;
 
-      self.$products = $('.block-products a');
+      self.$links = $('.frame-nav a');
     },
 
     bindEvent: function () {
       var self = this;
 
-      self.$products.on({
-        mouseenter: function () {
-          $(this).animateCss('pulse');
-        },
-        mouseleave: function () {
+      self.$links.on({
+        click: function () {
+          var $this = $(this);
+          var targetId = $this.data('target');
+
+          for (var i = 0; i < self.$links.length; i++) {
+            $(self.$links[i]).removeClass('active');
+          }
+
+          $this.addClass('active');
+
+          if (targetId) {
+            $('html,body').animate({scrollTop: $('#' + targetId).offset().top - 55}, 500);
+          }
         }
       });
     }

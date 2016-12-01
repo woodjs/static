@@ -6,6 +6,7 @@ html, body {
  height:100%;
  min-height: 500px;
 }
+
 body {
  font-size: 14px;
  min-width: 1000px;
@@ -80,7 +81,7 @@ table{
    padding:8px 0;
    margin-right:30px;
    display: inline-block;
-   vertical-align: middle;
+   vertical-align: top;
 
    .btn{
     display: inline-block;
@@ -110,19 +111,22 @@ table{
   .list-wrapper{
    margin-right:20px;
    display: inline-block;
-   vertical-align: middle;
+   vertical-align: top;
    position:relative;
+
    .btn{
     display: block;
     font-size:14px;
     color: $theme-color;
     @include setHeightGroup(50px);
    }
+
    i{
     font-size:16px;
     margin-right:10px;
     vertical-align: middle;
    }
+
    .arrow{
     margin-left:8px;
     margin-right:0;
@@ -133,7 +137,8 @@ table{
   .lang-list-wrapper{
    display: none;
    position: absolute;
-   top:55px;
+   top:49px;
+   padding-top:6px;
    width:94px;
    left:50%;
    margin-left:-47px;
@@ -147,6 +152,7 @@ table{
 
     li{
      width:100%;
+
      &:first-child{
       margin-bottom: 2px;
      }
@@ -174,7 +180,8 @@ table{
   .setting-wrapper{
    display: none;
    position: absolute;
-   top:55px;
+   top:49px;
+   padding-top: 6px;
    min-width:400px;
    right:-20px;
    z-index: 100;
@@ -203,6 +210,7 @@ table{
      font-size:12px;
      line-height: 22px;
      color:$lightest-font-color;
+
      span{
       margin-right:30px;
       color: $theme-font-color;
@@ -251,6 +259,7 @@ table{
       color:$lighter-font-color;
       cursor: pointer;
       white-space: nowrap;
+      @include transition(all .3s ease-in-out);
      }
 
      i{
@@ -288,8 +297,15 @@ table{
      @include borderRadius(5px);
      @include transition(all .3s ease-in-out);
      vertical-align: middle;
+
      &:hover,&.active{
       background: $theme-color;
+      color:#fff;
+     }
+
+     &.disable {
+      border-color:$disable-bg-color;
+      background: $disable-bg-color;
       color:#fff;
      }
     }
@@ -315,20 +331,24 @@ table{
  background: $aside-bg-color;
  z-index: 95;
  padding:0 10px;
+
  h2{
   @include setHeightGroup(54px);
   color: $nav-title-color;
   font-size:16px;
   padding:0 0 0 10px;
   font-weight: normal;
+
   i{
    float:right;
    color: $nav-icon-color;
   }
  }
+
  .nav-grade-2{
   padding-left:10px;
  }
+
  .link{
   display: block;
   @include borderRadius(5px);
@@ -429,6 +449,7 @@ table{
     display: inline-block;
     @include placeholderColor($input-font-color, 14px);
     position: relative;
+
     input {
      display: block;
      width: 200px;
@@ -469,7 +490,8 @@ table{
     margin:0;
     @include setHeightGroup(40px);
     color: #fff;
-    padding:0 33px;
+    width: 100px;
+    text-align: center;
     @include borderRadius(5px);
     font-size:16px;
     background: $btn-login-color;
@@ -477,6 +499,11 @@ table{
 
     &:hover{
      background: darken($btn-login-color, 2%);
+    }
+
+    &.disable{
+     background: $disable-bg-color !important;
+     cursor:default;
     }
 
     &:active{
@@ -534,6 +561,7 @@ table{
   margin-bottom: 30px;
   @include borderRadius(5px);
   padding:10px;
+
   h3{
    color: $theme-font-color;
    font-size:18px;
@@ -544,13 +572,13 @@ table{
    border-bottom: 1px dotted $bd-color;
    text-align: center;
   }
+
   table{
    width: 100%;
 
    td{
     padding: 10px 20px 10px 0;
     width: 33%;
-    height: 100%;
     vertical-align: top;
 
     &:first-child{
@@ -567,10 +595,11 @@ table{
     background: #fff;
     color: $lighter-font-color;
     @include borderRadius(5px);
-    @include transition(all .5s ease-in-out);
+    @include transition(all .1s ease-in-out);
 
     &:hover{
      background: $product-hover-color;
+
      img{
       @include transform(rotate(360deg));
      }
@@ -601,5 +630,4 @@ table{
    }
   }
  }
-
 }

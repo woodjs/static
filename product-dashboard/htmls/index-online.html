@@ -53,40 +53,21 @@
               </p>
               <div class="options">
                 <h4>显示设置：</h4>
-                <div class="table-wrapper">
+                <div class="table-wrapper" id="table-wrapper-options">
                   <table>
                     <tbody>
                       <tr>
-                        <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                      </tr>
-                      <tr>
-                        <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                      </tr>
-                      <tr>
-                        <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                      </tr>
-                      <tr>
-                        <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                        <td><div><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
-                      </tr>
-                      <tr>
-                        <td><div><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
-
+                        <td><div data-code="sgmw"><i class="iconfont icon-unchecked-2"></i>上海通上海通用五菱</div></td>
+                        <td><div data-code="sgmw"><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
+                        <td><div data-code="sgmw"><i class="iconfont icon-checked-2"></i>上海通用五菱</div></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
               <div class="btn-line">
-                <span class="btn">确定</span>
-                <span class="btn">取消</span>
+                <span class="btn" id="option-submit">确定</span>
+                <span class="btn" id="option-cancel">取消</span>
               </div>
             </div>
           </div>
@@ -97,20 +78,20 @@
   <aside class="frame-nav">
     <h2>软件产品<i class="iconfont icon-product"></i></h2>
     <nav>
-      <a href="#" class="link active"><i class="iconfont icon-sbom"></i>SBOM/SPDM</a>
-      <a href="#" class="link"><i class="iconfont icon-tis"></i>TIS</a>
+      <a href="javascript:;" data-target="sbom" class="link active"><i class="iconfont icon-sbom"></i>SBOM/SPDM</a>
+      <a href="javascript:;" data-target="tis" class="link"><i class="iconfont icon-tis"></i>TIS</a>
       <div class="nav-grade-2">
-        <a href="#" class="link"><i class="iconfont icon-arrow-left"></i>EPC</a>
-        <a href="#" class="link"><i class="iconfont icon-arrow-left"></i>PAC</a>
-        <a href="#" class="link"><i class="iconfont icon-arrow-left"></i>TAC</a>
-        <a href="#" class="link"><i class="iconfont icon-arrow-left"></i>通知通讯</a>
-        <a href="#" class="link"><i class="iconfont icon-arrow-left"></i>维修手册</a>
+        <a href="javascript:;"  data-target="epc" class="link"><i class="iconfont icon-arrow-left"></i>EPC</a>
+        <a href="javascript:;" data-target="pac" class="link"><i class="iconfont icon-arrow-left"></i>PAC（后台）</a>
+        <a href="javascript:;" data-target="tac" class="link"><i class="iconfont icon-arrow-left"></i>TAC（后台）</a>
+        <a href="javascript:;" data-target="tztx" class="link"><i class="iconfont icon-arrow-left"></i>通知通讯</a>
+        <a href="javascript:;" data-target="wxsc" class="link"><i class="iconfont icon-arrow-left"></i>维修手册</a>
       </div>
-      <a href="#" class="link"><i class="iconfont icon-box"></i>包装系统</a>
-      <a href="#" class="link"><i class="iconfont icon-oelink"></i>OELINK</a>
-      <a href="#" class="link"><i class="iconfont icon-bom"></i>汽配BOM</a>
-      <a href="#" class="link"><i class="iconfont icon-store"></i>汽配电商</a>
-      <a href="#" class="link"><i class="iconfont icon-epl"></i>EBOM(EPL)</a>
+      <a href="javascript:;" data-target="bzxt" class="link"><i class="iconfont icon-box"></i>包装系统</a>
+      <a href="javascript:;" data-target="oelink" class="link"><i class="iconfont icon-oelink"></i>OELINK</a>
+      <a href="javascript:;" data-target="qpbom" class="link"><i class="iconfont icon-bom"></i>汽配BOM</a>
+      <a href="javascript:;" data-target="qpds" class="link"><i class="iconfont icon-store"></i>汽配电商</a>
+      <a href="javascript:;" data-target="ebom" class="link"><i class="iconfont icon-epl"></i>EBOM(EPL)</a>
     </nav>
   </aside>
 
@@ -123,14 +104,15 @@
         <p>上海事成软件股份有限公司自成立以来，持续对技术和产品的投入，自主研发了DAS主数据管理系统、TIS技术信息发布系统等软件产品，其中主要产品有：SBOM售后数据管理系统、SPDM主数据管理系统、EPC电子配件目录、PAC配件服务咨询、TAC技术服务咨询、通知通讯、手册、OELINK原厂件订购平台、包装数据管理系统、EBOM工程数据管理系统等。同时，我们还有经验丰富的技术团队，为客户提供制图、数据、排版、包装技术等专业服务。</p>
         <p>我们与汽车及动力机械行业的众多领先企业建立了友好的客户合作关系，我们有众多的成功案例，目前数万名用户在用我们的产品。</p>
       </div>
-      <div class="block-products">
+
+      <div id="sbom" class="block-products">
         <h3>SBOM/SPDM</h3>
         <div class="table-wrapper">
           <table>
             <tbody>
             <tr>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -139,7 +121,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -148,36 +130,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
-                  <img src="../images/logo_bq.png" />
-                  <dl>
-                    <dt>柳工SBOM</dt>
-                    <dd>广西柳工机械股份有限公司</dd>
-                  </dl>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">
-                  <img src="../images/logo_bq.png" />
-                  <dl>
-                    <dt>柳工SBOM</dt>
-                    <dd>广西柳工机械股份有限公司</dd>
-                  </dl>
-                </a>
-              </td>
-              <td>
-                <a href="#">
-                  <img src="../images/logo_bq.png" />
-                  <dl>
-                    <dt>柳工SBOM</dt>
-                    <dd>广西柳工机械股份有限公司</dd>
-                  </dl>
-                </a>
-              </td>
-              <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -186,9 +139,10 @@
                 </a>
               </td>
             </tr>
+
             <tr>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -197,7 +151,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -206,7 +160,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -220,14 +174,15 @@
         </div>
       </div>
 
-      <div class="block-products">
-        <h3>SBOM/SPDM</h3>
+
+      <div id="tis" class="block-products">
+        <h3>TIS</h3>
         <div class="table-wrapper">
           <table>
             <tbody>
             <tr>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -236,7 +191,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -245,7 +200,37 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -259,14 +244,15 @@
         </div>
       </div>
 
-      <div class="block-products">
-        <h3>SBOM/SPDM</h3>
+
+      <div id="epc" class="block-products">
+        <h3>EPC</h3>
         <div class="table-wrapper">
           <table>
             <tbody>
             <tr>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -275,7 +261,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -284,7 +270,37 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -298,14 +314,15 @@
         </div>
       </div>
 
-      <div class="block-products">
-        <h3>SBOM/SPDM</h3>
+
+      <div id="pac" class="block-products">
+        <h3>PAC（后台）</h3>
         <div class="table-wrapper">
           <table>
             <tbody>
             <tr>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -314,7 +331,7 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -323,7 +340,37 @@
                 </a>
               </td>
               <td>
-                <a href="#">
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
                   <img src="../images/logo_bq.png" />
                   <dl>
                     <dt>柳工SBOM</dt>
@@ -336,8 +383,569 @@
           </table>
         </div>
       </div>
+
+
+      <div id="tac" class="block-products">
+        <h3>TAC（后台）</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="tztx" class="block-products">
+        <h3>通知通讯</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="wxsc" class="block-products">
+        <h3>维修手册</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="bzxt" class="block-products">
+        <h3>包装系统</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="oelink" class="block-products">
+        <h3>OELINK</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="qpbom" class="block-products">
+        <h3>汽配BOM</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="qpds" class="block-products">
+        <h3>汽配电商</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="ebom" class="block-products">
+        <h3>EBOM(EPL)</h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="animated fadeIn">
+                  <img src="../images/logo_bq.png" />
+                  <dl>
+                    <dt>柳工SBOM</dt>
+                    <dd>广西柳工机械股份有限公司</dd>
+                  </dl>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
     </div>
-
   </section>
   <script type="text/javascript" src="../scripts/local_bootstrap.js"></script>
   <script type="text/javascript">

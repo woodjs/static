@@ -1,10 +1,9 @@
 require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
 
   var path = globalConfig.context.path;
-  var identifyCodePath = path + '/find-pwd/input-user-key-auth-code';
-  var errorIcon = '<i class="icon icon-error"></i>';
+  var errorIcon = '<i class="iconfont icon-error"></i>';
 
-  var findPassword = {
+  var login = {
 
     init: function () {
       var self = this;
@@ -16,70 +15,72 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
     buildElement: function () {
       var self = this;
 
-      self.$accountInput = $('#account-input');
-      self.$accountError = $('#account-error');
-      self.$identifyInput = $('#identify-input');
-      self.$identifyError = $('#identify-error');
-      self.$identifyImg = $('#identify-img');
-      self.$btnInvisibility = $('#invisibility');
-      self.$btnSubmit = $('#submit');
+      self.$inputUsername = $('#username');
+      self.$inputPassword = $('#password');
+      self.$errorUsername = $('#username-error');
+      self.$errorPassoword = $('#password-error');
+
+      self.$btnLogin = $('#login');
     },
 
     bindEvent: function () {
       var self = this;
 
-      self.$accountInput.on('blur', function () {
-        self.checkAccountInput();
+      self.$inputUsername.on('blur', function () {
+        self.checkUsernameInput();
       });
 
-      self.$identifyInput.on('blur', function () {
-        self.checkIdentifyInput();
+      self.$inputPassword.on('blur', function () {
+        self.checkPasswordInput();
       });
 
-      self.$btnSubmit.on('click', function () {
-        self.submit();
+      self.$btnLogin.on('click', function () {
+        self.login();
       });
 
-      self.$identifyImg.on('click', function () {
-
-        self.$identifyImg.attr('src', identifyCodePath + '?_sc=' + Math.random());
-      });
-
-      self.$btnInvisibility.on('click', function () {
-
-        self.$identifyImg.attr('src', identifyCodePath + '?_sc=' + Math.random());
+      $('input').on('keypress', function(e) {
+        if (e.keyCode === 13) {
+          self.$btnLogin.click();
+          $(this).blur();
+          e.preventDefault();
+        }
       });
     },
 
-    checkAccountInput: function () {
+    checkUsernameInput: function () {
       var self = this;
 
-      if (self.checkIsEmpty(self.$accountInput)) {
+      if (self.checkIsEmpty(self.$inputUsername)) {
 
-        self.$accountError.html(errorIcon + _i18n_error['4_1_1']);
+        self.$inputUsername.addClass('error');
+        self.$errorUsername.html(errorIcon + _i18n['login_1']);
+        self.$inputUsername.focus();
 
         return false;
       } else {
-        self.$accountError.html('');
+        self.$inputUsername.removeClass('error');
+        self.$errorUsername.html('');
       }
 
       return true;
     },
 
-    checkIdentifyInput: function () {
+    checkPasswordInput: function () {
       var self = this;
 
-      if (!self.checkAccountInput()) {
+      if (!self.checkUsernameInput()) {
         return false;
       }
 
-      if (self.checkIsEmpty(self.$identifyInput)) {
-
-        self.$identifyError.html(errorIcon + _i18n_error['4_1_2']);
+      if (self.checkIsEmpty(self.$inputPassword)) {
+        self.$inputPassword.addClass('error');
+        self.$errorPassoword.html(errorIcon + _i18n['login_2']);
+        self.$inputPassword.focus();
 
         return false;
       } else {
-        self.$identifyError.html('');
+        self.$inputPassword.removeClass('error');
+        self.$errorPassoword.html('');
       }
 
       return true;
@@ -92,40 +93,47 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
         return true;
       }
 
-      return ($this.val && $this.val() === '') ? true : false;
+      return ($this.val && $.trim($this.val()) === '') ? true : false;
     },
 
     checkAllInput: function () {
       var self = this;
 
-      return self.checkIdentifyInput();
+      return self.checkPasswordInput();
     },
 
-    submit: function () {
+    login: function () {
       var self = this;
       var data = self.collectInputValue();
 
+      if (self.$btnLogin.is('.disable')) {
+        return;
+      }
+
       if (self.checkAllInput()) {
-        ajax.invoke({
-          url: path + '/find-pwd/do-input-key',
-          type: 'POST',
-          dataType: 'json',
-          data: JSON.stringify(data),
-          success: function (res) {
-            window.location.href = path + '/find-pwd/validate';
-          },
-          failed: function (res) {
-            var code = res.code;
 
-            if ('AUTH_CODE_ERROR' === code) {
-              self.$identifyError.html(errorIcon + _i18n_error['4_1_4']);
-            } else if ('USER_NOT_EXISTS' === code) {
-              self.$accountError.html(errorIcon + _i18n_error['4_1_3']);
+        self.$btnLogin.addClass('disable');
+        self.$btnLogin.html(_i18n.login_5);
+
+        setTimeout(function () {
+          ajax.invoke({
+            url: path + '/find-pwd/do-input-key',
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function (res) {
+              window.location.href = path + '/index';
+            },
+            failed: function (res) {
+
+              self.$btnLogin.removeClass('disable');
+              self.$btnLogin.html(_i18n.login_4);
+              self.$inputUsername.addClass('error');
+              self.$errorUsername.html(errorIcon + _i18n['login_3']);
+              self.$inputUsername.focus();
             }
-
-            self.$btnInvisibility.click();
-          }
-        });
+          });
+        }, 2000);
       }
     },
 
@@ -133,11 +141,11 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       var self = this;
 
       return {
-        userKey: self.$accountInput.val(),
-        authCode: self.$identifyInput.val()
+        username: $.trim(self.$inputUsername.val()),
+        password: $.trim(self.$inputPassword.val())
       };
     }
   };
 
-  findPassword.init();
+  login.init();
 });

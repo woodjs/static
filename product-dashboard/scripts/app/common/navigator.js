@@ -1,4 +1,4 @@
-require(['globalConfig', 'jquery', 'ajax', 'jqPlaceHolder', 'json2'], function (globalConfig, $, ajax, jqPlaceHolder) {
+require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, ajax) {
 
   var navigator = {
 
@@ -16,30 +16,77 @@ require(['globalConfig', 'jquery', 'ajax', 'jqPlaceHolder', 'json2'], function (
       self.$wrapperLangList = $('#wrapper-lang-list');
       self.$btnSetting = $('#btn-setting');
       self.$wrapperSetting = $('#wrapper-setting');
+      self.$options = $('#table-wrapper-options td div');
+      self.$btnOptionSubmit = $('#option-submit');
+      self.$btnOptionCancel = $('#option-cancel');
     },
 
     bindEvent: function () {
       var self = this;
+      var langTimeoutId;
+      var settingTimeoutId;
 
       self.$btnLangList.on({
         mouseenter: function () {
-          self.$wrapperLangList.show().animateCss('fadeInDown');
+          self.$wrapperSetting.fadeOut(100);
+          self.$wrapperLangList.fadeIn(200);
         },
         mouseleave: function () {
-          self.$wrapperLangList.animateCss('fadeOutUp', function () {
-            self.$wrapperLangList.hide();
-          });
+          langTimeoutId = setTimeout(function () {
+            self.$wrapperLangList.fadeOut(100);
+          }, 300);
+        }
+      });
+
+      self.$wrapperLangList.on({
+        mouseenter: function () {
+          langTimeoutId && clearTimeout(langTimeoutId);
         }
       });
 
       self.$btnSetting.on({
         mouseenter: function () {
-          self.$wrapperSetting.show().animateCss('fadeInDown');
+          self.$wrapperLangList.fadeOut(100);
+          self.$wrapperSetting.fadeIn(200);
         },
         mouseleave: function () {
-          self.$wrapperSetting.animateCss('fadeOutUp', function () {
-            self.$wrapperSetting.hide();
-          });
+          settingTimeoutId = setTimeout(function () {
+            self.$wrapperSetting.fadeOut(100);
+          }, 300);
+        }
+      });
+
+      self.$wrapperSetting.on({
+        mouseenter: function () {
+          settingTimeoutId && clearTimeout(settingTimeoutId);
+        }
+      });
+
+      self.$options.on({
+        click: function () {
+          var $option = $(this).find('i');
+
+          if ($option.is('.icon-checked-2')) {
+            $option.removeClass('icon-checked-2').addClass('icon-unchecked-2');
+          } else {
+            $option.removeClass('icon-unchecked-2').addClass('icon-checked-2');
+          }
+        }
+      });
+
+      self.$btnOptionSubmit.on({
+        click: function () {
+          var $this = $(this);
+
+          if ($this.is('.disable')) return;
+
+          $this.addClass('disable');
+        }
+      });
+
+      self.$btnOptionCancel.on({
+        click: function () {
+          self.$wrapperSetting.fadeOut(100);
         }
       });
     }

@@ -101,7 +101,7 @@ table {
   padding: 8px 0;
   margin-right: 30px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .frame-top-line .block-func .btn-wrapper .btn {
   display: inline-block;
@@ -131,7 +131,7 @@ table {
 .frame-top-line .block-func .list-wrapper {
   margin-right: 20px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   position: relative;
 }
 .frame-top-line .block-func .list-wrapper .btn {
@@ -154,7 +154,8 @@ table {
 .frame-top-line .block-func .lang-list-wrapper {
   display: none;
   position: absolute;
-  top: 55px;
+  top: 49px;
+  padding-top: 6px;
   width: 94px;
   left: 50%;
   margin-left: -47px;
@@ -199,7 +200,8 @@ table {
 .frame-top-line .block-func .setting-wrapper {
   display: none;
   position: absolute;
-  top: 55px;
+  top: 49px;
+  padding-top: 6px;
   min-width: 400px;
   right: -20px;
   z-index: 100;
@@ -271,6 +273,9 @@ table {
   color: #657782;
   cursor: pointer;
   white-space: nowrap;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .frame-top-line .block-func .setting-wrapper .table-wrapper td i {
   width: 18px;
@@ -309,6 +314,11 @@ table {
 }
 .frame-top-line .block-func .setting-wrapper .btn-line .btn:hover, .frame-top-line .block-func .setting-wrapper .btn-line .btn.active {
   background: #015C92;
+  color: #fff;
+}
+.frame-top-line .block-func .setting-wrapper .btn-line .btn.disable {
+  border-color: #aaa;
+  background: #aaa;
   color: #fff;
 }
 .frame-top-line .logo {
@@ -487,7 +497,8 @@ table {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  padding: 0 33px;
+  width: 100px;
+  text-align: center;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -499,6 +510,10 @@ table {
 }
 .module-login .block-login .box-input .btn-login:hover {
   background: #015688;
+}
+.module-login .block-login .box-input .btn-login.disable {
+  background: #aaa !important;
+  cursor: default;
 }
 .module-login .block-login .box-input .btn-login:active {
   background: #014f7e;
@@ -566,7 +581,6 @@ table {
 .module-content .block-products table td {
   padding: 10px 20px 10px 0;
   width: 33%;
-  height: 100%;
   vertical-align: top;
 }
 .module-content .block-products table td:first-child {
@@ -583,9 +597,9 @@ table {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .module-content .block-products table a:hover {
   background: #E4F6FA;
