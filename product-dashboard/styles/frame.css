@@ -40,6 +40,31 @@ body {
 body.offline {
   background: url(images/bg_white.png) left top repeat;
 }
+body.offline .block-intro p {
+  color: #39444A;
+}
+body.offline .frame-nav {
+  background: #fff;
+}
+body.offline .frame-nav h2 {
+  color: #657782;
+}
+body.offline .frame-nav h2 i {
+  color: #C0CBD9;
+}
+body.offline .frame-nav .link {
+  color: #657782;
+}
+body.offline .frame-nav .link:hover, body.offline .frame-nav .link.active {
+  background: #005B91;
+  color: #fff;
+}
+body.offline .frame-nav .link:hover i, body.offline .frame-nav .link.active i {
+  color: #fff;
+}
+body.offline .frame-nav .link i {
+  color: #C0CBD9;
+}
 
 a {
   color: #333;
@@ -257,6 +282,9 @@ table {
   font-weight: normal;
   color: #013554;
 }
+.frame-top-line .block-func .setting-wrapper .table-wrapper {
+  margin-top: 4px;
+}
 .frame-top-line .block-func .setting-wrapper .table-wrapper td {
   padding: 7px 30px 7px 0;
   width: 33%;
@@ -299,8 +327,9 @@ table {
 .frame-top-line .block-func .setting-wrapper .btn-line .btn {
   display: inline-block;
   margin: 0 19px;
-  padding: 0 30px;
+  width: 92px;
   height: 34px;
+  text-align: center;
   line-height: 30px;
   border: 2px solid #015C92;
   color: #015C92;
@@ -320,6 +349,7 @@ table {
   border-color: #aaa;
   background: #aaa;
   color: #fff;
+  cursor: default;
 }
 .frame-top-line .logo {
   float: left;
@@ -381,7 +411,7 @@ table {
   font-size: 14px;
   position: absolute;
   left: 12px;
-  top: 5px;
+  top: 4px;
 }
 .frame-nav .link .icon-arrow-left {
   font-size: 6px;
@@ -546,7 +576,7 @@ table {
 }
 
 .module-content {
-  padding: 24px 36px 24px 24px;
+  padding: 24px 36px 0 24px;
 }
 .module-content .block-intro {
   margin-bottom: 24px;

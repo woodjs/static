@@ -16,6 +16,39 @@ body {
 
  &.offline{
   background: url(images/bg_white.png) left top repeat;
+
+  .block-intro p{
+   color: $offline-block-intro-color;
+  }
+
+  .frame-nav{
+   background: $offline-aside-bg-color;
+
+   h2 {
+    color: $offline-nav-title-color;
+
+    i{
+     color: $offline-nav-icon-color;
+    }
+   }
+
+   .link {
+    color: $offline-nav-title-color;
+
+    &:hover, &.active{
+     background: $nav-hover-bg-color;
+     color: #fff;
+
+     i{
+      color: #fff;
+     }
+    }
+
+    i{
+     color: $offline-nav-icon-color;
+    }
+   }
+  }
  }
 }
 
@@ -241,6 +274,7 @@ table{
    }
 
    .table-wrapper{
+    margin-top: 4px;
 
     td{
      padding:7px 30px 7px 0;
@@ -289,8 +323,9 @@ table{
     .btn{
      display: inline-block;
      margin:0 19px;
-     padding:0 30px;
+     width:92px;
      height: 34px;
+     text-align: center;
      line-height: 30px;
      border:2px solid $theme-color;
      color: $theme-color;
@@ -307,6 +342,7 @@ table{
       border-color:$disable-bg-color;
       background: $disable-bg-color;
       color:#fff;
+      cursor:default;
      }
     }
    }
@@ -374,7 +410,7 @@ table{
    font-size:14px;
    position: absolute;
    left:12px;
-   top: 5px;
+   top: 4px;
   }
 
   .icon-arrow-left{
@@ -544,7 +580,7 @@ table{
 }
 
 .module-content{
-  padding:24px 36px 24px 24px;
+  padding:24px 36px 0 24px;
 
  .block-intro{
   margin-bottom:24px;

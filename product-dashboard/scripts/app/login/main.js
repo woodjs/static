@@ -106,34 +106,30 @@ require(['globalConfig', 'jquery', 'ajax'], function (globalConfig, $, ajax) {
       var self = this;
       var data = self.collectInputValue();
 
-      if (self.$btnLogin.is('.disable')) {
-        return;
-      }
+      if (self.$btnLogin.is('.disable')) return;
 
       if (self.checkAllInput()) {
 
         self.$btnLogin.addClass('disable');
         self.$btnLogin.html(_i18n.login_5);
 
-        setTimeout(function () {
-          ajax.invoke({
-            url: path + '/find-pwd/do-input-key',
-            type: 'POST',
-            dataType: 'json',
-            data: JSON.stringify(data),
-            success: function (res) {
-              window.location.href = path + '/index';
-            },
-            failed: function (res) {
+        ajax.invoke({
+          url: path + '/login',
+          type: 'POST',
+          dataType: 'json',
+          data: JSON.stringify(data),
+          success: function (res) {
+            window.location.href = path + '/index';
+          },
+          failed: function (res) {
 
-              self.$btnLogin.removeClass('disable');
-              self.$btnLogin.html(_i18n.login_4);
-              self.$inputUsername.addClass('error');
-              self.$errorUsername.html(errorIcon + _i18n['login_3']);
-              self.$inputUsername.focus();
-            }
-          });
-        }, 2000);
+            self.$btnLogin.removeClass('disable');
+            self.$btnLogin.html(_i18n.login_4);
+            self.$inputUsername.addClass('error');
+            self.$errorUsername.html(errorIcon + _i18n['login_3']);
+            self.$inputUsername.focus();
+          }
+        });
       }
     },
 

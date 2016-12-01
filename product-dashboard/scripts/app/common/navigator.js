@@ -1,4 +1,5 @@
 require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, ajax) {
+  var path = globalConfig.context.path;
 
   var navigator = {
 
@@ -28,12 +29,20 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
 
       self.$btnLangList.on({
         mouseenter: function () {
-          self.$wrapperSetting.fadeOut(100);
+          var $this = $(this);
+
+          self.$wrapperSetting.fadeOut(200);
           self.$wrapperLangList.fadeIn(200);
+
+          self.toggleToArrowUp($this);
         },
         mouseleave: function () {
+          var $this = $(this);
+
           langTimeoutId = setTimeout(function () {
-            self.$wrapperLangList.fadeOut(100);
+            self.$wrapperLangList.fadeOut(200);
+
+            self.toggleToArrowDown($this);
           }, 300);
         }
       });
@@ -46,12 +55,19 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
 
       self.$btnSetting.on({
         mouseenter: function () {
-          self.$wrapperLangList.fadeOut(100);
+          var $this = $(this);
+
+          self.$wrapperLangList.fadeOut(200);
           self.$wrapperSetting.fadeIn(200);
+
+          self.toggleToArrowUp($this);
         },
         mouseleave: function () {
+          var $this = $(this);
+
           settingTimeoutId = setTimeout(function () {
-            self.$wrapperSetting.fadeOut(100);
+            self.$wrapperSetting.fadeOut(200);
+            self.toggleToArrowDown($this);
           }, 300);
         }
       });
@@ -81,27 +97,69 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
           if ($this.is('.disable')) return;
 
           $this.addClass('disable');
+          $this.html(_i18n.index_2);
+          self.$btnOptionCancel.addClass('disable');
+
+          var data = self.collectOptions();
+
+          ajax.invoke({
+            url: path + '/setting',
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function (res) {
+              window.location.href = path + '/index';
+            },
+            failed: function (res) {
+
+              $this.removeClass('disable');
+              $this.html(_i18n.index_1);
+              self.$btnOptionCancel.removeClass('disable');
+
+              alert(_i18n.index_3);
+            }
+          });
         }
       });
 
       self.$btnOptionCancel.on({
         click: function () {
-          self.$wrapperSetting.fadeOut(100);
+          var $this = $(this);
+
+          if ($this.is('.disable')) return;
+
+          self.$wrapperSetting.fadeOut(200);
         }
       });
+    },
+
+    toggleToArrowUp: function ($this) {
+      $this.find('.arrow').removeClass('icon-arrow-down').addClass('icon-arrow-up');
+
+    },
+
+    toggleToArrowDown: function ($this) {
+      $this.find('.arrow').removeClass('icon-arrow-up').addClass('icon-arrow-down');
+    },
+
+    collectOptions: function () {
+      var self = this;
+      var result = [];
+
+      for (var i = 0; i < self.$options.length; i++) {
+        var obj = {};
+        var $temp = $(self.$options[i]);
+        var code = $temp.data('code');
+
+        obj.code = code;
+        obj.isShow = $temp.find('i').is('.icon-checked-2') ? true : false;
+
+        result.push(obj);
+      }
+
+      return result;
     }
   };
 
   navigator.init();
-
-  $.fn.extend({
-    animateCss: function (animationName, callback) {
-      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-      this.addClass('animated ' + animationName).one(animationEnd, function() {
-        $(this).removeClass('animated ' + animationName);
-
-        callback && callback();
-      });
-    }
-  });
 });
