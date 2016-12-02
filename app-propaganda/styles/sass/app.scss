@@ -9,6 +9,10 @@ html {
  -webkit-overflow-scrolling: touch;
 }
 
+a{
+ -webkit-tap-highlight-color: rgba(255, 255, 255, .2);
+}
+
 @media only screen and (min-width: 750px) {
  html {
   font-size: 20px !important;
@@ -80,6 +84,7 @@ a {
   @include setHeightGroup(2rem);
   padding: 0 1rem;
   margin: 0 .4rem;
+  vertical-align: top;
  }
 }
 
@@ -120,7 +125,7 @@ a {
  }
 
  .qrcode-wrapper {
-  padding: 2rem 0;
+  padding: 2rem 0 2.5rem;
  }
 
  .qrcode {
@@ -131,8 +136,24 @@ a {
   vertical-align: top;
  }
 
+ .app-download{
+  text-align: center;
+  padding-bottom:2.2rem;
+  a{
+   display: inline-block;
+   text-align: center;
+   color:#fff;
+   font-size:1.5rem;
+   width:16rem;
+   height:4rem;
+   border:.2rem solid #fff;
+   line-height: 3.6rem;
+   @include borderRadius(2.2rem);
+  }
+ }
+
  .popularize-wrapper {
-  padding: 1.5rem 0 8.5rem;
+  padding: 1.5rem 0 5rem;
   position: relative;
 
   .popularize-title {
@@ -159,7 +180,7 @@ a {
   .activity {
    position: absolute;
    right: -1rem;
-   bottom: .5rem;
+   bottom: 3.5rem;
    z-index: 10;
    width: 8.7rem;
    height: 11.8rem;
@@ -168,7 +189,7 @@ a {
 }
 
 .block-main-img {
- margin-top: 6rem;
+ margin-top: 2.4rem;
  img {
   display: block;
   vertical-align: top;
@@ -179,7 +200,7 @@ a {
 
 .block-main-intro {
  padding: 0 1.5rem;
- margin-top: 3.8rem;
+ margin-top: 2.5rem;
  line-height: 2rem;
  text-indent: 2em;
 }
@@ -256,7 +277,7 @@ a {
 }
 
 .block-module-2 {
- margin-top: .5rem;
+ margin-top: .8rem;
  position: relative;
  height: 13.6rem;
 
@@ -301,7 +322,7 @@ a {
 }
 
 .block-module-3 {
- margin-top: 1rem;
+ margin-top: 2rem;
  position: relative;
  height: 25.9rem;
 
@@ -358,7 +379,7 @@ a {
 }
 
 .block-footer {
- margin-top: 1.5rem;
+ margin-top: 3rem;
  padding: 0 1.5rem;
 
  li {
