@@ -159,10 +159,11 @@ table {
   vertical-align: top;
   position: relative;
 }
-.frame-top-line .block-func .list-wrapper .btn {
+.frame-top-line .block-func .list-wrapper > .btn {
   display: block;
   font-size: 14px;
   color: #015C92;
+  padding-right: 20px;
   height: 50px;
   line-height: 50px;
 }
@@ -172,9 +173,29 @@ table {
   vertical-align: middle;
 }
 .frame-top-line .block-func .list-wrapper .arrow {
-  margin-left: 8px;
   margin-right: 0;
   font-size: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: rotate(0deg);
+  -moz-transition: rotate(0deg);
+  transition: rotate(0deg);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.frame-top-line .block-func .list-wrapper .arrow.rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.frame-top-line .block-func .list-wrapper .arrow.rotate-0 {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .frame-top-line .block-func .lang-list-wrapper {
   display: none;

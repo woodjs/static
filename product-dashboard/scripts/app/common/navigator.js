@@ -134,12 +134,11 @@ require(['globalConfig', 'jquery', 'ajax', 'json2'], function (globalConfig, $, 
     },
 
     toggleToArrowUp: function ($this) {
-      $this.find('.arrow').removeClass('icon-arrow-down').addClass('icon-arrow-up');
-
+      $this.find('.arrow').removeClass('rotate-0').addClass('rotate-180');
     },
 
     toggleToArrowDown: function ($this) {
-      $this.find('.arrow').removeClass('icon-arrow-up').addClass('icon-arrow-down');
+      $this.find('.arrow').removeClass('rotate-180').addClass('rotate-0');
     },
 
     collectOptions: function () {
