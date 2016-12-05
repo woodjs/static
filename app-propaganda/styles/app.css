@@ -172,7 +172,7 @@ a {
   line-height: 2.6rem;
 }
 .block-step .popularize-wrapper .popularize-code-wrapper {
-  padding-top: .8rem;
+  padding-top: 3rem;
   text-align: center;
 }
 .block-step .popularize-wrapper .popularize-code {
@@ -190,7 +190,7 @@ a {
 .block-step .popularize-wrapper .activity {
   position: absolute;
   right: -1rem;
-  bottom: 3.5rem;
+  bottom: 2.5rem;
   z-index: 10;
   width: 8.7rem;
   height: 11.8rem;
@@ -227,7 +227,7 @@ a {
 }
 
 .block-module-1 {
-  margin-top: 1.8rem;
+  margin-top: 2rem;
   position: relative;
   height: 25.9rem;
 }
