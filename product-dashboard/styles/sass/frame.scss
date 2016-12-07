@@ -141,6 +141,18 @@ table{
    }
   }
 
+  .wrapper-logout{
+   @include setHeightGroup(50px);
+   display: inline-block;
+   vertical-align: top;
+   margin:0 10px 0 0;
+
+   a{
+    font-size:14px;
+    color: $theme-color;
+   }
+  }
+
   .list-wrapper{
    margin-right:20px;
    display: inline-block;

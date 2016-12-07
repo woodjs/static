@@ -153,6 +153,17 @@ table {
   margin-right: 10px;
   vertical-align: middle;
 }
+.frame-top-line .block-func .wrapper-logout {
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 0 0;
+}
+.frame-top-line .block-func .wrapper-logout a {
+  font-size: 14px;
+  color: #015C92;
+}
 .frame-top-line .block-func .list-wrapper {
   margin-right: 20px;
   display: inline-block;
