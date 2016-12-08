@@ -91,6 +91,7 @@ table {
  width: 100%;
  border-bottom: 3px solid $top-line-color;
  z-index: 100;
+ min-width: 980px;
 
  .block-logo {
   height: 50px;
@@ -397,15 +398,20 @@ table {
  padding: 0 10px;
 
  h2 {
-  @include setHeightGroup(54px);
+  line-height: 24px;
   color: $nav-title-color;
   font-size: 16px;
-  padding: 0 0 0 10px;
+  padding: 15px 16px 15px 10px;
   font-weight: normal;
+  position: relative;
 
   i {
    float: right;
    color: $nav-icon-color;
+   font-size:16px;
+   position: absolute;
+   right:0;
+   top:15px;
   }
  }
 
