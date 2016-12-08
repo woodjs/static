@@ -33,7 +33,7 @@ html, body {
 
 body {
   font-size: 14px;
-  min-width: 1000px;
+  min-width: 980px;
   font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
   background: url(images/bg_blue.png) left top repeat;
   color: #333;
