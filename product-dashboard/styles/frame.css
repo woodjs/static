@@ -28,6 +28,7 @@ header, footer, article, section, nav, aside, figure {
 html, body {
   height: 100%;
   min-height: 500px;
+  min-width: 980px;
 }
 
 body {
