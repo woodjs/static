@@ -305,6 +305,11 @@ table {
    .table-wrapper {
     margin-top: 4px;
 
+    table{
+     width:100%;
+     table-layout: auto;
+    }
+
     td {
      padding: 7px 30px 7px 0;
      width: 33%;
