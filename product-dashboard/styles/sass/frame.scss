@@ -3,9 +3,9 @@
 @import "./core/config";
 
 html, body {
- height:100%;
+ height: 100%;
  min-height: 500px;
- min-width:980px;
+ min-width: 980px;
 }
 
 body {
@@ -15,20 +15,20 @@ body {
  background: url(images/bg_blue.png) left top repeat;
  color: $font-color;
 
- &.offline{
+ &.offline {
   background: url(images/bg_white.png) left top repeat;
 
-  .block-intro p{
+  .block-intro p {
    color: $offline-block-intro-color;
   }
 
-  .frame-nav{
+  .frame-nav {
    background: $offline-aside-bg-color;
 
    h2 {
     color: $offline-nav-title-color;
 
-    i{
+    i {
      color: $offline-nav-icon-color;
     }
    }
@@ -36,16 +36,16 @@ body {
    .link {
     color: $offline-nav-title-color;
 
-    &:hover, &.active{
+    &:hover, &.active {
      background: $nav-hover-bg-color;
      color: #fff;
 
-     i{
+     i {
       color: #fff;
      }
     }
 
-    i{
+    i {
      color: $offline-nav-icon-color;
     }
    }
@@ -62,15 +62,15 @@ a {
  cursor: pointer;
 }
 
-.m-r-30{
- margin-right:30px;
+.m-r-30 {
+ margin-right: 30px;
 }
 
-.m-r-50{
- margin-right:50px;
+.m-r-50 {
+ margin-right: 50px;
 }
 
-.p-l-180{
+.p-l-180 {
  padding-left: 180px;
 }
 
@@ -78,404 +78,406 @@ a {
  display: inline-block;
 }
 
-table{
- table-layout:fixed;
+table {
+ table-layout: fixed;
 }
 
 .frame-top-line {
- height:53px;
+ height: 53px;
  background: #fff;
- position:fixed;
- top:0;
- left:0;
+ position: fixed;
+ top: 0;
+ left: 0;
  width: 100%;
- border-bottom:3px solid $top-line-color;
+ border-bottom: 3px solid $top-line-color;
  z-index: 100;
 
- .block-logo{
-  height:50px;
+ .block-logo {
+  height: 50px;
   margin: 0 20px;
-  float:left;
+  float: left;
 
-  span{
-   color:$logo-font-color;
-   font-size:18px;
-   margin-left:12px;
+  span {
+   color: $logo-font-color;
+   font-size: 18px;
+   margin-left: 12px;
    line-height: 50px;
   }
  }
 
- .block-func{
-  height:50px;
-  margin-right:15px;
-  float:right;
+ .block-func {
+  height: 50px;
+  margin-right: 15px;
+  float: right;
   text-align: right;
 
-  .btn-wrapper{
-   padding:8px 0;
-   margin-right:30px;
+  .btn-wrapper {
+   padding: 8px 0;
+   margin-right: 30px;
    display: inline-block;
    vertical-align: top;
 
-   .btn{
+   .btn {
     display: inline-block;
-    height:34px;
+    height: 34px;
     line-height: 30px;
     background: #fff;
     padding: 0 15px;
-    border:2px solid $theme-color;
+    border: 2px solid $theme-color;
     @include borderRadius(5px);
-    font-size:14px;
+    font-size: 14px;
     color: $theme-color;
     @include transition(all .3s ease-in-out);
 
-    &:hover, &.active{
+    &:hover, &.active {
      background: $theme-color;
      color: #fff;
     }
    }
 
-   i{
-    font-size:16px;
-    margin-right:10px;
+   i {
+    font-size: 16px;
+    margin-right: 10px;
     vertical-align: middle;
    }
   }
 
-  .wrapper-logout{
+  .wrapper-logout {
    @include setHeightGroup(50px);
    display: inline-block;
    vertical-align: top;
-   margin:0 10px 0 0;
+   margin: 0 10px 0 0;
 
-   a{
-    font-size:14px;
+   a {
+    font-size: 14px;
     color: $theme-color;
    }
   }
 
-  .list-wrapper{
-   margin-right:20px;
+  .list-wrapper {
+   margin-right: 20px;
    display: inline-block;
    vertical-align: top;
-   position:relative;
+   position: relative;
 
-   & > .btn{
+   & > .btn {
     display: block;
-    font-size:14px;
+    font-size: 14px;
     color: $theme-color;
-    padding-right:20px;
+    padding-right: 20px;
     @include setHeightGroup(50px);
    }
 
-   i{
-    font-size:16px;
-    margin-right:10px;
+   i {
+    font-size: 16px;
+    margin-right: 10px;
     vertical-align: middle;
    }
 
-   .arrow{
-    margin-right:0;
-    font-size:5px;
+   .arrow {
+    margin-right: 0;
+    font-size: 5px;
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     @include transition(rotate(0deg));
     @include transition(all .2s linear);
 
-    &.rotate-180{
+    &.rotate-180 {
      @include transform(rotate(180deg));
     }
 
-    &.rotate-0{
+    &.rotate-0 {
      @include transform(rotate(0deg));
     }
    }
   }
 
-  .lang-list-wrapper{
+  .lang-list-wrapper {
    display: none;
    position: absolute;
-   top:49px;
-   padding-top:6px;
-   width:94px;
-   left:50%;
-   margin-left:-47px;
+   top: 49px;
+   padding-top: 6px;
+   width: 94px;
+   left: 50%;
+   margin-left: -47px;
    z-index: 100;
    @include setAnimationDuration(.3s);
+   @include boxShadow(0 3px 4px 0 rgba(0, 0, 0, .5));
 
-   ul{
-    padding:2px;
+   ul {
+    padding: 2px;
     background: #fff;
     @include borderRadius(5px);
 
-    li{
-     width:100%;
+    li {
+     width: 100%;
 
-     &:first-child{
+     &:first-child {
       margin-bottom: 2px;
      }
     }
 
-    a{
+    a {
      display: block;
      width: 100%;
      color: $theme-color;
      background: #fff;
-     font-size:12px;
+     font-size: 12px;
      text-align: center;
      @include borderRadius(5px);
      @include setHeightGroup(28px);
      @include transition(all .3s ease-in-out);
 
-     &:hover,&.active{
-      color:#fff;
+     &:hover, &.active {
+      color: #fff;
       background: $theme-color;
      }
     }
    }
   }
 
-  .setting-wrapper{
+  .setting-wrapper {
    display: none;
    position: absolute;
-   top:49px;
+   top: 49px;
    padding-top: 6px;
-   min-width:400px;
-   right:-20px;
+   min-width: 400px;
+   right: -20px;
    z-index: 100;
    @include setAnimationDuration(.3s);
+   @include boxShadow(0 5px 8px 0 rgba(0, 0, 0, .5));
 
-   .block-setting{
+   .block-setting {
     position: relative;
     padding: 10px 15px;
     background: #fff;
     @include borderRadius(5px);
 
-    &:before{
+    &:before {
      content: '';
      position: absolute;
      top: -10px;
-     right:45px;
+     right: 45px;
      border: 10px solid #fff;
-     border-top:0;
+     border-top: 0;
      border-left: 10px solid transparent;
      border-right: 10px solid transparent;
     }
 
-    p{
+    p {
      text-align: left;
-     margin-top:10px;
-     font-size:12px;
+     margin-top: 10px;
+     font-size: 12px;
      line-height: 22px;
-     color:$lightest-font-color;
+     color: $lightest-font-color;
 
-     span{
-      margin-right:30px;
+     span {
+      margin-right: 30px;
       color: $theme-font-color;
      }
     }
    }
 
-   h3{
-    color:$theme-font-color;
+   h3 {
+    color: $theme-font-color;
     line-height: 30px;
     text-align: center;
-    font-size:16px;
+    font-size: 16px;
     font-weight: normal;
-    height:31px;
+    height: 31px;
     border-bottom: 1px dotted $bd-color;
    }
 
-   .options{
-    margin-top:10px;
+   .options {
+    margin-top: 10px;
     text-align: left;
 
-    h4{
-     font-size:14px;
+    h4 {
+     font-size: 14px;
      line-height: 24px;
      font-weight: normal;
      color: $theme-font-color;
     }
    }
 
-   .table-wrapper{
+   .table-wrapper {
     margin-top: 4px;
 
-    td{
-     padding:7px 30px 7px 0;
+    td {
+     padding: 7px 30px 7px 0;
      width: 33%;
      vertical-align: top;
 
-     &:first-child{
+     &:first-child {
       width: 34%;
      }
 
      div {
-      padding-left:23px;
+      padding-left: 23px;
       position: relative;
       line-height: 18px;
-      font-size:12px;
-      color:$lighter-font-color;
+      font-size: 12px;
+      color: $lighter-font-color;
       cursor: pointer;
       white-space: nowrap;
       @include transition(all .3s ease-in-out);
      }
 
-     i{
-      width:18px;
-      height:18px;
-      font-size:16px;
+     i {
+      width: 18px;
+      height: 18px;
+      font-size: 16px;
       position: absolute;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
       margin-right: 0;
      }
 
-     .icon-checked-2{
+     .icon-checked-2 {
       color: $checked-color;
      }
 
-     .icon-unchecked-2{
+     .icon-unchecked-2 {
       color: $unchecked-color;
      }
     }
    }
 
-   .btn-line{
+   .btn-line {
     margin-top: 20px;
     text-align: center;
 
-    .btn{
+    .btn {
      display: inline-block;
-     margin:0 19px;
-     width:92px;
+     margin: 0 19px;
+     width: 92px;
      height: 34px;
      text-align: center;
      line-height: 30px;
-     border:2px solid $theme-color;
+     border: 2px solid $theme-color;
      color: $theme-color;
      @include borderRadius(5px);
      @include transition(all .3s ease-in-out);
      vertical-align: middle;
 
-     &:hover,&.active{
+     &:hover, &.active {
       background: $theme-color;
-      color:#fff;
+      color: #fff;
      }
 
      &.disable {
-      border-color:$disable-bg-color;
+      border-color: $disable-bg-color;
       background: $disable-bg-color;
-      color:#fff;
-      cursor:default;
+      color: #fff;
+      cursor: default;
      }
     }
    }
   }
  }
 
- .logo{
-   float:left;
-   display: inline-block;
-   width:140px;
-   height:50px;
-   background: url(images/logo.png) left center no-repeat;
+ .logo {
+  float: left;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  background: url(images/logo.png) left center no-repeat;
  }
 }
 
-.frame-nav{
+.frame-nav {
  position: fixed;
- left:0;
+ left: 0;
  top: 53px;
  bottom: 0;
- width:180px;
+ width: 180px;
  background: $aside-bg-color;
  z-index: 95;
- padding:0 10px;
+ padding: 0 10px;
 
- h2{
+ h2 {
   @include setHeightGroup(54px);
   color: $nav-title-color;
-  font-size:16px;
-  padding:0 0 0 10px;
+  font-size: 16px;
+  padding: 0 0 0 10px;
   font-weight: normal;
 
-  i{
-   float:right;
+  i {
+   float: right;
    color: $nav-icon-color;
   }
  }
 
- .nav-grade-2{
-  padding-left:10px;
+ .nav-grade-2 {
+  padding-left: 10px;
  }
 
- .link{
+ .link {
   display: block;
   @include borderRadius(5px);
-  font-size:12px;
+  font-size: 12px;
   line-height: 22px;
-  padding:3px 0 3px 36px;
+  padding: 3px 0 3px 36px;
   position: relative;
   margin-bottom: 2px;
   color: $nav-font-color;
   @include transition(all .3s ease-in-out);
 
-  &:hover, &.active{
+  &:hover, &.active {
    background: $nav-hover-bg-color;
    color: #fff;
 
-   i{
+   i {
     color: #fff;
    }
   }
 
-  i{
-   color:$nav-icon-color;
-   font-size:14px;
+  i {
+   color: $nav-icon-color;
+   font-size: 14px;
    position: absolute;
-   left:12px;
+   left: 12px;
    top: 4px;
   }
 
-  .icon-arrow-left{
-   font-size:6px;
+  .icon-arrow-left {
+   font-size: 6px;
   }
 
  }
 }
 
-.frame-main-body{
-  padding-top:53px;
-  height:100%;
+.frame-main-body {
+ padding-top: 53px;
+ height: 100%;
 }
 
-.module-login{
+.module-login {
  width: 100%;
  height: 100%;
 
- .block-banner{
+ .block-banner {
   width: 100%;
   background: $banner-bg-color url(images/banner.png) center center no-repeat;
   height: 50%;
   position: relative;
   text-align: center;
 
-  &:before{
+  &:before {
    content: '';
    display: inline-block;
-   height:100%;
+   height: 100%;
    vertical-align: middle;
-   margin-right:-0.25em;
+   margin-right: -0.25em;
   }
 
-  .banner-info{
-   font-size:36px;
-   height:72px;
+  .banner-info {
+   font-size: 36px;
+   height: 72px;
    line-height: 72px;
    display: inline-block;
-   color:#fff;
+   color: #fff;
    background: $banner-info-bg-color;
    padding: 0 25px;
    vertical-align: middle;
@@ -484,27 +486,27 @@ table{
   }
  }
 
- .block-login{
+ .block-login {
   text-align: center;
   position: relative;
 
-  .login{
+  .login {
    display: inline-block;
    margin: 30px;
   }
 
-  .box-input{
-   display:inline-block;
+  .box-input {
+   display: inline-block;
    vertical-align: top;
 
-   & > span{
+   & > span {
     display: inline-block;
-    font-size:16px;
+    font-size: 16px;
     color: #fff;
-    @include  setHeightGroup(40px);
+    @include setHeightGroup(40px);
     vertical-align: middle;
-    margin-right:15px;
-    float:left;
+    margin-right: 15px;
+    float: left;
    }
 
    & > div {
@@ -515,60 +517,60 @@ table{
     input {
      display: block;
      width: 200px;
-     height:40px;
+     height: 40px;
      line-height: 36px;
      background: #fff;
-     border:2px solid #fff;
-     padding:0 8px;
+     border: 2px solid #fff;
+     padding: 0 8px;
      color: $input-font-color;
-     font-size:14px;
+     font-size: 14px;
      @include borderRadius(5px);
     }
 
-    .error{
-     border:2px solid $error-bd-color;
+    .error {
+     border: 2px solid $error-bd-color;
     }
    }
 
-   .error-info{
+   .error-info {
     position: absolute;
-    left:0;
-    top:48px;
+    left: 0;
+    top: 48px;
     line-height: 18px;
     text-align: left;
-    font-size:12px;
-    color:$error-text-color;
+    font-size: 12px;
+    color: $error-text-color;
     white-space: nowrap;
 
-    i{
-     font-size:16px;
-     color:$error-icon-color;
-     margin-right:6px;
+    i {
+     font-size: 16px;
+     color: $error-icon-color;
+     margin-right: 6px;
      vertical-align: middle;
     }
    }
 
-   .btn-login{
-    margin:0;
+   .btn-login {
+    margin: 0;
     @include setHeightGroup(40px);
     color: #fff;
     width: 100px;
     text-align: center;
     @include borderRadius(5px);
-    font-size:16px;
+    font-size: 16px;
     background: $btn-login-color;
     @include transition(all .3s ease-in-out);
 
-    &:hover{
+    &:hover {
      background: darken($btn-login-color, 2%);
     }
 
-    &.disable{
+    &.disable {
      background: $disable-bg-color !important;
-     cursor:default;
+     cursor: default;
     }
 
-    &:active{
+    &:active {
      background: darken($btn-login-color, 4%);
     }
    }
@@ -576,27 +578,27 @@ table{
  }
 }
 
-.block-banner-index{
+.block-banner-index {
  width: 100%;
  background: $banner-bg-color url(images/banner.png) center center no-repeat;
  height: 360px;
  position: relative;
  text-align: center;
 
- &:before{
+ &:before {
   content: '';
   display: inline-block;
-  height:100%;
+  height: 100%;
   vertical-align: middle;
-  margin-right:-0.25em;
+  margin-right: -0.25em;
  }
 
- .banner-info{
-  font-size:36px;
-  height:72px;
+ .banner-info {
+  font-size: 36px;
+  height: 72px;
   line-height: 72px;
   display: inline-block;
-  color:#fff;
+  color: #fff;
   background: $banner-info-bg-color;
   padding: 0 25px;
   vertical-align: middle;
@@ -605,28 +607,28 @@ table{
  }
 }
 
-.module-content{
-  padding:24px 36px 0 24px;
+.module-content {
+ padding: 24px 36px 0 24px;
 
- .block-intro{
-  margin-bottom:24px;
-  p{
+ .block-intro {
+  margin-bottom: 24px;
+  p {
    color: #fff;
    text-indent: 2em;
-   font-size:14px;
+   font-size: 14px;
    line-height: 32px;
   }
  }
 
- .block-products{
+ .block-products {
   background: #fff;
   margin-bottom: 30px;
   @include borderRadius(5px);
-  padding:10px;
+  padding: 10px;
 
-  h3{
+  h3 {
    color: $theme-font-color;
-   font-size:18px;
+   font-size: 18px;
    padding-bottom: 6px;
    font-weight: normal;
    line-height: 24px;
@@ -635,58 +637,58 @@ table{
    text-align: center;
   }
 
-  table{
+  table {
    width: 100%;
 
-   td{
+   td {
     padding: 10px 20px 10px 0;
     width: 33%;
     vertical-align: top;
 
-    &:first-child{
+    &:first-child {
      width: 34%;
     }
    }
 
-   a{
+   a {
     display: block;
     position: relative;
     min-height: 80px;
     height: 100%;
-    padding:10px 10px 10px 90px;
+    padding: 10px 10px 10px 90px;
     background: #fff;
     color: $lighter-font-color;
     @include borderRadius(5px);
     @include transition(all .1s ease-in-out);
 
-    &:hover{
+    &:hover {
      background: $product-hover-color;
 
-     img{
+     img {
       @include transform(rotate(360deg));
      }
     }
 
-    img{
+    img {
      position: absolute;
-     left:10px;
-     top:10px;
+     left: 10px;
+     top: 10px;
      width: 60px;
-     height:60px;
+     height: 60px;
      @include transition(all .3s ease-in-out);
      @include transform(rotate(0deg));
     }
 
-    dt{
-     color:$product-title-color;
-     font-size:16px;
+    dt {
+     color: $product-title-color;
+     font-size: 16px;
      line-height: 24px;
     }
 
-    dd{
-     margin-top:8px;
+    dd {
+     margin-top: 8px;
      color: $lighter-font-color;
-     font-size:14px;
+     font-size: 14px;
      line-height: 20px;
     }
    }
