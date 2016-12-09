@@ -674,10 +674,6 @@ table {
 
     &:hover {
      background: $product-hover-color;
-
-     img {
-      @include transform(rotate(360deg));
-     }
     }
 
     img {
@@ -686,8 +682,6 @@ table {
      top: 10px;
      width: 60px;
      height: 60px;
-     @include transition(all .3s ease-in-out);
-     @include transform(rotate(0deg));
     }
 
     dt {

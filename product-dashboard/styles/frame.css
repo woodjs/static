@@ -682,25 +682,12 @@ table {
 .module-content .block-products table a:hover {
   background: #E4F6FA;
 }
-.module-content .block-products table a:hover img {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
 .module-content .block-products table a img {
   position: absolute;
   left: 10px;
   top: 10px;
   width: 60px;
   height: 60px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
 }
 .module-content .block-products table a dt {
   color: #01A3DA;
