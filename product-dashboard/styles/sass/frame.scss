@@ -670,7 +670,7 @@ table {
     background: #fff;
     color: $lighter-font-color;
     @include borderRadius(5px);
-    @include transition(all .1s ease-in-out);
+    @include transition(all .3s ease-in-out);
 
     &:hover {
      background: $product-hover-color;
