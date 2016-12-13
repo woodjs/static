@@ -417,7 +417,7 @@ table {
   line-height: 24px;
   color: #C0CBD9;
   font-size: 16px;
-  padding: 15px 16px 15px 10px;
+  padding: 15px 0 15px 23px;
   font-weight: normal;
   position: relative;
 }
@@ -426,8 +426,8 @@ table {
   color: #01A3DA;
   font-size: 16px;
   position: absolute;
-  right: 0;
   top: 15px;
+  left: 0;
 }
 .frame-nav .nav-grade-2 {
   padding-left: 10px;
