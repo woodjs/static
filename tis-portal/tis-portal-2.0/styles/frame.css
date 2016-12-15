@@ -942,4 +942,145 @@ body.en .portal-module dd .right-text div {
   display: none;
 }
 
+.dialog-box-remind {
+  min-width: 400px;
+  position: fixed;
+  bottom: 20px;
+  right: 120px;
+  background: #fff;
+  z-index: 1100;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-box-remind .dialog-header {
+  border-bottom: 1px solid #ebebeb;
+  height: 39px;
+  line-height: 38px;
+  background: #353751;
+  width: 100%;
+  padding-left: 18px;
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+}
+
+.dialog-box-remind .dialog-header .btn-close {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(images/icons.png) 0 -1210px no-repeat;
+  float: right;
+  margin: 7px 10px;
+  *position: absolute;
+  *right: 10px;
+  *top: 7px;
+  *z-index: 1300;
+  *margin: 0;
+}
+
+.remind-box {
+  width: 100%;
+}
+.remind-box .remind-item {
+  width: 100%;
+  padding: 12px 0;
+  position: relative;
+}
+.remind-box .remind-item:nth-child(even) {
+  background: #f0f0f0;
+}
+.remind-box .remind-item ul {
+  display: inline-block;
+  padding: 0 10px 0 20px;
+  width: 100%;
+  vertical-align: middle;
+}
+.remind-box .remind-item ul a {
+  color: #38374f;
+  text-decoration: underline;
+  font-size: 12px;
+  padding-left: 12px;
+  position: relative;
+}
+.remind-box .remind-item ul a:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  margin-top: -3px;
+  background: #9C9FA9;
+}
+.remind-box .remind-item ul a span {
+  color: #e80015;
+  font-weight: bold;
+  padding: 0 3px;
+}
+.remind-box .remind-item ul a:hover {
+  color: #0072ff;
+}
+.remind-box .remind-item ul a:hover span {
+  color: #0072ff;
+  font-weight: bold;
+}
+.remind-box .remind-item ul a:hover:after {
+  background: #0072ff;
+}
+.remind-box .remind-item li {
+  height: 32px;
+  line-height: 32px;
+  display: block;
+}
+.remind-box dl {
+  position: absolute;
+  width: 90px;
+  height: 68px;
+  top: 50%;
+  left: 0;
+  margin-top: -34px;
+}
+.remind-box dt {
+  text-align: center;
+}
+.remind-box dt span {
+  vertical-align: top;
+}
+.remind-box dd {
+  color: #9d9eaa;
+  font-size: 12px;
+  text-align: center;
+}
+.remind-box .wrapper-links {
+  padding: 0 0 0 90px;
+  position: relative;
+  min-height: 64px;
+  line-height: 64px;
+}
+.remind-box .wrapper-links:before {
+  position: absolute;
+  content: '';
+  left: 91px;
+  width: 1px;
+  height: 100%;
+  background: #e0e3d5;
+}
+.remind-box .icon {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+.remind-box .icon-tac {
+  background: url(images/module_icons.png) -50px -350px no-repeat;
+}
+.remind-box .icon-pac {
+  background: url(images/module_icons.png) 0 -350px no-repeat;
+}
+.remind-box .icon-lac {
+  background: url(images/module_icons.png) -100px -350px no-repeat;
+}
+
 /*# sourceMappingURL=frame.css.map */

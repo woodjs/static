@@ -1,4 +1,4 @@
-require(['globalConfig', 'jquery', 'tabNews', 'userActivity', 'banner', 'mustache'], function (globalConfig, $, tabNews, UserActivity, banner, Mustache) {
+require(['globalConfig', 'jquery', 'tabNews', 'userActivity', 'banner', 'mustache', 'scWindow'], function (globalConfig, $, tabNews, UserActivity, banner, Mustache) {
   var home = {
     init: function () {
       var self = this;

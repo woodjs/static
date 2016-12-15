@@ -23,6 +23,7 @@ require.config({
     numbox: 'component/private/form/jquery.numbox.js',
     formValidate: 'component/private/form/jquery.formValidate.js',
     paging: 'component/private/paging.js',
+    scWindow: 'component/private/jquery.servision.window.js',
     promptUI: 'component/private/promptUI/js/jquery.promptUI.js',
     addressSelect: 'component/private/addressSelect/jquery.addressSelect.js',
     blockUI: 'component/public/blockUI/jquery.blockUI.js',
