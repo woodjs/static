@@ -1,0 +1,116 @@
+body, div, ul, dl, ol, dt, dd, li, p, a, label, span, i, img, input, textarea, header, footer, article, section, nav, aside, figure, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  min-width: 1200px;
+  font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+ul, dl, ol {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+input, textarea, a {
+  outline: none;
+}
+
+header, footer, article, section, nav, aside, figure {
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.frame-top-line {
+  height: 80px;
+  background: #fff;
+}
+
+.frame-footer {
+  width: 100%;
+  padding: 20px 100px 20px;
+  background: #353751;
+  overflow: hidden;
+}
+.frame-footer:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.frame-footer .box-links {
+  font-size: 14px;
+  line-height: 28px;
+  color: #333;
+  text-align: center;
+}
+.frame-footer .box-links a {
+  display: inline-block;
+  color: #fff;
+  margin: 0 12px;
+}
+.frame-footer .box-links a:hover {
+  text-decoration: underline;
+}
+.frame-footer .box-links-2 {
+  font-size: 0;
+  color: #fff;
+  text-align: center;
+  margin-top: 16px;
+}
+.frame-footer .box-links-2 a {
+  font-size: 12px;
+  display: inline-block;
+  line-height: 24px;
+  padding: 0 8px 0 9px;
+  color: #fff;
+  position: relative;
+}
+.frame-footer .box-links-2 a:before {
+  content: '';
+  height: 12px;
+  width: 1px;
+  background: #65677f;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -6px;
+}
+.frame-footer .box-links-2 a:hover {
+  text-decoration: underline;
+}
+.frame-footer .box-links-2 label {
+  font-size: 12px;
+  line-height: 24px;
+}
+.frame-footer .box-links-2 label + a:before, .frame-footer .box-links-2 a:first-child:before {
+  display: none;
+}
+.frame-footer .site-statement {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=frame.css.map */
