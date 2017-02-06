@@ -52,7 +52,12 @@ header, footer, article, section, nav, aside, figure {
  display: inline-block;
 }
 
-.p-b-65{
+.p-t-b-10 {
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+.p-b-65 {
  padding-bottom: 65px;
 }
 
@@ -103,33 +108,33 @@ header, footer, article, section, nav, aside, figure {
    font-size: 14px;
    @include setHeightGroup(20px);
 
-   a:hover{
+   a:hover {
     color: $themeAnchorColor;
    }
   }
 
-  .register{
+  .register {
    padding: 0 14px 0 0;
    display: block;
    position: relative;
    height: 20px;
 
-   &:before{
+   &:before {
     content: '';
     position: absolute;
     right: 0;
     top: 0;
     height: 20px;
-    width:8px;
+    width: 8px;
     background: url(images/arrow_down.png) left center no-repeat;
    }
 
-   &:hover:before{
+   &:hover:before {
     background: url(images/arrow_up.png) left center no-repeat;
    }
   }
 
-  .register-guide{
+  .register-guide {
    position: absolute;
    top: 30px;
    background: #fff;
@@ -139,11 +144,11 @@ header, footer, article, section, nav, aside, figure {
    color: $fontColor;
    padding: 10px 20px;
    cursor: text;
-   width:300px;
+   width: 300px;
    margin-left: -140px;
    @include borderRadius(5px);
 
-   &:before{
+   &:before {
     content: '';
     position: absolute;
     border: 8px solid #fff;
@@ -155,17 +160,17 @@ header, footer, article, section, nav, aside, figure {
     z-index: 1100;
    }
 
-   td{
+   td {
     white-space: nowrap;
     line-height: 34px;
 
-    &:first-child{
+    &:first-child {
      font-weight: bold;
     }
    }
   }
 
-  .file-search{
+  .file-search {
    padding: 0 0 0 20px;
    margin-left: 5px;
 
@@ -181,20 +186,20 @@ header, footer, article, section, nav, aside, figure {
     margin-top: -8px;
    }
 
-   a{
+   a {
     padding-left: 22px;
     background: url(images/search.png) left center no-repeat;
    }
 
-   &:hover{
-    a{
+   &:hover {
+    a {
      background: url(images/search_red.png) left center no-repeat;
     }
    }
   }
 
-  .login-info{
-   font-size:12px;
+  .login-info {
+   font-size: 12px;
   }
 
   .username {
@@ -294,44 +299,44 @@ header, footer, article, section, nav, aside, figure {
  }
 }
 
-.frame-main-container{
- width:100%;
+.frame-main-container {
+ width: 100%;
 
- .main-container-wrapper{
+ .main-container-wrapper {
   width: $frameWidth;
   margin: 0 auto;
  }
 
- .line-modules{
+ .line-modules {
   width: 100%;
-  padding-top:36px;
-  overflow:hidden;
+  padding-top: 36px;
+  overflow: hidden;
 
-  a{
+  a {
    width: 171px;
    float: left;
    padding: 0 25px;
 
-   &:hover{
+   &:hover {
     color: $themeAnchorColor;
-    h3{
+    h3 {
      color: $themeAnchorColor;
      text-decoration: underline;
     }
    }
   }
 
-  .icon-wrapper{
+  .icon-wrapper {
    height: 60px;
    text-align: center;
 
-   span{
+   span {
     display: inline-block;
-    width:60px;
-    height:60px;
+    width: 60px;
+    height: 60px;
    }
 
-   img{
+   img {
     display: block;
     width: 60px;
     height: 60px;
@@ -340,24 +345,70 @@ header, footer, article, section, nav, aside, figure {
    }
   }
 
-  h3{
-   margin-top:8px;
-   font-size:14px;
+  h3 {
+   margin-top: 8px;
+   font-size: 14px;
    font-weight: normal;
    line-height: 20px;
    text-align: center;
    color: #333333;
 
-   label{
+   label {
     margin-right: 5px;
     color: $themeAnchorColor;
    }
   }
 
-  p{
-   font-size:12px;
+  p {
+   font-size: 12px;
    text-align: center;
    color: #999999;
+  }
+ }
+
+ .box-modules {
+  border: 1px solid #e2e2e2;
+  @include boxShadow(0 0 5px rgba(0,0,0,.1));
+
+  .line-modules{
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 12px;
+
+   &:first-child{
+    padding-top:0;
+   }
+
+   a{
+    width: 166px;
+   }
+  }
+
+  dl {
+   border-top: 1px solid #ededed;
+   padding-bottom: 18px;
+
+   &:first-child {
+    border: none;
+   }
+  }
+
+  dt{
+   font-size:18px;
+   line-height: 30px;
+   padding:12px 30px;
+   position: relative;
+
+   &:before{
+    content: '';
+    position: absolute;
+    width:2px;
+    height: 18px;
+    background: #E20102;
+    left:18px;
+    top:50%;
+    margin-top:-9px;
+   }
   }
  }
 }
@@ -448,7 +499,7 @@ header, footer, article, section, nav, aside, figure {
   color: $fontColor;
   font-size: 12px;
   line-height: 24px;
-  margin-top: 8px;
+  margin: 8px 0 30px;
   li:first-child {
    margin-bottom: 5px;
   }
@@ -483,11 +534,11 @@ header, footer, article, section, nav, aside, figure {
   height: 39px;
   line-height: 38px;
   background: $themeColor;
-  width:100%;
+  width: 100%;
   padding-left: 18px;
   font-size: 14px;
   position: relative;
-  color:#fff;
+  color: #fff;
 
   .btn-close {
    display: inline-block;
@@ -506,7 +557,7 @@ header, footer, article, section, nav, aside, figure {
 
  .dialog-content {
   padding: 20px 20px 10px 20px;
-  width:100%;
+  width: 100%;
   height: 149px;
 
   .info-line {
@@ -555,7 +606,7 @@ header, footer, article, section, nav, aside, figure {
    text-align: center;
    height: 24px;
    line-height: 24px;
-   color: #999;
+   color: #777;
    font-size: 12px;
 
    a {
@@ -567,4 +618,5 @@ header, footer, article, section, nav, aside, figure {
   }
  }
 }
+
 /* end login dialog */

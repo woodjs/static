@@ -40,6 +40,11 @@ header, footer, article, section, nav, aside, figure {
   display: inline-block;
 }
 
+.p-t-b-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .p-b-65 {
   padding-bottom: 65px;
 }
@@ -311,6 +316,46 @@ header, footer, article, section, nav, aside, figure {
   text-align: center;
   color: #999999;
 }
+.frame-main-container .box-modules {
+  border: 1px solid #e2e2e2;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.frame-main-container .box-modules .line-modules {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 12px;
+}
+.frame-main-container .box-modules .line-modules:first-child {
+  padding-top: 0;
+}
+.frame-main-container .box-modules .line-modules a {
+  width: 166px;
+}
+.frame-main-container .box-modules dl {
+  border-top: 1px solid #ededed;
+  padding-bottom: 18px;
+}
+.frame-main-container .box-modules dl:first-child {
+  border: none;
+}
+.frame-main-container .box-modules dt {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 12px 30px;
+  position: relative;
+}
+.frame-main-container .box-modules dt:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 18px;
+  background: #E20102;
+  left: 18px;
+  top: 50%;
+  margin-top: -9px;
+}
 
 .frame-footer {
   width: 100%;
@@ -384,7 +429,7 @@ header, footer, article, section, nav, aside, figure {
   color: #282828;
   font-size: 12px;
   line-height: 24px;
-  margin-top: 8px;
+  margin: 8px 0 30px;
 }
 .frame-footer .site-statement li:first-child {
   margin-bottom: 5px;
@@ -482,7 +527,7 @@ header, footer, article, section, nav, aside, figure {
   text-align: center;
   height: 24px;
   line-height: 24px;
-  color: #999;
+  color: #777;
   font-size: 12px;
 }
 .dialog-box .dialog-content .register-line a {
