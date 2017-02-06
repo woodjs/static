@@ -1,6 +1,6 @@
 @import "base";
 
-$themeColor: #353751;
+$themeColor: #b8342c;
 $themeAnchorColor: #d1251a;
 $bdColor: #eae9ec;
 $bgColor: #fff;
@@ -50,6 +50,10 @@ header, footer, article, section, nav, aside, figure {
 
 .icon {
  display: inline-block;
+}
+
+.p-b-65{
+ padding-bottom: 65px;
 }
 
 .frame-top-line {
@@ -296,17 +300,25 @@ header, footer, article, section, nav, aside, figure {
  .main-container-wrapper{
   width: $frameWidth;
   margin: 0 auto;
-  padding-bottom: 65px;
  }
 
  .line-modules{
   width: 100%;
   padding-top:36px;
+  overflow:hidden;
 
   a{
    width: 171px;
    float: left;
    padding: 0 25px;
+
+   &:hover{
+    color: $themeAnchorColor;
+    h3{
+     color: $themeAnchorColor;
+     text-decoration: underline;
+    }
+   }
   }
 
   .icon-wrapper{
@@ -318,6 +330,14 @@ header, footer, article, section, nav, aside, figure {
     width:60px;
     height:60px;
    }
+
+   img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    vertical-align: center;
+   }
   }
 
   h3{
@@ -327,6 +347,11 @@ header, footer, article, section, nav, aside, figure {
    line-height: 20px;
    text-align: center;
    color: #333333;
+
+   label{
+    margin-right: 5px;
+    color: $themeAnchorColor;
+   }
   }
 
   p{
@@ -429,3 +454,117 @@ header, footer, article, section, nav, aside, figure {
   }
  }
 }
+
+/* begin login dialog */
+.dialog-bg {
+ position: fixed;
+ left: 0;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.3);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#47000000, endColorstr=#47000000);
+ z-index: 1005;
+}
+
+.dialog-box {
+ width: 350px;
+ height: 190px;
+ position: fixed;
+ left: 50%;
+ top: 50%;
+ margin-top: -95px;
+ margin-left: -175px;
+ background: #fff;
+ z-index: 1100;
+
+ .dialog-header {
+  border-bottom: 1px solid #ebebeb;
+  height: 39px;
+  line-height: 38px;
+  background: $themeColor;
+  width:100%;
+  padding-left: 18px;
+  font-size: 14px;
+  position: relative;
+  color:#fff;
+
+  .btn-close {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background: url(images/close.png) center center no-repeat;
+   float: right;
+   margin: 7px 10px;
+   *position: absolute;
+   *right: 10px;
+   *top: 7px;
+   *z-index: 1300;
+   *margin: 0;
+  }
+ }
+
+ .dialog-content {
+  padding: 20px 20px 10px 20px;
+  width:100%;
+  height: 149px;
+
+  .info-line {
+   padding-left: 32px;
+   line-height: 24px;
+   width: 308px;
+   background: url(images/warn.png) left 2px no-repeat;
+
+   span {
+    font-size: 12px;
+    color: red;
+   }
+  }
+
+  .btn-line {
+   height: 36px;
+   line-height: 36px;
+   margin-top: 15px;
+   font-size: 14px;
+
+   .btn-action {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 64px;
+    float: left;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    background: $themeColor;
+   }
+
+   .btn-cancel {
+    margin-left: 35px;
+    float: left;
+    color: $fontColor;
+   }
+
+   .btn-cancel:hover {
+    text-decoration: underline;
+   }
+  }
+
+  .register-line {
+   margin-top: 15px;
+   text-align: center;
+   height: 24px;
+   line-height: 24px;
+   color: #999;
+   font-size: 12px;
+
+   a {
+    cursor: text;
+    text-decoration: none;
+    color: $fontColor;
+    margin-left: 2px;
+   }
+  }
+ }
+}
+/* end login dialog */

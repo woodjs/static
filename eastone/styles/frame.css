@@ -40,6 +40,10 @@ header, footer, article, section, nav, aside, figure {
   display: inline-block;
 }
 
+.p-b-65 {
+  padding-bottom: 65px;
+}
+
 .frame-top-line {
   height: 80px;
   background: #fff;
@@ -180,7 +184,7 @@ header, footer, article, section, nav, aside, figure {
   background: #f6f6f6;
 }
 .frame-banner-box a:hover {
-  color: #353751;
+  color: #b8342c;
   text-decoration: underline;
 }
 .frame-banner-box ul {
@@ -256,16 +260,23 @@ header, footer, article, section, nav, aside, figure {
 .frame-main-container .main-container-wrapper {
   width: 1200px;
   margin: 0 auto;
-  padding-bottom: 65px;
 }
 .frame-main-container .line-modules {
   width: 100%;
   padding-top: 36px;
+  overflow: hidden;
 }
 .frame-main-container .line-modules a {
   width: 171px;
   float: left;
   padding: 0 25px;
+}
+.frame-main-container .line-modules a:hover {
+  color: #d1251a;
+}
+.frame-main-container .line-modules a:hover h3 {
+  color: #d1251a;
+  text-decoration: underline;
 }
 .frame-main-container .line-modules .icon-wrapper {
   height: 60px;
@@ -276,6 +287,13 @@ header, footer, article, section, nav, aside, figure {
   width: 60px;
   height: 60px;
 }
+.frame-main-container .line-modules .icon-wrapper img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  vertical-align: center;
+}
 .frame-main-container .line-modules h3 {
   margin-top: 8px;
   font-size: 14px;
@@ -283,6 +301,10 @@ header, footer, article, section, nav, aside, figure {
   line-height: 20px;
   text-align: center;
   color: #333333;
+}
+.frame-main-container .line-modules h3 label {
+  margin-right: 5px;
+  color: #d1251a;
 }
 .frame-main-container .line-modules p {
   font-size: 12px;
@@ -367,5 +389,109 @@ header, footer, article, section, nav, aside, figure {
 .frame-footer .site-statement li:first-child {
   margin-bottom: 5px;
 }
+
+/* begin login dialog */
+.dialog-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#47000000, endColorstr=#47000000);
+  z-index: 1005;
+}
+
+.dialog-box {
+  width: 350px;
+  height: 190px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -95px;
+  margin-left: -175px;
+  background: #fff;
+  z-index: 1100;
+}
+.dialog-box .dialog-header {
+  border-bottom: 1px solid #ebebeb;
+  height: 39px;
+  line-height: 38px;
+  background: #b8342c;
+  width: 100%;
+  padding-left: 18px;
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+}
+.dialog-box .dialog-header .btn-close {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(images/close.png) center center no-repeat;
+  float: right;
+  margin: 7px 10px;
+  *position: absolute;
+  *right: 10px;
+  *top: 7px;
+  *z-index: 1300;
+  *margin: 0;
+}
+.dialog-box .dialog-content {
+  padding: 20px 20px 10px 20px;
+  width: 100%;
+  height: 149px;
+}
+.dialog-box .dialog-content .info-line {
+  padding-left: 32px;
+  line-height: 24px;
+  width: 308px;
+  background: url(images/warn.png) left 2px no-repeat;
+}
+.dialog-box .dialog-content .info-line span {
+  font-size: 12px;
+  color: red;
+}
+.dialog-box .dialog-content .btn-line {
+  height: 36px;
+  line-height: 36px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.dialog-box .dialog-content .btn-line .btn-action {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  margin-left: 64px;
+  float: left;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  background: #b8342c;
+}
+.dialog-box .dialog-content .btn-line .btn-cancel {
+  margin-left: 35px;
+  float: left;
+  color: #282828;
+}
+.dialog-box .dialog-content .btn-line .btn-cancel:hover {
+  text-decoration: underline;
+}
+.dialog-box .dialog-content .register-line {
+  margin-top: 15px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  color: #999;
+  font-size: 12px;
+}
+.dialog-box .dialog-content .register-line a {
+  cursor: text;
+  text-decoration: none;
+  color: #282828;
+  margin-left: 2px;
+}
+
+/* end login dialog */
 
 /*# sourceMappingURL=frame.css.map */
