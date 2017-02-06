@@ -1,0 +1,203 @@
+body, div, ul, dl, ol, dt, dd, li, p, a, label, span, i, img, input, textarea, header, footer, article, section, nav, aside, figure, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul, dl, ol {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+input, textarea, a {
+  outline: none;
+}
+
+header, footer, article, section, nav, aside, figure {
+  display: block;
+}
+
+body {
+  font-size: 14px;
+  min-width: 1200px;
+  font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+  background: url(images/body_bg.png) left top repeat;
+  color: #333;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.earth-map {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 824px;
+  height: 405px;
+  margin-left: -412px;
+  margin-top: -202px;
+  z-index: 10;
+  background: url(images/map.png) center center no-repeat;
+}
+
+.login-box {
+  width: 400px;
+  height: 400px;
+  padding: 25px 30px 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px rgba(12, 4, 8, 0.1);
+  -moz-box-shadow: 0 0 6px rgba(12, 4, 8, 0.1);
+  box-shadow: 0 0 6px rgba(12, 4, 8, 0.1);
+  z-index: 100;
+}
+.login-box .logo {
+  height: 34px;
+}
+.login-box .logo img {
+  display: block;
+  margin: 0 auto;
+  height: 34px;
+  vertical-align: top;
+}
+.login-box .login-title {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+}
+.login-box .login-title:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #333;
+  top: 12px;
+  left: 0;
+  z-index: -1;
+}
+.login-box .login-title:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #333;
+  top: 12px;
+  right: 0;
+  z-index: -1;
+}
+.login-box .login-title span {
+  padding: 0 10px;
+}
+.login-box .input-line {
+  margin-top: 14px;
+}
+.login-box .input-line label {
+  display: block;
+  line-height: 24px;
+  height: 24px;
+}
+.login-box .input-line input {
+  display: block;
+  border: 1px solid #d5d4d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  width: 100%;
+  height: 36px;
+  padding: 8px 8px 8px 48px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #333;
+  margin-top: 6px;
+}
+.login-box .input-line input:focus {
+  border: 1px solid #ababab;
+}
+.login-box .input-line input.error {
+  border: 1px solid #f03334;
+}
+.login-box .input-line input.username {
+  background: url(images/username.png) 12px center no-repeat;
+}
+.login-box .input-line input.password {
+  background: url(images/password.png) 12px center no-repeat;
+}
+.login-box .func-line {
+  margin-top: 10px;
+  line-height: 16px;
+  overflow: hidden;
+}
+.login-box .func-line .remember {
+  float: left;
+  padding-left: 25px;
+  cursor: default;
+}
+.login-box .func-line .forget {
+  float: right;
+  text-decoration: underline;
+  color: #333;
+  cursor: pointer;
+}
+.login-box .func-line .checked {
+  background: url(images/checked.png) left center no-repeat;
+}
+.login-box .func-line .unchecked {
+  background: url(images/unchecked.png) left center no-repeat;
+}
+.login-box .btn-line {
+  margin-top: 20px;
+  height: 36px;
+}
+.login-box .btn-line a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #D0251A;
+}
+.login-box .error-line {
+  height: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+  color: #ee0103;
+  font-size: 12px;
+}
+.login-box .error-line:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  width: 14px;
+  height: 16px;
+  background: url(images/error.png) left center no-repeat;
+}
+
+/*# sourceMappingURL=login.css.map */
