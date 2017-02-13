@@ -96,60 +96,6 @@ header, footer, article, section, nav, aside, figure {
 .frame-top-line .func-box > div a:hover {
   color: #d1251a;
 }
-.frame-top-line .func-box .register {
-  padding: 0 14px 0 0;
-  display: block;
-  position: relative;
-  height: 20px;
-}
-.frame-top-line .func-box .register:before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 20px;
-  width: 8px;
-  background: url(images/arrow_down.png) left center no-repeat;
-}
-.frame-top-line .func-box .register:hover:before {
-  background: url(images/arrow_up.png) left center no-repeat;
-}
-.frame-top-line .func-box .register-guide {
-  position: absolute;
-  top: 30px;
-  background: #fff;
-  filter: drop-shadow(1px 1px 6px rgba(12, 4, 8, 0.3));
-  -webkit-box-shadow: 1px 1px 6px rgba(12, 4, 8, 0.3);
-  -moz-box-shadow: 1px 1px 6px rgba(12, 4, 8, 0.3);
-  box-shadow: 1px 1px 6px rgba(12, 4, 8, 0.3);
-  z-index: 1000;
-  color: #282828;
-  padding: 10px 20px;
-  cursor: text;
-  width: 300px;
-  margin-left: -140px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.frame-top-line .func-box .register-guide:before {
-  content: '';
-  position: absolute;
-  border: 8px solid #fff;
-  border-top: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  left: 50%;
-  top: -8px;
-  z-index: 1100;
-}
-.frame-top-line .func-box .register-guide td {
-  white-space: nowrap;
-  line-height: 34px;
-}
-.frame-top-line .func-box .register-guide td:first-child {
-  font-weight: bold;
-}
 .frame-top-line .func-box .file-search {
   padding: 0 0 0 20px;
   margin-left: 5px;
@@ -265,6 +211,30 @@ header, footer, article, section, nav, aside, figure {
 .frame-main-container .main-container-wrapper {
   width: 1200px;
   margin: 0 auto;
+}
+.frame-main-container .register-guide {
+  text-align: center;
+}
+.frame-main-container .register-guide table {
+  vertical-align: middle;
+  text-align: left;
+  display: inline-block;
+}
+.frame-main-container .register-guide table span {
+  padding: 0 10px 0 35px;
+}
+.frame-main-container .register-guide table td {
+  padding: 0;
+  line-height: 36px;
+}
+.frame-main-container .register-guide table .user {
+  background: url(images/user.png) left center no-repeat;
+}
+.frame-main-container .register-guide table .tel {
+  background: url(images/tel.png) left center no-repeat;
+}
+.frame-main-container .register-guide table .mail {
+  background: url(images/mail.png) left center no-repeat;
 }
 .frame-main-container .line-modules {
   width: 100%;

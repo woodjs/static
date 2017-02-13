@@ -113,63 +113,6 @@ header, footer, article, section, nav, aside, figure {
    }
   }
 
-  .register {
-   padding: 0 14px 0 0;
-   display: block;
-   position: relative;
-   height: 20px;
-
-   &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 20px;
-    width: 8px;
-    background: url(images/arrow_down.png) left center no-repeat;
-   }
-
-   &:hover:before {
-    background: url(images/arrow_up.png) left center no-repeat;
-   }
-  }
-
-  .register-guide {
-   position: absolute;
-   top: 30px;
-   background: #fff;
-   filter: drop-shadow(1px 1px 6px rgba(12, 4, 8, .3));
-   @include boxShadow(1px 1px 6px rgba(12, 4, 8, .3));
-   z-index: 1000;
-   color: $fontColor;
-   padding: 10px 20px;
-   cursor: text;
-   width: 300px;
-   margin-left: -140px;
-   @include borderRadius(5px);
-
-   &:before {
-    content: '';
-    position: absolute;
-    border: 8px solid #fff;
-    border-top: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    left: 50%;
-    top: -8px;
-    z-index: 1100;
-   }
-
-   td {
-    white-space: nowrap;
-    line-height: 34px;
-
-    &:first-child {
-     font-weight: bold;
-    }
-   }
-  }
-
   .file-search {
    padding: 0 0 0 20px;
    margin-left: 5px;
@@ -305,6 +248,37 @@ header, footer, article, section, nav, aside, figure {
  .main-container-wrapper {
   width: $frameWidth;
   margin: 0 auto;
+ }
+
+ .register-guide{
+  text-align: center;
+
+  table{
+   vertical-align: middle;
+   text-align: left;
+   display: inline-block;
+
+   span{
+    padding:0 10px 0 35px;
+   }
+
+   td{
+    padding: 0;
+    line-height: 36px;
+   }
+
+   .user{
+    background: url(images/user.png) left center no-repeat;
+   }
+
+   .tel{
+    background: url(images/tel.png) left center no-repeat;
+   }
+
+   .mail{
+    background: url(images/mail.png) left center no-repeat;
+   }
+  }
  }
 
  .line-modules {
