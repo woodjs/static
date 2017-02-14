@@ -14,6 +14,7 @@ require.config({
     jqueryUI: 'libs/public/jquery-ui.js',
     jqueryDatepicker: 'libs/public/jquery.ui.datepicker-zh_CN.js',
     md5: 'libs/private/md5.js',
+    track: 'libs/private/track.js',
 
     //component
     checkbox: 'component/private/form/form_checkbox.js',
@@ -32,13 +33,7 @@ require.config({
     //app
     navigator: 'app/common/navigator.js',
     dialog: 'app/common/dialog.js',
-    tabNews: 'app/home/tab_news.js',
-    userActivity: 'app/home/user_activity.js',
-    toggleMessage: 'app/message/toggle_message.js',
-    pagination: 'app/message/pagination.js',
-
-    // add portal
-    banner: 'app/home/banner.js'
+    banner: 'app/common/banner.js'
 
   },
   shim: {

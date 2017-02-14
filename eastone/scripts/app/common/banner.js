@@ -1,6 +1,7 @@
 define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
 
   var banner = {
+
     init: function () {
       var self = this;
 
@@ -10,6 +11,7 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
       self.index = 0;
       self.length = self.$bannerList.length;
       self.imgSrcList = [];
+      self.countBannerImageError = 0;
 
       self.$bannerImgList.each(function (index, item) {
         self.imgSrcList.push(item['src']);
@@ -23,9 +25,10 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
         }
         $temp.data('index', index);
       });
-
+      
       self.checkLoading();
     },
+
     buildElement: function () {
       var self = this;
 
@@ -40,42 +43,49 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
       self.$btnListBox = $('#frame-btn-list');
       self.$btnList = $('#frame-btn-list .btn-banner');
     },
+    
     checkLoading: function () {
       var self = this;
       var count = 0;
 
       for (var i = 0; i < self.$bannerImgList.length; i++) {
+
         if (self.$bannerImgList[i].complete || self.$bannerImgList[i].width) {
+
           count++;
-          if (count === self.length) {
-            self.showBanner();
-          }
+          if (count === self.length) self.showBanner();
+
         } else {
+
           self.$bannerImgList[i].onload = function () {
+
             count++;
-            if (count === self.length) {
-              self.showBanner();
-            }
+            if (count === self.length) self.showBanner();
+
           };
+
+          self.$bannerImgList[i].onerror = function () {};
         }
       }
     },
+    
     showBanner: function () {
       var self = this;
 
       self.$bannerLoading.fadeOut(300);
       self.$bannerListBox.fadeIn(300);
       self.$bannerTemp.fadeIn(300);
-
+          
       if (self.length > 1) {
-        self.$btnListBox.fadeIn(300);
-        self.bindEvent();
-        self.timer = setInterval(function () {
-          self.autoPlay();
-        }, self.gap);
+    	  self.$btnListBox.fadeIn(300);
+	      self.bindEvent();
+	      self.bannerTimer = setInterval(function () {
+	          self.autoPlay();
+	        }, self.gap);
       }
-
+    
     },
+
     bindEvent: function () {
       var self = this;
 
@@ -101,27 +111,30 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
 
       self.$bannerBox.on({
         mouseenter: function () {
-          clearInterval(self.timer);
+        	self.bannerTimer && clearInterval(self.bannerTimer);
         },
         mouseleave: function () {
-          self.timer = setInterval(function () {
+          self.bannerTimer = setInterval(function () {
             self.autoPlay();
           }, self.gap);
         }
       });
     },
+
     prev: function () {
       var self = this;
 
       self.index = self.index === 0 ? self.length - 1 : self.index - 1;
       self.$btnList.eq(self.index).click();
     },
+
     next: function () {
       var self = this;
 
       self.index = self.index === self.length - 1 ? 0 : self.index + 1;
       self.$btnList.eq(self.index).click();
     },
+
     changeBannerByIndex: function (index, prevIndex) {
       var self = this;
       prevIndex = prevIndex || 0;
@@ -137,6 +150,7 @@ define(['globalConfig', 'jquery', 'domReady!'], function (globalConfig, $) {
         self.transition = false;
       });
     },
+
     autoPlay: function () {
       var self = this;
 
