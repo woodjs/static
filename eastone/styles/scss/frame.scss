@@ -601,7 +601,7 @@ header, footer, article, section, nav, aside, figure {
    font-size: 12px;
 
    a {
-    text-decoration: none;
+    text-decoration: underline;
     color: $fontColor;
     margin-left: 2px;
    }

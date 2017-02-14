@@ -515,7 +515,7 @@ header, footer, article, section, nav, aside, figure {
   font-size: 12px;
 }
 .dialog-box .dialog-content .register-line a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #282828;
   margin-left: 2px;
 }
