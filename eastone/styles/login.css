@@ -126,7 +126,7 @@ html, body {
   background: #fff;
   width: 100%;
   height: 36px;
-  padding: 8px 8px 8px 48px;
+  padding: 8px 8px 8px 46px;
   line-height: 18px;
   font-size: 12px;
   color: #333;
@@ -139,10 +139,10 @@ html, body {
   border: 1px solid #f03334;
 }
 .login-box .input-line input.username {
-  background: url(images/username.png) 12px center no-repeat;
+  background: url(images/login_icons.png) 0 -1px no-repeat;
 }
 .login-box .input-line input.password {
-  background: url(images/password.png) 12px center no-repeat;
+  background: url(images/login_icons.png) 0 -35px no-repeat;
 }
 .login-box .func-line {
   margin-top: 10px;
@@ -161,10 +161,10 @@ html, body {
   cursor: pointer;
 }
 .login-box .func-line .checked {
-  background: url(images/checked.png) left center no-repeat;
+  background: url(images/login_icons.png) 0 -88px no-repeat;
 }
 .login-box .func-line .unchecked {
-  background: url(images/unchecked.png) left center no-repeat;
+  background: url(images/login_icons.png) 0 -72px no-repeat;
 }
 .login-box .btn-line {
   margin-top: 20px;
@@ -197,7 +197,7 @@ html, body {
   margin-right: 5px;
   width: 14px;
   height: 16px;
-  background: url(images/error.png) left center no-repeat;
+  background: url(images/login_icons.png) 0 -104px no-repeat;
 }
 
 /*# sourceMappingURL=login.css.map */

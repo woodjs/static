@@ -108,6 +108,10 @@ header, footer, article, section, nav, aside, figure {
    font-size: 14px;
    @include setHeightGroup(20px);
 
+   a{
+    line-height: 20px;
+   }
+
    a:hover {
     color: $themeAnchorColor;
    }
@@ -131,12 +135,12 @@ header, footer, article, section, nav, aside, figure {
 
    a {
     padding-left: 22px;
-    background: url(images/search.png) left center no-repeat;
+    background: url(images/index_icons.png) 0 0 no-repeat;
    }
 
    &:hover {
     a {
-     background: url(images/search_red.png) left center no-repeat;
+     background: url(images/index_icons.png) 0 -20px no-repeat;
     }
    }
   }
@@ -259,7 +263,9 @@ header, footer, article, section, nav, aside, figure {
    display: inline-block;
 
    span{
-    padding:0 10px 0 35px;
+    padding:0 5px 0 35px;
+    display: inline-block;
+    height: 36px;
    }
 
    td{
@@ -268,15 +274,15 @@ header, footer, article, section, nav, aside, figure {
    }
 
    .user{
-    background: url(images/user.png) left center no-repeat;
+    background: url(images/register_icons.png) 0 0 no-repeat;
    }
 
    .tel{
-    background: url(images/tel.png) left center no-repeat;
+    background: url(images/register_icons.png) 0 -36px no-repeat;
    }
 
    .mail{
-    background: url(images/mail.png) left center no-repeat;
+    background: url(images/register_icons.png) 0 -72px no-repeat;
    }
   }
  }
@@ -518,7 +524,7 @@ header, footer, article, section, nav, aside, figure {
    display: inline-block;
    width: 24px;
    height: 24px;
-   background: url(images/close.png) center center no-repeat;
+   background: url(images/index_icons.png) 0 -40px no-repeat;
    float: right;
    margin: 7px 10px;
    *position: absolute;
@@ -538,7 +544,18 @@ header, footer, article, section, nav, aside, figure {
    padding-left: 32px;
    line-height: 24px;
    width: 308px;
-   background: url(images/warn.png) left 2px no-repeat;
+
+   position: relative;
+
+   &:before{
+    content: '';
+    position: absolute;
+    width: 21px;
+    height:24px;
+    background: url(images/index_icons.png) 0 -64px no-repeat;
+    left:0;
+    top:-1px;
+   }
 
    span {
     font-size: 12px;

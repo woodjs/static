@@ -93,6 +93,9 @@ header, footer, article, section, nav, aside, figure {
   height: 20px;
   line-height: 20px;
 }
+.frame-top-line .func-box > div a {
+  line-height: 20px;
+}
 .frame-top-line .func-box > div a:hover {
   color: #d1251a;
 }
@@ -113,10 +116,10 @@ header, footer, article, section, nav, aside, figure {
 }
 .frame-top-line .func-box .file-search a {
   padding-left: 22px;
-  background: url(images/search.png) left center no-repeat;
+  background: url(images/index_icons.png) 0 0 no-repeat;
 }
 .frame-top-line .func-box .file-search:hover a {
-  background: url(images/search_red.png) left center no-repeat;
+  background: url(images/index_icons.png) 0 -20px no-repeat;
 }
 .frame-top-line .func-box .login-info {
   font-size: 12px;
@@ -221,20 +224,22 @@ header, footer, article, section, nav, aside, figure {
   display: inline-block;
 }
 .frame-main-container .register-guide table span {
-  padding: 0 10px 0 35px;
+  padding: 0 5px 0 35px;
+  display: inline-block;
+  height: 36px;
 }
 .frame-main-container .register-guide table td {
   padding: 0;
   line-height: 36px;
 }
 .frame-main-container .register-guide table .user {
-  background: url(images/user.png) left center no-repeat;
+  background: url(images/register_icons.png) 0 0 no-repeat;
 }
 .frame-main-container .register-guide table .tel {
-  background: url(images/tel.png) left center no-repeat;
+  background: url(images/register_icons.png) 0 -36px no-repeat;
 }
 .frame-main-container .register-guide table .mail {
-  background: url(images/mail.png) left center no-repeat;
+  background: url(images/register_icons.png) 0 -72px no-repeat;
 }
 .frame-main-container .line-modules {
   width: 100%;
@@ -443,7 +448,7 @@ header, footer, article, section, nav, aside, figure {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(images/close.png) center center no-repeat;
+  background: url(images/index_icons.png) 0 -40px no-repeat;
   float: right;
   margin: 7px 10px;
   *position: absolute;
@@ -461,7 +466,16 @@ header, footer, article, section, nav, aside, figure {
   padding-left: 32px;
   line-height: 24px;
   width: 308px;
-  background: url(images/warn.png) left 2px no-repeat;
+  position: relative;
+}
+.dialog-box .dialog-content .info-line:before {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 24px;
+  background: url(images/index_icons.png) 0 -64px no-repeat;
+  left: 0;
+  top: -1px;
 }
 .dialog-box .dialog-content .info-line span {
   font-size: 12px;
