@@ -152,10 +152,15 @@ header, footer, article, section, nav, aside, figure {
   width: 100%;
   height: 100%;
   float: left;
+  text-align: center;
+}
+.frame-banner-box li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 .frame-banner-box li img {
-  display: block;
-  margin: 0 auto;
+  display: none;
 }
 .frame-banner-box .banner-temp {
   width: 100%;
