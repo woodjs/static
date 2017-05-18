@@ -1,0 +1,389 @@
+body, div, ul, dl, ol, dt, dd, li, p, a, label, span, i, label, img, input, textarea, header, footer, article, section, nav, aside, figure {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ul, dl, ol {
+  list-style: none;
+}
+
+input, textarea, a {
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 20px !important;
+  }
+  html .block-step .icon-ball {
+    background: url(images/ball@2x.png) center center no-repeat !important;
+  }
+  html .block-footer .phone {
+    background: url(images/phone@2x.png) left top no-repeat !important;
+  }
+  html .block-footer .qq {
+    background: url(images/qq@2x.png) left top no-repeat !important;
+  }
+  html .block-module .icon-circle {
+    background: url(images/circle@2x.png) left center no-repeat;
+  }
+}
+body {
+  font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+  color: #fff;
+  font-size: 1.3rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  background: #D51518;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D51518), color-stop(100%, #F62D2D));
+  background: -webkit-linear-gradient(top, #D51518 0%, #F62D2D 100%);
+  background: linear-gradient(to bottom, #D51518 0%, #F62D2D 100%);
+}
+
+a, input, textarea, .btn {
+  -webkit-tap-highlight-color: rgba(1, 122, 204, 0.5);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.container {
+  min-width: 350px;
+  max-width: 800px;
+  padding-bottom: 2.4rem;
+  margin: 0 auto;
+  overflow: auto;
+  background: #D51518;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D51518), color-stop(100%, #F62D2D));
+  background: -webkit-linear-gradient(top, #D51518 0%, #F62D2D 100%);
+  background: linear-gradient(to bottom, #D51518 0%, #F62D2D 100%);
+}
+
+.block-header {
+  padding: 2.5rem 1.5rem 0;
+  line-height: 2rem;
+}
+.block-header .username {
+  background: #F89D3B;
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+  margin: 0 .4rem;
+  vertical-align: top;
+}
+
+.block-step {
+  margin-top: .6rem;
+  padding: 0 1rem;
+  position: relative;
+}
+.block-step .line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: .1rem;
+  height: 100%;
+  z-index: 0;
+  left: 2.2rem;
+  border-left: .1rem dashed #fff;
+}
+.block-step dt {
+  height: 2rem;
+  line-height: 2rem;
+  padding: .2rem 0 .2rem 3rem;
+  position: relative;
+  text-align: center;
+}
+.block-step dt .icon-ball {
+  width: 2.4rem;
+  height: 2.4rem;
+  text-align: center;
+  line-height: 2.4rem;
+  font-weight: bolder;
+  background: url(images/ball@1x.png) center center no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.block-step .qrcode-wrapper {
+  padding: 2rem 0 2.5rem;
+}
+.block-step .qrcode {
+  display: block;
+  width: 21.5rem;
+  height: 21.5rem;
+  margin: 0 auto;
+  vertical-align: top;
+}
+.block-step .app-download {
+  text-align: center;
+  padding-bottom: 2.2rem;
+}
+.block-step .app-download a {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 16rem;
+  height: 4rem;
+  border: .2rem solid #fff;
+  line-height: 3.6rem;
+  -webkit-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+}
+.block-step .popularize-wrapper {
+  padding: 1.5rem 0 6.2rem;
+  position: relative;
+}
+.block-step .popularize-wrapper .popularize-title {
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 2.6rem;
+}
+.block-step .popularize-wrapper .popularize-code-wrapper {
+  padding-top: 3rem;
+  text-align: center;
+}
+.block-step .popularize-wrapper .popularize-code {
+  padding: 0 1rem;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  display: inline-block;
+  background: #FF6900;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FFDC47), color-stop(100%, #FF6900));
+  background: -webkit-linear-gradient(left, #FFDC47 0%, #FF6900 100%);
+  background: linear-gradient(to right, #FFDC47 0%, #FF6900 100%);
+}
+.block-step .popularize-wrapper .activity {
+  position: absolute;
+  right: -1rem;
+  bottom: 2.5rem;
+  z-index: 10;
+  width: 8.7rem;
+  height: 11.8rem;
+}
+
+.block-main-img {
+  margin-top: 2.4rem;
+}
+.block-main-img img {
+  display: block;
+  vertical-align: top;
+  height: 17.5rem;
+  margin: 0 auto;
+}
+
+.block-main-intro {
+  padding: 0 1.5rem;
+  margin-top: 2.5rem;
+  line-height: 2rem;
+  text-indent: 2em;
+}
+
+.block-module dt {
+  position: relative;
+  font-weight: bold;
+}
+.block-module .icon-circle {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 0;
+  background: url(images/circle@1x.png) left center no-repeat;
+  z-index: 10;
+}
+
+.block-module-1 {
+  margin-top: 2rem;
+  position: relative;
+  height: 25.9rem;
+}
+.block-module-1 .left-wrapper {
+  width: 16rem;
+  height: 25.9rem;
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  z-index: 10;
+}
+.block-module-1 .left-wrapper img {
+  display: block;
+  width: 16rem;
+  height: 25.9rem;
+  vertical-align: top;
+}
+.block-module-1 .right-wrapper {
+  position: absolute;
+  right: 0;
+  width: 19.3rem;
+  height: 25.9rem;
+  top: 0;
+  z-index: 15;
+}
+.block-module-1 .right-wrapper img {
+  display: block;
+  width: 19.3rem;
+  height: 13.6rem;
+  vertical-align: top;
+  margin-top: 2rem;
+}
+.block-module-1 .right-wrapper dl {
+  margin-top: .5rem;
+  padding: 0 3rem;
+}
+.block-module-1 .right-wrapper dl dt {
+  padding-left: 2rem;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+.block-module-1 .right-wrapper dl dd {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.block-module-2 {
+  margin-top: .8rem;
+  position: relative;
+  height: 13.6rem;
+}
+.block-module-2 .left-wrapper {
+  width: 15.5rem;
+  height: 13.6rem;
+  position: absolute;
+  left: 2.2rem;
+  top: 0;
+  z-index: 15;
+}
+.block-module-2 .left-wrapper dl {
+  margin-top: 3.5rem;
+}
+.block-module-2 .left-wrapper dl dt {
+  padding-left: 2rem;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+.block-module-2 .left-wrapper dl dd {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.block-module-2 .right-wrapper {
+  position: absolute;
+  right: 0;
+  width: 19.3rem;
+  height: 13.6rem;
+  top: 0;
+  z-index: 10;
+}
+.block-module-2 .right-wrapper img {
+  display: block;
+  width: 19.3rem;
+  height: 13.6rem;
+  vertical-align: top;
+}
+
+.block-module-3 {
+  margin-top: 2rem;
+  position: relative;
+  height: 25.9rem;
+}
+.block-module-3 .left-wrapper {
+  position: absolute;
+  left: 0;
+  width: 19.3rem;
+  height: 25.9rem;
+  top: 0;
+  z-index: 15;
+}
+.block-module-3 .left-wrapper img {
+  display: block;
+  width: 19.3rem;
+  height: 13.6rem;
+  vertical-align: top;
+  margin-top: 3rem;
+}
+.block-module-3 .left-wrapper dl {
+  margin-top: .5rem;
+  padding: 0 3rem;
+}
+.block-module-3 .left-wrapper dl dt {
+  padding-left: 2rem;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+.block-module-3 .left-wrapper dl dd {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.block-module-3 .right-wrapper {
+  width: 16rem;
+  height: 25.9rem;
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  z-index: 10;
+}
+.block-module-3 .right-wrapper img {
+  display: block;
+  width: 16rem;
+  height: 25.9rem;
+  vertical-align: top;
+}
+
+.block-footer {
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+}
+.block-footer li {
+  padding: .4rem 0;
+  text-align: center;
+}
+.block-footer li .phone {
+  background: url(images/phone@1x.png) left top no-repeat;
+}
+.block-footer li .qq {
+  background: url(images/qq@1x.png) left top no-repeat;
+}
+.block-footer li span {
+  display: inline-block;
+  min-height: 1.8rem;
+  line-height: 1.8rem;
+  padding-left: 3rem;
+}
+
+/*# sourceMappingURL=app.css.map */
