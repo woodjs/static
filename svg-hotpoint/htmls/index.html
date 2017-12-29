@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>legend</title>
+  <style type="text/css">
+    body, div, ul, dl, ol, dt, dd, li, p, a, label, span, i, label, img, input, textarea, header, footer, article, section, nav, aside, figure, table, tr, thead, tbody, td {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      -webkit-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+
+    ul, dl, ol {
+      list-style: none;
+    }
+
+    input, textarea, a {
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+    }
+
+    html {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+      font-size: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+      font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+      color: #333;
+      font-size: 1.4rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    html, body, #legend{
+      width: 100%;
+      height:100%;
+    }
+
+    /* svg */
+    .svg-wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .svg-wrap svg {
+      width: 100%;
+      height: 100%;
+      position:relative;
+    }
+
+    /* assistive style  */
+    .assistive-bg {
+      background: url(../images/assistive_tool_bg.png) no-repeat;
+      display: block;
+    }
+
+    .assistive {
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      cursor: move;
+      zoom: 1;
+      z-index: 60;
+      border-radius: 5px;
+    }
+
+    .assistive-content {
+      background-color: #248cd7;
+      height: 29px;
+      overflow: hidden;
+      zoom: 1;
+      padding: 0 10px;
+    }
+
+    .assistive-content a {
+      margin: 6px 5px;
+      height: 18px;
+      width: 18px;
+      float: left;
+      cursor: pointer;
+    }
+
+    .assistive-content .assistive-reset {
+      background-position: -25px -35px;
+    }
+
+    .assistive-content .assistive-zoomout {
+      background-position: -25px -65px;
+    }
+
+    .assistive-content .assistive-zoomin {
+      background-position: -25px -96px;
+    }
+
+    .assistive-content .assistive-rotateleft {
+      background-position: -21px -152px;
+    }
+
+    .assistive-content .assistive-rotateright {
+      background-position: -21px -180px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="legend"></div>
+
+  <script type="text/javascript" src="../scripts/libs/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="../scripts/libs/d3.v3.min.js"></script>
+  <script type="text/javascript" src="../scripts/libs/snap-svg.min.js"></script>
+  <script type="text/javascript" src="../scripts/libs/jquery.showLoading.min.js"></script>
+  <script type="text/javascript" src="../scripts/components/jquery.svgzoomdrag.js"></script>
+  <script type="text/javascript" src="../scripts/components/jquery.svghotpoint.js"></script>
+  <script>
+    var $legend = $('#legend');
+
+    $legend.svgHotpoint({
+      svgUrl: 'http://localhost:8686/res/svg/test/test.svg',
+      scale: 1,
+      callbacks: {
+        onSelectionCallout: function(callout) {
+          hasSelectCallout(callout);
+        }
+      }
+    });
+
+    function loadSvg(url) {
+      $legend.svgHotpoint('loadSVG', url);
+    }
+
+    function highlightCallout(callout) {
+      $legend.svgHotpoint('highlightCallout', callout);
+    }
+
+    function hasSelectCallout(callout) {
+
+      console.log(callout);
+    }
+  </script>
+</body>
+</html>
