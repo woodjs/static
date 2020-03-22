@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: block;
+}
+
+ul, dl {
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  min-width: 980px;
+}
+
+body {
+  font-size: 14px;
+  min-width: 980px;
+  font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  background-size: auto 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: url("../images/login_bg.jpg") center center no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-info-wrapper {
+  width: 900px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  margin-left: -450px;
+  margin-top: -250px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.box-info-bg {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  bottom: 0;
+}
+
+.box-info {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 0;
+  position: relative;
+  z-index: 100;
+}
+.box-info .title-line {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #a61f38;
+}
+.box-info .list {
+  margin: 40px 0 0 105px;
+  overflow: hidden;
+}
+.box-info .list .item {
+  padding: 22px 20px 0 20px;
+  background: #fff;
+  width: 200px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  margin-right: 40px;
+  height: 240px;
+}
+.box-info .list .image-wrapper {
+  text-align: center;
+}
+.box-info .list .image-wrapper img {
+  display: inline-block;
+  height: 100px;
+  vertical-align: top;
+}
+.box-info .list .text-line {
+  margin-top: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 13px;
+  line-height: 20px;
+}
+.box-info .list .btn-line {
+  margin-top: 15px;
+}
+.box-info .list .btn-line .btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #a61f38;
+  text-decoration: none;
+}
+.box-info .list .btn-line .btn span {
+  font-size: 13px;
+  margin-right: 6px;
+}
+.box-info .list .btn-line .btn i {
+  font-size: 10px;
+  position: relative;
+  top: -1px;
+}
+.box-info .contact-line {
+  margin: 40px 0 0 105px;
+  line-height: 26px;
+}
+.box-info .contact-line .contact-label {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.box-info .contact-line .item {
+  margin-right: 30px;
+  font-size: 12px;
+}
+.box-info .contact-line .item .gap {
+  margin: 0 5px;
+}
+.box-info .contact-line .item .iconfont {
+  vertical-align: middle;
+  font-size: 18px;
+  color: #a61f38;
+  margin-right: 8px;
+}
+
+.police-line {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  bottom: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.police-line span {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+}
+.police-line .icon {
+  padding: 0 10px 0 20px;
+  margin-left: 20px;
+  border-left: 1px solid #fff;
+}
+.police-line .icon img {
+  vertical-align: top;
+}
+
+/*# sourceMappingURL=browser.css.map */

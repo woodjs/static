@@ -1,0 +1,187 @@
+@import "./sdk/index";
+@import "./common/reset";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  min-width: 980px;
+}
+
+body {
+  font-size: 14px;
+  min-width: 980px;
+  font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif;
+  color: $font-color;
+  background-size: auto 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: url("../images/login_bg.jpg") center center no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.box-info-wrapper {
+  width: 900px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  margin-left: -450px;
+  margin-top: -250px;
+  @include borderRadius(4px);
+}
+
+.box-info-bg {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .8;
+  @include borderRadius(4px);
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  bottom: 0;
+}
+
+.box-info {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 0;
+  position: relative;
+  z-index: 100;
+
+  .title-line {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .list {
+    margin: 40px 0 0 105px;
+    overflow: hidden;
+
+    .item {
+      padding: 22px 20px 0 20px;
+      background: #fff;
+      width: 200px;
+      @include borderRadius(4px);
+      float:left;
+      margin-right:40px;
+      height: 240px;
+    }
+
+    .image-wrapper{
+      text-align: center;
+
+      img {
+        display: inline-block;
+        height: 100px;
+        vertical-align: top;
+      }
+    }
+
+    .text-line {
+      margin-top: 15px;
+      text-align: center;
+      color: $font-color;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+
+    .btn-line {
+      margin-top: 15px;
+
+      .btn {
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        @include borderRadius(4px);
+        background: $primary-color;
+        text-decoration: none;
+
+        span {
+          font-size:13px;
+          margin-right: 6px;
+        }
+
+        i{
+          font-size:10px;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+  }
+
+  .contact-line {
+    margin: 40px 0 0 105px;
+    line-height: 26px;
+
+    .contact-label {
+      margin-right: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .item {
+      margin-right: 30px;
+      font-size: 12px;
+
+      .gap {
+        margin: 0 5px;
+      }
+
+      .iconfont {
+        vertical-align: middle;
+        font-size: 18px;
+        color: $primary-color;
+        margin-right:8px;
+      }
+    }
+  }
+}
+
+.police-line {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  bottom: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+
+  span {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .icon {
+    padding: 0 10px 0 20px;
+    margin-left:20px;
+    border-left: 1px solid #fff;
+
+    img {
+      vertical-align: top;
+    }
+  }
+}
+
+
+
