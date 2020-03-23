@@ -72,7 +72,7 @@ a {
         background: #f5232c;
         color: #fff;
         padding: 2px 4px;
-        font-size: 10px;
+        font-size: 12px;
         line-height: 12px;
         height: auto;
         display: inline;
@@ -146,6 +146,10 @@ a {
     padding: 10px 0;
     border-bottom: 1px dashed $bd-color;
     overflow: hidden;
+
+    &:last-child {
+      border-bottom:none;
+    }
 
     .iconfont {
       font-size: 18px;

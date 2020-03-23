@@ -1,0 +1,49 @@
+@import "./sdk/index";
+
+.contact-block{
+  padding: 10px 10px 10px 20px;
+  background: #fff;
+  overflow: hidden;
+  @include borderRadius(4px);
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 210px;
+
+  .info-wrapper{
+    float:left;
+    padding-right: 420px;
+
+    .title {
+      @include setHeightGroup(30px);
+      margin-top:5px;
+      font-size: 15px;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .content {
+      margin-top: 4px;
+      line-height: 28px;
+      font-size: 13px;
+
+      label {
+        font-weight: bold;
+        margin-right:8px;
+      }
+    }
+  }
+
+  .image-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    img {
+      display: block;
+      width: 400px;
+      height: 190px;
+      @include borderRadius(4px);
+    }
+  }
+
+}

@@ -1,0 +1,183 @@
+@import "./sdk/index";
+
+.block-message-box {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.block-message-box .item-message {
+  padding: 14px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.item-message.collapsed .arrow {
+  display: inline-block;
+  width: 8px;
+  height: 26px;
+  background: url(images/icons.png) -10px -570px no-repeat;
+  float: left;
+}
+
+.item-message.collapsed dd {
+  display: none;
+}
+
+.item-message dt {
+  height: 26px;
+  line-height: 26px;
+  position: relative;
+  cursor: pointer;
+}
+
+.item-message dt span, .item-message dt label {
+  display: inline-block;
+}
+
+.item-message dt .date {
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  height: 20px;
+  line-height: 20px;
+  right: 0;
+  top: 4px;
+  z-index: 50;
+}
+
+.item-message dt .dot {
+  display: inline-block;
+  width: 5px;
+  height: 26px;
+  background: url(images/icons.png) 0 -570px no-repeat;
+  float: left;
+}
+
+.item-message dt .title {
+  display: inline-block;
+  margin: 0 8px 0 5px;
+  float: left;
+}
+
+.item-message dt .arrow {
+  display: inline-block;
+  width: 8px;
+  height: 26px;
+  background: url(images/icons.png) -18px -570px no-repeat;
+  float: left;
+}
+
+.item-message dd {
+  padding: 5px 0;
+  line-height: 20px;
+  font-size: 12px;
+  color: #333;
+}
+
+.item-message dd a {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #353751;
+}
+
+.item-message .readed {
+  color: #999;
+}
+
+.item-message .readed .dot {
+  display: inline-block;
+  width: 5px;
+  height: 26px;
+  background: url(images/icons.png) -5px -570px no-repeat;
+  float: left;
+}
+
+.block-btn-group {
+  height: 26px;
+  line-height: 26px;
+  margin: 30px 0 20px;
+  text-align: center;
+}
+
+.block-btn-group span {
+  display: inline-block;
+  margin: 0 3px;
+  font-size: 12px;
+}
+
+.block-btn-group .input-box {
+  display: inline-block;
+  width: 60px;
+  padding: 0 5px;
+  border: 1px solid #ebebeb;
+  margin: 0;
+  height: 26px;
+}
+
+.block-btn-group .input-box input {
+  width: 48px;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  top: -2px;
+  font-size: 12px;
+}
+
+.block-btn-group .btn-goto {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 12px;
+  background: #353751;
+}
+
+.block-btn-group .btn {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  -webkit-transition: background 0.3s ease-out, color 0.3s ease-out;
+  -ms-transition: background 0.3s ease-out, color 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out, color 0.3s ease-out;
+  -o-transition: background 0.3s ease-out, color 0.3s ease-out;
+  transition: background 0.3s ease-out, color 0.3s ease-out;
+}
+
+.block-btn-group .btn:hover, .block-btn-group .btn.active {
+  color: #fff;
+  background: #353751;
+}
+
+.block-btn-group .btn-ctl {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ebebeb;
+  cursor: pointer;
+}
+
+.block-btn-group .first {
+  background: url(images/icons.png) 0 -596px no-repeat;
+}
+
+.block-btn-group .prev {
+  background: url(images/icons.png) -48px -596px no-repeat;
+}
+
+.block-btn-group .last {
+  background: url(images/icons.png) -24px -596px no-repeat;
+}
+
+.block-btn-group .next {
+  background: url(images/icons.png) -72px -596px no-repeat;
+}
+
+.block-btn-group .ellipsis {
+  width: 17px;
+  height: 26px;
+  border: 1px solid #fff;
+  background: url(images/icons.png) -96px -596px no-repeat;
+}
+
+.block-btn-group .disabled {
+  background-color: #eff0f1;
+}

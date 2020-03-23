@@ -1,0 +1,43 @@
+html, body {
+  background: #f0f3f5;
+}
+
+.error-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -230px;
+  margin-top: -100px;
+}
+.error-box .image-wrapper {
+  float: left;
+}
+.error-box .info-wrapper {
+  float: right;
+  margin-left: 20px;
+  font-size: 13px;
+}
+.error-box .info-wrapper label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.error-box .info-wrapper .link-line {
+  margin-top: 25px;
+  height: 26px;
+  line-height: 26px;
+}
+.error-box .info-wrapper .link-line a {
+  color: #a61f38;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.error-box .info-wrapper .title-line {
+  margin-top: 5px;
+  line-height: 26px;
+  font-size: 15px;
+}
+.error-box .info-wrapper .info-line {
+  line-height: 26px;
+}
+
+/*# sourceMappingURL=error.css.map */

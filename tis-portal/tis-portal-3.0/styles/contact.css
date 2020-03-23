@@ -1,0 +1,47 @@
+.contact-block {
+  padding: 10px 10px 10px 20px;
+  background: #fff;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 210px;
+}
+.contact-block .info-wrapper {
+  float: left;
+  padding-right: 420px;
+}
+.contact-block .info-wrapper .title {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #a61f38;
+}
+.contact-block .info-wrapper .content {
+  margin-top: 4px;
+  line-height: 28px;
+  font-size: 13px;
+}
+.contact-block .info-wrapper .content label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.contact-block .image-wrapper {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.contact-block .image-wrapper img {
+  display: block;
+  width: 400px;
+  height: 190px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,49 @@
+@import "./sdk/index";
+
+html,body {
+  background: #f0f3f5;
+}
+
+.error-box {
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left:-230px;
+  margin-top:-100px;
+
+  .image-wrapper{
+    float:left;
+  }
+
+  .info-wrapper{
+    float:right;
+    margin-left:20px;
+    font-size:13px;
+
+    label {
+      font-weight: bold;
+      margin-right:8px;
+    }
+
+    .link-line {
+      margin-top: 25px;
+      @include setHeightGroup(26px);
+
+      a {
+        color: $primary-color;
+        font-size:13px;
+        text-decoration: underline;
+      }
+    }
+
+    .title-line {
+      margin-top:5px;
+      line-height: 26px;
+      font-size:15px;
+    }
+
+    .info-line {
+      line-height: 26px;
+    }
+  }
+}

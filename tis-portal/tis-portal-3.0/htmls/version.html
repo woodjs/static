@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>tis-portal 2.0</title>
+    <link type="text/css" rel="stylesheet" href="../styles/fonts/iconfont.css"/>
+    <link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+    <link type="text/css" rel="stylesheet" href="../styles/version.css"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../scripts/libs/public/html5shiv.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../scripts/libs/public/require.js"></script>
+    <script type="text/javascript" src="../scripts/local_config.js"></script>
+    <script type="text/javascript">
+        var pageConfig = {
+            pageCode: 'pageIndex',
+            //isLocal: ${isLocal} TODO
+            isLocal: true
+        };
+    </script>
+</head>
+<body>
+<section class="header">
+    <div class="logo-box">
+        <a class="logo-wrapper" href="/"><img src="../images/logo/logo_sgmw.png" alt="logo"></a>
+        <span class="title">EPC售后信息发布平台</span>
+    </div>
+    <div class="nav-box" id="nav-box">
+        <nav class="nav">
+      <span class="nav-item">
+        <span class="nav-item-inner">
+        <i class="iconfont icon-home"></i>
+        </span>
+      </span>
+            <span class="nav-item">
+        <span class="nav-item-inner">
+        <i class="iconfont icon-user"></i><span class="username">Admin</span>
+        </span>
+      </span>
+            <span class="nav-item">
+        <span class="nav-item-inner">
+        <i class="iconfont icon-message"></i>
+        </span>
+      </span>
+            <span class="nav-item">
+        <span class="nav-item-inner">
+        <i class="iconfont icon-lang"></i>
+        </span>
+      </span>
+        </nav>
+    </div>
+</section>
+<div class="crumbs">
+    <a class="link-item" href="#">
+        <i class="iconfont icon-home"></i>
+        <span class="crumbs-text">产品大全</span>
+    </a>
+    <span class="separator">/</span>
+    <span class="text-item">
+      <i class="iconfont icon-home"></i>
+      <span class="crumbs-text">产品大全</span>
+  </span>
+</div>
+<section class="main-container">
+    <div class="version-wrap">
+        <div class="version-content">
+            <div class="version-title">
+                版本历程
+            </div>
+            <div class="version-info">
+                <table>
+                    <tbody>
+
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2020年3月18日 <em class="current-version"></em></h2> <span>(当前版本)</span></td>
+                        <td>
+                            <div>
+                                <h3>手册升级（TIS-SGMW 20200317）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.新宝骏RM-5电路手册智能版（CN202M-EWD01- C2020）；<br>
+2.新宝骏RS-3电路手册智能版（CN180S MCEEWD01-C2020）；<br>
+3.宝骏510电路手册智能版(CN180S-EWD01-C2020)；<br>
+4.宝骏310电路手册（CN180C-EWD02-C2020）；<br>
+5.新宝骏RM-5维修手册智能版（CN202M-SM01-C2020)k；<br>
+6.新宝骏RS-3维修手册（CN180SMCE-SM01-C2020)；<br>
+7.宝骏510维修手册智能版（CN180SSM01-C2020）；<br>
+8.新五菱之光维修手册（N1-SM01-C2020）；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2020年3月17日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>手册升级（TIS-SGMW 20200318）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.TSB_19-003&nbsp;CN113R&nbsp;IAT&nbsp;Sensor&nbsp;WDS&nbsp;Inaccurate&nbsp;Reading；<br>
+2.TSB_19-004&nbsp;Vehicle&nbsp;Diagnostic&nbsp;System&nbsp;(VDS)&nbsp;Implementation；<br>
+3.TSB_19-011&nbsp;Wuling&nbsp;Key&nbsp;Reprogramming；<br>
+4.TSB_19-016&nbsp;Almaz&nbsp;-&nbsp;RH&nbsp;Knee&nbsp;Bolster&nbsp;Replacement；<br>
+5.TSB_19-017&nbsp;ABS&nbsp;ESP&nbsp;Leakage&nbsp;Check；<br>
+6.TSB_19-018&nbsp;Limp&nbsp;Home&nbsp;Mode&nbsp;Concern&nbsp;Handling；<br>
+7.TSB_19-024&nbsp;Battery&nbsp;Charger；<br>
+8.TSB_19-026&nbsp;Battery&nbsp;Checking&nbsp;Standard&nbsp;2019；<br>
+9.TSB_20-004&nbsp;CN113-ACT&nbsp;ECM&nbsp;Software&nbsp;Update；<br>
+</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2020年3月12日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_20200312）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新车载充电及高压配电系统、发动机冷却管 、蓄电池和保险丝盒 、空调压缩机等143张爆炸图；<br>
+2.更新前门线束总成、左前门三角板总成、后制动硬管总成、发动机控制模块总成、燃油管束总成等2445个零件；<br>
+3.更新实物照片<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2020年2月27日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>EPC-SGMW_20200227</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更副仪表板组件、 型号标牌、 外部附件等156张爆炸图；<br>
+2.更新玻璃电机总成、遮阳帘电机总成、移动玻璃总成、前减振器总成、驻车制动后拉索总成等1580个零件；<br>
+3.更新实物照片<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2020年1月15日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_20200115）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油泵总成、前窗玻璃升降器、变速器壳体、后桥总成等236张爆炸图；<br>
+2.更新右前门锁及手柄总成、前部线束接地线螺栓、EPS转向管柱总成、随车包总成等2478个零件；<br>
+3.更新实物照片<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年12月17日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>功能升级（TIS-SGMW_20191217）</h3>
+                                <ul>
+                                    <li>内容：
+                                        <span style="font-size: 15px;line-height: 30px;">
+更新维修技术咨询（TAC）模块下；我站的主动服务单详情页面，增加'车主姓名'、'车主电话'、'动力电池厂家'字段<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年12月11日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_20191211）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油箱总成、方向盘总成、后地毯组件、后门装饰板等106张爆炸图；<br>
+2.更新后氧传感器总成，行车制动灯开关总成，发动机线束总成，真空助力器总成等1598个零件；<br>
+3.更新实物照片<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年11月28日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_20191128）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新倒车雷达模块、水泵、散热器水管总成、雨刮水壶、离合器踏板及主缸总成等161张爆炸图；<br>
+2.更新喇叭按钮总成，发动机前盖总成（带机油泵和水泵），加热器进水软管总成，尾部线束总成等1124个零件；<br>
+3.更新实物照片<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年11月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_20191114）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油管路、天线和扬声器、散热器水管总成、散热器总成等284张爆炸图；<br>
+2.更新加热器进水软管总成，前部线束总成，后桥总成，前格栅总成等3235个零件；<br>
+3.更新实物照片<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年11月13日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>维修技术咨询功能升级（TAC_20191113）</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.原TAC的【技术求援】和【信息反馈】模块合并为一个【我站的求援/反馈】；<br>
+2.通过【我要求援/反馈】的支持类别（技术求援、信息反馈）提出求援和反馈问题；<br>
+3.通过【我站的求援/反馈】的支持类别（技术求援、信息反馈）查询求援和反馈问题；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年11月1日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_11.1.20191031.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新气缸盖罩盖总成，换档操纵机构，装饰裙板，天线和扬声器等260张爆炸图；<br>
+2.更新膨胀箱盖，组合开关总成，起动机总成，左前门线束总成等2949个零件；<br>
+3.更新实物照片<br>
+4.平台用户协议已更新，
+<a href="https://sgmw.tis.servision.com.cn/help/service-agreement">请查看</a>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年10月17日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_11.0.20191017.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新发动机气缸盖，侧围钣金件，传动半轴，仪表板大总成等130张爆炸图；<br>
+2.更新连杆总成，后氧传感器总成，进气歧管螺柱，前排座椅前脚盖总成等3043个零件；<br>
+3.更新实物照片<br></span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年9月27日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.9.20190927.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新传动半轴，发动机冷却管，安全气囊，倒车雷达模块等185张爆炸图；<br>
+2.更新发动机机油，门槛内板孔塞，仪表线束总成，双组带扣组件等2620个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年9月12日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.8.20190911.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新发动机冷却管，第二排座椅总成，尾门拉手组件，收放机多媒体等112张爆炸图；<br>
+2.更新防冻液，右翼子板，右驻车制动开关线束，右外后视镜组件等2515个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年8月29日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.7.20190829.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新横向稳定杆组件，轮罩装饰，前座椅总成，车轮及轮胎总成等369张爆炸图；<br>
+2.更新滑轨前端左饰盖，自攻螺钉，空调控制器总成，后蒸发器壳体等5060个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年7月25日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.6.20190725.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新散热器总成，换档操纵机构，传动半轴，后排座椅安全带等328张爆炸图；<br>
+2.更新右后侧门装饰板，右前门装饰板，左扶手垫片，进气门等2774个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年7月11日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.5.20190711.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新外部附件，仪表板大总成，内外饰胶条，燃油箱总成等82张爆炸图；<br>
+2.更新右前门线束总成，离合主缸总成，地板孔塞，空调箱总成等3013个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年6月27日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.4.20190627.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新天线，后侧门总成，排气管和消声器，保险丝盒等107张爆炸图；<br>
+2.更新压缩机总成，线束支架，后地板孔塞，方向盘总成等981个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年6月12日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.3.20190612.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新散热器水管总成，前部钣金焊合件，燃油管路，倒档齿轮轴组件等192张爆炸图；<br>
+2.更新卡箍，左铰链外饰盖，点火线圈总成，多媒体播放器等1536个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年5月29日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.2.20190529.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油箱总成，车窗玻璃，发动机罩和相关零件，侧围钣金件等226张爆炸图；<br>
+2.更新外等速节防尘罩，右吹脚风道，变速器悬置，地板孔塞等1147个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年5月15日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.2.20190515.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新发动机冷却管，换档箱及组件，传动半轴，车架总成等257张爆炸图；<br>
+2.更新方向盘总成，副仪表线束总成，连杆总成，排气歧管垫片成等1886个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年4月25日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.2.20190425.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新制动管路总成，方向盘总成，前蒸发器，侧围钣金件等348张爆炸图；<br>
+2.更新组合仪表总成，轴承板，前制动硬管总成，前顶灯总成等1357个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年3月28日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.1.20190328.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油箱总成，内外饰胶条，车轮及轮胎总成，翼子板等307张爆炸图；<br>
+2.更新组合仪表总成，轴承板，前制动硬管总成，前顶灯总成等1357个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年3月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.1.20190314.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新制动管路总成，后桥总成，散热器总成，副车架支撑装置等174张爆炸图；<br>
+2.更新右外后视镜组件，点火线圈盖，发动机机油，左A柱上饰板等753个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年2月22日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_10.0.20190222.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新外后视镜，翼子板，副车架支撑装置，输入轴与输出轴等127张爆炸图；<br>
+2.更新右B柱内板焊合件，中冷管支架组件，压缩机吸气管，左防尘板等2960个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年1月31日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.9.20190131.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新排气管和消声器，轮速传感器，全车锁芯及钥匙组件，水泵等292张爆炸图；<br>
+2.更新前部线束总成，散热器总成，前下盖板，前门装饰板卡扣等2915个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2019年1月17日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.8.20190117.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油管路，曲轴连杆机构，机油泵，行李架等179张爆炸图；<br>
+2.更新前氧传感器总成，主动进气格栅，脱附管支架，	曲轴皮带轮等1939个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年12月28日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.7.20181228.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新换档操纵机构，空调控制机构，水泵，增压器等202张爆炸图；<br>
+2.更新加油塞，辅助拉手总成，左刮臂总成，后稳定杆夹箍等3052个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年12月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.6.20181214.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新气缸盖罩盖总成，散热器总成，翼子板，后地毯组件等82张爆炸图；<br>
+2.更新发动机机油，杂物箱把手，组合仪表总成，左后侧门装饰板等755个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年11月29日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.5.20181129.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新空调管路，前格栅，后保险杠总成，散热器水管总成等99张爆炸图；<br>
+2.更新加热器出水软管，碳罐电磁阀总成，空调箱总成，前部线束总成等581个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年11月15日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.4.20181115.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新离合器主缸总成，前门装饰板，前部钣金焊合件，后保险杠总成等62张爆炸图；<br>
+2.更新副仪表板组件，	左吹脚风道，继电器，蓄电池底架总成等703个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年10月25日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.3.20181025.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新换档操纵机构，收放机多媒体，侧围钣金件，后门装饰板等203张爆炸图；<br>
+2.更新方向盘总成，左前门装饰板，自动张紧轮，前地板孔塞等2601个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年9月27日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.2.20180927.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新第三排座椅总成，前蒸发器，换档操纵机构，扬声器总成等163张爆炸图；<br>
+2.更新燃油箱盖总成，	电子扇总成，左后门槛饰板，	刮刷总成等710个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年9月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.1.20180914.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新散热器总成，车架总成，后保险杠总成，仪表板大总成等136张爆炸图；<br>
+2.更新前围内隔音垫，仪表线束总成，继电器，双孔管夹等1266个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年8月30日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_9.0.20180830.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新车身线束，后悬挂总成，车窗玻璃，尾门相关零件等179张爆炸图；<br>
+2.更新右前照灯总成，锁紧盘，球面垫圈，轮胎气门嘴等1032个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年8月8日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.9.20180808.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新机油泵，发动机冷却管，前部钣金焊合件，差速器等95张爆炸图；<br>
+2.更新电源插座总成，天窗总成，左前门装饰裙板，仪表板本体等1237个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年7月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.8.20180719.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新换档操纵机构，前地毯总成，散热器水管总成，变速器壳体等121张爆炸图；<br>
+2.更新前雾灯灯泡，两孔管夹，发动机线束总成，从动五档齿等657个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年6月27日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.7.20180627.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新收放机多媒体，气缸盖罩盖总成，离合器壳体，前座椅安全带安装等117张爆炸图；<br>
+2.更新左后侧门装饰板，操纵盖总成，倒档惰轮卡簧，倒档拨叉等648个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年6月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.6.20180614.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新车顶内衬，车身线束，后侧门总成，后悬挂总成等98张爆炸图；<br>
+2.更新鼓风机总成，后桥总成，后扰流板胶条，连杆总成等1098个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年6月1日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.5.20180601.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新暖风机总成，前格栅，燃油喷射装置，收放机多媒体等295张爆炸图；<br>
+2.更新自攻螺钉，前门外开手柄，交流充电插座，缓冲胶等850个零件；<br>
+3.新增车系"五菱宏光S 2018款"<br>
+4.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年5月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.4.20180514.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油泵总成，发动机总成，空调压缩机，车顶内饰板等340张爆炸图；<br>
+2.更新吊耳外侧板，右A柱加强板焊合件，后洗涤泵，后窗胶条等1737个零件；<br>
+3.新增车系"五菱荣光新卡"<br>
+4.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年4月11日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.3.20180411.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新蓄电池总成，换档杆拨叉，尾门相关零件，前蒸发器等152张爆炸图；<br>
+2.更新左尾门气弹簧总成，后蒙皮，白车身总成，发动机线束支架等1349个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年3月28日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.2.20180328.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新排气管和消声器，前门装饰板，制动踏板及支架总成，收放机多媒体等85张爆炸图；<br>
+2.更新前蒙皮组件，PAD支架，垫密圈，右前门装饰板等836个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年3月8日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.1.20180308.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新车顶内衬，仪表板大总成，倒车雷达模块，换档杆拨叉等235张爆炸图；<br>
+2.更新发动机悬置，天线总成，左C柱上饰板总成，右尾灯总成等971个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年2月8日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_8.0.20180208.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新随车工具总成，轴承箱，前门锁，蓄电池总成等73张爆炸图；<br>
+2.更新左翼子板，左前轮罩焊合件，车顶内衬，前雾灯灯泡等333个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2018年1月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.9.20180118.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新副仪表板组件，气缸盖罩盖总成，变速器总成等251张爆炸图；<br>
+2.更新注水管组件，前部线束总成，前门焊合总成，副仪表板主体等1282个零件；<br>
+3.更新张实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年12月28日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.8.20171228.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新侧围钣金件，排气管和消声器，仪表板大总成等249张爆炸图；<br>
+2.更新缸盖总成，副驾驶员坐垫骨架组件，输油管总成II，缓冲胶垫等1007个零件；<br>
+3.更新张实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年12月7日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.7.20171207.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新排气管和消声器，后侧门总成，后保险杠总成等57张爆炸图；<br>
+2.更新白车身总成，仪表线束总成，右D柱焊合总成，内侧饰盖等106个零件；<br>
+3.更新1022张实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年11月23日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.6.20171123.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新空调管路，轮速传感器，后车灯，后悬挂总成等55张爆炸图；<br>
+2.更新仪表线束总成，白车身总成，发动机机油，压缩机吸气管等9798个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年11月9日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.5.20171109.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新扬声器总成，副仪表板组件，尾门总成，倒车雷达模块等217张爆炸图；<br>
+2.更新后侧门焊合总成，天窗总成，摄像头总成，后门框胶条等1751个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年10月26日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.4.20171026.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新散热器水管总成，车身线束，尾门总成，后悬挂总成等217张爆炸图；<br>
+2.更新气门挺柱，左前门三角饰板装饰圈，洗涤液罐，顶盖等851个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年9月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.3.20170921.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新第二排座椅总成，后车灯，散热器总成，前保险杠总成等148张爆炸图；<br>
+2.更新连杆总成，左侧围外板，防尘胶套，右除霜格栅等1199个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年9月7日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.2.20170907.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新前座椅总成，后门装饰板，空调管路，制动主缸总成等127张爆炸图；<br>
+2.更新后车灯，收放机天线，气门挺柱分组Q，前部线束总成等1031个零件；<br>
+3.更新实物照片
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年8月24日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.1.20170824.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新车顶内饰板，离合器踏板及主缸总成，前部钣金焊合件，后制动器总成等151张爆炸图；<br>
+2.更新顶部线束，侧围外板，右后侧围下饰板，中间右装饰板等843个零件；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年8月9日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_7.0.20170809.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新组合仪表总成，散热器总成，后制动器总成，后地板钣金件等266张爆炸图；<br>
+2.更新中间左装饰板组件，发动机控制模块总成，USB电缆，天窗顶盖等1418个零件；<br>
+3.更新实物照片266张；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年7月20日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.9.20170720.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新后车灯，副仪表板组件，尾门拉手组件，前门总成等150张爆炸图；<br>
+2.更新前部线束总成，多功能开关组件，挂杆，左D柱焊合总成等218个零件；<br>
+3.更新实物照片103张；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年7月6日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.8.20170706.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新空调管路，换档操纵机构，差速器，玻璃升降器等154张爆炸图；<br>
+2.更新左D柱饰板，主线束总成，天窗遮阳板总成，加油塞垫圈等210个零件；<br>
+3.更新实物照片693张；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年6月22日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.7.20170622.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新侧围钣金件，水泵，副仪表板组件，换档操纵机构等279张爆炸图；<br>
+2.更新右前门线束总成，前部线束总成，左后侧围内板焊合件，后侧装饰盖等1077个零件；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年6月8日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.6.20170608.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新后制动器总成，车顶内衬，前部钣金焊合件，后保险杠总成等142张爆炸图；<br>
+2.更新天线总成，空调控制器总成，右尾灯总成，仪表护罩等352个零件；<br>
+3.更新实物照片1223张；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年5月25日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.5.20170525.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新燃油箱总成，发电机，转向管柱饰盖，前部钣金焊合件等276张爆炸图；<br>
+2.更新全景天窗，尾门线束总成，燃油泵总成，天窗总成等967个零件；<br>
+3.更新实物照片1129张；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年5月9日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.4.20170509.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新蓄电池总成，车顶内衬，前门装饰板等50张爆炸图；<br>
+2.更新中间装饰板组件，前部线束总成，转向器，左前大梁焊合件等161个零件；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年4月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.3.20170419.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新仪表板大总成，燃油管路，前悬挂总成等68张爆炸图；<br>
+2.更新地毯总成，发动机控制模块总成，上臂总成，转向节合件等231个零件；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年3月23日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.2.20170323.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新后车灯，空调管路，方向盘总成等63张爆炸图；<br>
+2.更新前门装饰板，驻车制动操纵总成，消声器总成，右外后视镜总成等164个零件；<br>
+3.更新实物照片；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年3月10日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.1.20170309.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新散热器水管总成，翼子板，后车灯等69张爆炸图；<br>
+2.更新右厢板焊合件总成，门内开手柄总成，前门锁总成，左翼子板等440个零件；<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年2月16日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_6.0.20170216.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新后侧门总成，发动机安装，空气滤清器总成等158张爆炸图<br>
+2.更新拉索支架，左吹脚风道，半轴总成，换档拉索支架
+等436个零件<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2017年1月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.9.20170119.1)</h3>
+                                <ul>
+                                    <li><span style="font-size: 15px;line-height: 30px;">
+1.更新发动机缸体，节温器，轮速传感器等422张爆炸图<br>
+2.更新节温器垫片，气门弹簧，前门装饰，传动轴总成等2031个零件<br>
+</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年12月28日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.8.20161228.1)</h3>
+                                <ul>
+                                    <li>新增车型宝骏730 2017款，宝骏510；<br>
+                                        更新后翼子板，离合器壳体，前格栅等422张爆炸图；<br>
+                                        更新后侧位外板，B柱内板焊合件，指针式电子钟总成等176张实物照片；
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年12月9日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.7.20161209.1)</h3>
+                                <ul>
+                                    <li>更新后制动器总成，空调管路，车顶内衬，车顶内衬，离合器壳体等116张爆炸图；
+                                        <br>更新四挡同步环，尾门线束总成，翼子板，天线总成，后桥总成等263个零件；</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年11月25日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.6.20161125.1)</h3>
+                                <ul>
+                                    <li>更新起动机，车身线束，离合器踏板及主缸总成，转向器及转向拉杆总成等57张爆炸图；
+                                        <br>更新后端板总成，右后行李托架装饰盖，仪表板组件
+                                        ，空调箱总成等543个零件；</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年11月4日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.5.20161104.1)</h3>
+                                <ul>
+                                    <li>更新车身线束，第二排座椅总成，中排安全带总成，换挡摇臂与拨叉，暖风机总成等57张爆炸图；
+                                        <br>更新膨胀箱总成，ESC模块总成，消声器总成
+                                        ，后桥减速器总成等358个零件；</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年10月20日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.4.20161021.1)</h3>
+                                <ul>
+                                    <li>更新制动管路总成，扬声器总成，方向盘总成，气缸盖罩盖总成，换挡及离合器执行器置等108张爆炸图的更新；
+                                        <br>更新组合仪表总成，底盘线束总成，挡风网总成，后地板焊合总成，选换档软轴总成等359个零件；</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年9月22日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.3.20160922.1)</h3>
+                                <ul>
+                                    <li>新增车型宝骏560-2017款（CN201S），涉及883条数据的更新。<br>
+                                        更新散热器支架焊合件，后桥减速器总成，前悬架支柱减振器，防尘油封总成，前制动蹄总成等415个配件。<br>
+                                        更新曲轴连杆机构，发动机凸轮轴，气缸盖罩盖总成，前座椅安全带安装，后面装饰板，安全气囊等200张爆炸图。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年9月13日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.2.20160913.1)</h3>
+                                <ul>
+                                    <li>更新制动管路总成，中冷器总成，车架总成，第三排座椅总成，前门装饰板，安全气囊，副车架支撑装置等79张爆炸图涉及851条数据的更新；<br>更新前纵梁与轮罩总成，厢板支撑板支架，遮阳板组件，前门腰部外胶条组件，地板托架组件，驻车制动灯开关总成等651个零件；<br>更新支撑杆衬套，尾门扣手，后轮毂螺栓等4张实物照片。<br></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年9月8日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.0.20160908.1)</h3>
+                                <ul>
+                                    <li>更新发动机控制模块总成，左前行李托架装饰盖，组合仪表总成，驻车制动后拉索总成，后轮速度传感器总成，副仪表板装饰盖等140个零件号。<br>
+                                        更新制动管路总成，发动机悬挂，制动管路总成，转向管柱总成，	驻车制动及手刹线索总成，后蒸发器等109张爆炸图，涉及1353条数据的更新。<br>
+                                        更新驾驶员座椅总成，压缩机总成等15张实物照片。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年8月25日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_5.0.20160825.1)</h3>
+                                <ul>
+                                    <li>更新第二排座椅总成， 前挡风玻璃及密封胶条， 收放机多媒体， 尾门内饰板， 变速器壳体， 前门内饰板等117张爆炸图，涉及1529条数据的更新。<br>更新中立柱铰链加强板，备用胎托架及吊钩组件，离合器拉索总成，散热器支架焊合件，侧除霜器嘴及风管组件，仪表板装饰胶条，仪表护罩等198个零件。<br>更新杂物箱锁扣组件，发动机控制模块总成，右前门杂物盒，备胎托架吊钩， 后侧门总成等8张实物照片。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年8月12日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.9.20160812.1)</h3>
+                                <ul>
+                                    <li>更新防水薄膜，中冷器总成，支撑装置，转向器及转向拉杆总成，前保险杠总成，仪表板大总成，后保险杠总成等60张爆炸图，涉及2028条数据的更新。<br>更新后侧门焊合总成，空气流量传感器总成，注油管焊合件，后侧门焊合总成等5个零件。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年7月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.8.20160721.1)</h3>
+                                <ul>
+                                    <li>新增新车型五菱之光V，涉及2306条数据的更新。<br>更新车身控制模块总成，制动与离合踏板总成(带支架板)，驾驶员侧外饰盖，制动踏板回位弹簧，左后制动缸进油总成，空调控制器总成等1174个零件。<br>更新及新增中冷器总成，轮速传感器，水泵，蓄电池总成，制动主缸总成，倒档齿轮轴组件，动力转向器总成，尾门总成，前门及内装饰件等298张爆炸图。<br>更新鼓风机电机总成，拉带，座椅拉绳， 铝合金车轮4.5JX13 等13张实物照片。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年7月7日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.7.20160707.1)</h3>
+                                <ul>
+                                    <li>更新前雾灯开关，转向开关盒总成，中间加强架焊合件，侧除霜器嘴及风管组件，传动轴总成，曲轴位置传感器等159个零件。<br>更新尾门相关零件，发动机总成，仪表板大总成，发动机凸轮轴， 发动机飞轮， 曲轴连杆机构等118张爆炸图涉及到1342条数据的更新。<br>更新左高音扬声器盖，驾驶员座椅总成，前雾灯装饰盖，回油管总成，右高音扬声器盖等17张实物照片。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年6月22日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.6.20160622.1)</h3>
+                                <ul>
+                                    <li>新增新车型CN180C-宝骏310，涉及到3483条数据的更新。<br>更新发动机总成，发动机缸体，地毯总成，发动机总成，气缸盖罩盖总成，排气管和消声器，燃油箱总成等207张爆炸图。<br>更新外侧饰盖，前门饰板总成，侧围钣金件，车轮及轮胎总成等5张实物照片。<br>更新仪表板线束总成，右弹片胶条，加油口门焊合件，后侧门上走轮臂总成，左C柱上加强板，前照灯调光开关总成等1258个零件。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年6月17日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>功能升级(EPC-SGMW_4.5.20160617.1)</h3>
+                                <ul>
+                                    <li>系统接口升级，VIN查询功能恢复正常使用</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年6月2日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.4.20160607.1)</h3>
+                                <ul>
+                                    <li>更新车架总成，制动管路总成，排气管和消声器，输出轴及齿轮部件，换挡摇臂与拨叉，车顶内衬等34张爆炸图，涉及2502条数据的更新。<br>新增及更新飞轮总成，左尾灯总成，左翼子板，增压器冷却回水管总成，第二排三人座椅总成，机油冷却器出水管密封圈等70张实物照片。<br>更新蓄电池底架总成，制动助力器真空软管总成，发动机线束总成，右遮阳板总成，后备箱侧饰板，白车身总成等513个零件。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年5月12日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.3.20160517.1)</h3>
+                                <ul>
+                                    <li>更新 第三排座椅总成，左前轮罩衬垫总成，左前侧围外板，白车身总成，凸轮轴位置执行器电磁阀总成，下曲轴箱挡油板等253个配件。<br>更新 制动管(ABS) ，后车灯，前车灯， 起动机 ， 副仪表板组件 ， 散热器总成 ，手刹操纵及拉索总成等23张爆炸图，涉及1297条数据的更新。<br>更新 左前轮罩焊合件 ，防尘胶套， 五/倒档拨叉 ， A/C开关 等7张配件照片。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年4月29日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.2.20160506.1)</h3>
+                                <ul>
+                                    <li>更新排气管和消声器、制动主缸助力器组件、 驻车制动操纵装置 、 方向盘总成 、空气滤清器总成、蓄电池总成、 中间轴及齿轮部件 等82张爆炸图，涉及861条数据的更新。<br>更新组合仪表总成、换档护套装饰框、安全气囊控制模块、机油滤清器总成、第二排安全带外盖总成、输油管总成II、组合仪表总成等106个零件。<br>新增右后侧门玻璃总成、 节气门体总成 、 右前门玻璃总成 、 电子扇总成、排气凸轮轴链轮螺栓 、导航天线、进气凸轮轴链轮（带凸轮轴位置执行器）等384张实物照片。<br></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年4月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_4.1.20160421.1)</h3>
+                                <ul>
+                                    <li>新增 离合器壳体 、后制动蹄调节器弹簧、 右翼子板加强板B 、前部车顶饰条总   成、后蒸风机调速电阻器总成、 左后侧门内开装置 等559个配件；<br>更新 车厢装配总成 、 前制动器总成 、空调管路、车顶内衬、曲轴连杆机构、 正时系统 等168张爆炸图涉及2036条数据的更新；<br>更新 曲轴链轮、密封圈（中心）、 发动机控制模块 、右前侧围外板、后顶灯、 第二排双人座椅总成 、机油泵盖等582张实物照片。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年3月23日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>功能升级(EPC-SGMW_3.9.20160324.1)</h3>
+                                <ul>
+                                    <li>1、图数据界面增加零件反查功能，方便用户在浏览图数据时，能通过零件编号反查，查看该零件编号都适用在哪些车型上。<br>2、替换查询界面新老配件增加适用车型列。方便查看历史配件的适用车型。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年3月18日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.8.20160318.1)</h3>
+                                <ul>
+                                    <li>1、新增驻车制动操纵总成、副仪表板主体、缸体总成、前蒸发器出口管组件(双蒸)、曲轴箱强制通风管总成、副驾驶员座椅总成等等244个配件<br>2、更新轮速传感器、发动机凸轮轴、后侧门门装饰板、车顶内衬、保险丝盒、上部内饰安装、空调控制机构总成等77张爆炸图涉及1303条数据的更新<br>3、更新前减振器下隔振垫总成、左前轮罩衬垫总成、安全气囊控制模块等6张照片</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年3月4日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.7.20160304.1)</h3>
+                                <ul>
+                                    <li>1、更新39张爆炸图涉及555条数据更新<br>2、更新4张配件照片<br>3、新增13个配件</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年2月22日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.6.20160222.1)</h3>
+                                <ul>
+                                    <li>更新部分车型图例和数据</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2016年1月20日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.5.20160120.1)</h3>
+                                <ul>
+                                    <li>1.部分图例数据更新<br>2.部分配件照片更新</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年12月30日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.4.20151230.1)</h3>
+                                <ul>
+                                    <li>零件详情页 增加相关的“通知通讯”提醒查看功能</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年12月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.3.20151221.1)</h3>
+                                <ul>
+                                    <li>1.部分图例数据更新<br>2.部分配件照片更新</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年11月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.2.20151119.1)</h3>
+                                <ul>
+                                    <li>1.部分图例数据更新<br>2.精确呈现配件实物图</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年10月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.1.20151021.1)</h3>
+                                <ul>
+                                    <li>1.优化系统中订单，购物车等列表中删除功能。<br>2.优化多功能编码查询逻辑。<br>3.优化购物车配件检索功能。<br>4.优化替换查询功能。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年10月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_3.0.20151019.1)</h3>
+                                <ul>
+                                    <li>1.部分图例数据更新<br>2.新增1600多张零件实物图</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年9月23日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（Ebook-SGMW_1.3.20150923.1）</h3>
+                                <ul>
+                                    <li>新增功能“维修技术通讯”查询(TAC)</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年9月23日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_2.9.20150923.1)</h3>
+                                <ul>
+                                    <li>优化左图右数据的替换关系图标显示逻辑<br>左图右数据增加配件编号复制功能<br>零件详情页实物图片增加放大镜功能<br>高级查询、零件编号查询结果页，点击零件进入左图右数据，高亮显示该零件。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年9月22日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（AY-SGMW_2.0.20150922.1）</h3>
+                                <ul>
+                                    <li>1.新增“车辆电子模块”查询<br>2.新增“车辆形式核准认证”查询<br>3.新增“CCC认证”查询</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年9月14日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级(EPC-SGMW_2.8.20150915.1)</h3>
+                                <ul>
+                                    <li>1.部分图数据更新<br>2.上传了1660多张配件实物图照片</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年9月10日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_2.7.20150914.1）</h3>
+                                <ul>
+                                    <li>1.优化左图右数据查询功能，原VIN快捷查询框，优化成同时支持VIN、VSN、零件编号、零件描述查询（备注：VIN、VSN支持完整查询；零件编号、零件描述支持模糊查询）。<br>2.订单模块新增备注功能，同时优化订单列排序，下单日期前移，新增状态和备注，方便用户一目了然识别自己的订单。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年9月1日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_2.6.20150901.1）</h3>
+                                <ul>
+                                    <li>左图右数据页面，树展现效果优化<br>订单、消息、书签等模块后台优化<br>部分系统功能优化</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年8月26日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>帮助优化（EPC-SGMW_1.2.20150826.1）</h3>
+                                <ul>
+                                    <li>用户手册内容更新<br>1.增加“呆滞件交易平台”操作说明<br>2.增加“账号安全”操作说明<br>3.系统其他功能块的操作指导增加及更新</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年8月19日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_2.5.20150819.1）</h3>
+                                <ul>
+                                    <li>五菱部分图例数据更新</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年8月17日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_2.4.20150817.1）</h3>
+                                <ul>
+                                    <li>1.零件编号查询，高级查询，增加配件价格显示（针对有查看价格权限的维修站）<br>2.调整左图右数据界面“在线客服”位置<br>3.调整“用途”对话框位置及大小。<br>4.“零件编号查询”，“高级查询”列按照维修站要求重新排列。<br>5. VIN号查询结果增加生产日期显示。</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年8月10日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_2.3.20150810.1）</h3>
+                                <ul>
+                                    <li>新增零件实物照片160多张</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年7月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_2.2.20150722.1）</h3>
+                                <ul>
+                                    <li>增加如下两款新车型数据：<br>CN113:五菱宏光S1<br>CN201:2015款宝骏730</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年7月15日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_2.1.20150717.1）</h3>
+                                <ul>
+                                    <li>修复BUG<br>增加VIN查询功能 <br>优化查询界面<br>优化信息检索查询功能</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年7月15日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（AY-SGMW_1.0.20150715.1）</h3>
+                                <ul>
+                                    <li>汽车附件拆分为专用工具与精品附件(专用工具显示至维修资料下)<br>增加车辆上市信息查询</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年7月13日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_2.0.20150713.1）</h3>
+                                <ul>
+                                    <li>首页布局改版</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年7月6日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>功能优化（EPC-SGMW_1.9.20150708.1）</h3>
+                                <ul>
+                                    <li>导出订单功能优化（支持多库位订单导出）</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年7月6日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_1.8.20150706.1）</h3>
+                                <ul>
+                                    <li>优化“替换查询”功能<br>优化“VSN查询”功能<br>优化“订单详细”界面<br>导出订单增加“库位”验证功能（同一订单中只能导出相同库位的配件）</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月24日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（Ebook-SGMW_1.2.20150624.1）</h3>
+                                <ul>
+                                    <li>变更手册查询条件样式<br>增加手册打印功能</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月23日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（OE_link-SGMW_2.2.20150623.1）</h3>
+                                <ul>
+                                    <li>增加卖家商品管理中“批量上架”、“批量下架”功能</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月18日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_1.7.20150618.1）</h3>
+                                <ul>
+                                    <li>增加如下四款新车型数据：<br>CN200S-宝骏560<br>GP30-宝骏330<br>N111P-五菱之光2013款货车<br>N120-五菱之光S</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月15日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_1.6.20150615.1）</h3>
+                                <ul>
+                                    <li>新增【在线客服】功能<br>增加“零件编号查询”、“高级查询”功能的详细“用途描述”展示框<br>增加购物车中已有的零件及其数量，可以在配件目录界面中标记出来的功能<br>增加以上功能优化的引导说明<br>优化“VSN查询”功能</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月11日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（OE_link-SGMW_2.1.20150611.1）</h3>
+                                <ul>
+                                    <li>调整产品大全页面模块描述</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月8日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>系统优化（EPC-SGMW_1.5.20150608.1）</h3>
+                                <ul>
+                                    <li>全面提升EPC访问速度，大幅缩短页面等待时间<br>重构并优化系统性能</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年6月3日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级（EPC-SGMW_1.4.20150603.1）</h3>
+                                <ul>
+                                    <li>新增零件实物照片80977张（涉及的零件种类有22420种）</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年5月21日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>数据升级及功能优化（EPC-SGMW_1.3.20150521.5）</h3>
+                                <ul>
+                                    <li>热点图有更新<br>配件价格显示优化<br>购物车功能优化，并增加引导说明</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年5月11日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>帮助优化（EPC-SGMW_1.1.20150511.1）</h3>
+                                <ul>
+                                    <li>增加电子配件目录(EPC)查询指导手册，可在：【帮助】→【<a href="http://res.servision.com.cn/tis/doc/SGMW/epc-manual/" target="_blank">电子配件目录(EPC)查询指导手册</a>】中查看</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年3月20日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>EPC升级（EPC-SGMW_1.0.20150320.1）</h3>
+                                <ul>
+                                    <li>数据更新<br>进入配件详情的查询方式从原来的“i”标记，改为配件编码下划线的链接形式<br>bug修复</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年3月13日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>EPC功能优化（EPC-SGMW_1.0.20150313.1）</h3>
+                                <ul>
+                                    <li>WebEPC 中的零件装配图（爆炸图）可自由拖动以扩大显示范围，方便用户查看<br>按钮风格更新，由原先的黑底白字调整为蓝底白色，更易识别<br>重复配件加入购物车的提示<br>版本历程内容更新<br>bug修复<br></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年1月1日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>客户端架构升级至WEB版架构（TIS-SGMW_1.0.20141222.1）</h3>
+                                <ul>
+                                    <li>升级系统架构，无需安装，有网就能使用系统<br>速度流畅，查询无需等待<br>无感升级，即时享用软件与数据最新版<br>个性化用户服务（备注，收藏等）<br>维修资料，即看即用，疑难问题专家支持<br>管家式在线服务</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="version-date">
+                            <h2>
+                                2015年1月1日 </h2> </td>
+                        <td>
+                            <div>
+                                <h3>客户端架构升级至WEB版架构（TIS-SGMW_1.0.20141222.1）</h3>
+                                <ul>
+                                    <li>升级系统架构，无需安装，有网就能使用系统<br>速度流畅，查询无需等待<br>无感升级，即时享用软件与数据最新版<br>个性化用户服务（备注，收藏等）<br>维修资料，即看即用，疑难问题专家支持<br>管家式在线服务</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="box-links">
+        <a href="http://help.tis.dev.servision.com.cn/CRM/tutorial/" target="_blank">新手上路</a>
+        <a href="http://help.tis.dev.servision.com.cn/SGMW/home/manual/" target="_blank">用户帮助</a>
+        <a href="/tis-home/version" target="_blank">版本历程</a>
+        <a href="http://my.tis.servision.com.cn/help/service-agreement" target="_blank">服务协议</a>
+        <a href="http://www.servision.com.cn/" target="_blank">关于事成</a>
+        <a href="/tis-home/contact" target="_blank">联系方式</a>
+        <a href="/tis-home/standard" target="_blank">收费标准</a>
+    </div>
+    <div class="box-links-2">
+        <label>友情链接：</label>
+        <a href="http://www.moc.gov.cn/" target="_blank" rel="nofollow">交通运输部</a>
+        <a href="http://www.zhb.gov.cn/" target="_blank" rel="nofollow">环境保护部</a>
+        <a href="http://www.mofcom.gov.cn/" target="_blank" rel="nofollow">商务部</a>
+        <a href="http://www.saic.gov.cn/" target="_blank" rel="nofollow">国家工商行政管理总局</a>
+        <a href="http://www.aqsiq.gov.cn/" target="_blank" rel="nofollow">国家质量监督检验检疫总局</a>
+        <a href="http://www.cnca.gov.cn/" target="_blank" rel="nofollow">中国国家认证认可监督管理委员会</a>
+    </div>
+    <ul class="site-statement">
+        <li>声明：本网站为上汽通用五菱官方指定汽车维修技术信息公开唯一平台；该网址所有公开维修技术信息归上汽通用五菱汽车股份有限公司版权所有</li>
+        <li>©2015 Copyright by 上海事成软件股份有限公司 沪ICP备15055698号</li>
+        <li class="police-line">
+            <span class="image-wrapper"><img src="../styles/images/police.png"/></span>
+            沪公安网备31011502006569
+        </li>
+    </ul>
+</footer>
+
+<figure class="frame-back-to-top" id="back-to-top">
+    <i></i>
+</figure>
+
+<script type="text/javascript" src="../scripts/local_bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@import "./sdk/index";
+
+.version-wrap {
+  width: 100%;
+  @include borderRadius(4px);
+}
+
+.version-content{
+  margin-bottom: 20px;
+  @include borderRadius(4px);
+}
+
+.version-title {
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  background: #fff;
+  padding: 0 20px;
+  color: $font-color;
+  font-size:15px;
+  font-weight: bold;
+}
+
+.version-title {
+  border-right: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  font-weight: bold;
+}
+
+.version-info table {
+  background-color: #fff;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.version-date {
+  text-align: center;
+  width: 40%;
+}
+
+.version-date h2 {
+  font-size: 18px;
+}
+.version-date span{
+  font-size:12px;
+}
+
+.version-info table div {
+  padding: 15px 15px 15px 20px;
+}
+
+.version-info table div h3 {
+  line-height: 28px;
+  font-size: 15px;
+}
+
+.version-info table div ul li {
+  line-height: 30px;
+  font-size:12px;
+}
+
+.version-info table td {
+  border: 1px solid #e6e5e5;
+}
+
+.version-info table div ul li s {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  margin-right: 7px;
+  background: url(images/version_li_bg.png) no-repeat;
+  position:relative;
+  top: -1px;
+}
+
+.version-info .current-version {
+  width: 26px;
+  height: 16px;
+  display: inline-block;
+  background: url(images/new.png) no-repeat;
+  margin-top: -10px;
+  position: absolute;
+}
