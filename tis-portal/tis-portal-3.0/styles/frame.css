@@ -117,13 +117,10 @@ a {
 }
 
 .home-banner {
-  height: 400px;
-  text-align: center;
-}
-.home-banner img {
   width: 100%;
-  display: inline-block;
-  height: 400px;
+  height: 375px;
+  text-align: center;
+  background: url(./images/banner.jpg) center center no-repeat;
 }
 
 .main-container {
@@ -422,7 +419,7 @@ a {
 }
 .dialog-box-remind .dialog-footer .btn-remind .icon-wrapper .iconfont {
   font-size: 10px;
-  color: #fff;
+  color: #f5f5f5;
 }
 .dialog-box-remind .dialog-footer .btn-remind.checked .iconfont {
   color: #636363 !important;
@@ -464,6 +461,7 @@ a {
   width: 4px;
   background: rgba(0, 0, 0, 0.65);
   margin: 0 8px 0 5px;
+  vertical-align: middle;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -511,6 +509,65 @@ a {
   display: inline-block;
   height: 50px;
   width: 50px;
+}
+
+.ant-dropdown {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  position: absolute;
+  top: 38px;
+  right: 10px;
+  z-index: 1050;
+  display: block;
+}
+.ant-dropdown.user-dropdown {
+  right: 46px;
+}
+.ant-dropdown.lang-dropdown {
+  right: 10px;
+  z-index: 1100;
+}
+.ant-dropdown a {
+  color: rgba(0, 0, 0, 0.65);
+}
+.ant-dropdown .ant-dropdown-menu {
+  position: relative;
+  margin: 0;
+  padding: 4px 0;
+  text-align: left;
+  list-style-type: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 2px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.ant-dropdown .ant-dropdown-menu-item {
+  clear: both;
+  margin: 0;
+  padding: 5px 12px;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ant-dropdown .ant-dropdown-menu-item:hover {
+  background: #f5f5f5;
 }
 
 /*# sourceMappingURL=frame.css.map */
