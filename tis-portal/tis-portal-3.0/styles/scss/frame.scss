@@ -1,11 +1,12 @@
 @import "./sdk/index";
 @import "./common/reset";
 
-html,body{
+html, body {
   background: $body-bg-color !important;
   min-width: 1200px;
   font-family: 'Microsoft Yahei', Arial, STHeiti, sans-serif !important;
 }
+
 
 a {
   text-decoration: none;
@@ -19,7 +20,7 @@ a {
 
   .logo-box {
     height: 100%;
-    float:left;
+    float: left;
 
     .logo-wrapper {
       display: inline-block;
@@ -43,27 +44,33 @@ a {
 
   .nav-box {
     padding-right: 10px;
-    float:right;
+    float: right;
   }
 
   .nav {
-    width:100%;
+    width: 100%;
     @include setHeightGroup($header-height);
 
+    a{
+      color: #fff;
+    }
+
     .nav-item {
+      display: inline;
       cursor: pointer;
       transition: color .3s ease-in-out;
       color: #fff;
       padding: 0 10px;
       font-size: 14px;
 
-      .iconfont{
+      .iconfont {
         font-size: 16px;
       }
     }
 
-    .nav-item-inner{
+    .nav-item-inner {
       position: relative;
+      display: inline;
 
       .number {
         position: absolute;
@@ -87,15 +94,15 @@ a {
 }
 
 .crumbs {
-  display:block;
+  display: block;
   width: 100%;
   padding: 0 10px;
   height: $crumbs-height;
   line-height: $crumbs-height - 2;
   background: #fff;
   border-top: 1px solid $bd-color;
-  border-bottom:1px solid $bd-color;
-  font-size:14px;
+  border-bottom: 1px solid $bd-color;
+  font-size: 14px;
 
   .iconfont {
     font-size: 14px;
@@ -117,26 +124,26 @@ a {
   }
 }
 
-.home-banner{
+.home-banner {
   width: 100%;
-  height:375px;
+  height: 375px;
   text-align: center;
-  background: url(./images/banner.jpg) center center no-repeat;
+  background: url(./images/home_banner.jpg) center center no-repeat;
 }
 
-.main-container{
+.main-container {
   padding: 20px 30px 0;
 }
 
 .aside-contact {
   position: fixed;
   margin-top: -90px;
-  top:50%;
+  top: 50%;
   right: 30px;
   background: #F8F8F8;
   @include borderRadius(4px);
-  padding:10px 20px;
-  @include boxShadow(0 0 5px rgba(0,0,0,.5));
+  padding: 10px 20px;
+  @include boxShadow(0 0 5px rgba(0, 0, 0, .5));
   z-index: 100;
 
   .info-line {
@@ -145,7 +152,7 @@ a {
     overflow: hidden;
 
     &:last-child {
-      border-bottom:none;
+      border-bottom: none;
     }
 
     .iconfont {
@@ -155,12 +162,12 @@ a {
       display: inline-block;
       vertical-align: middle;
 
-      &.icon-phone{
+      &.icon-phone {
         vertical-align: top;
       }
     }
 
-    span{
+    span {
       font-size: 12px;
       display: inline-block;
       color: $lighter-font-color;
@@ -178,16 +185,16 @@ a {
     padding: 15px 20px 25px;
     overflow: hidden;
 
-    .title{
+    .title {
       font-weight: bold;
       font-size: 16px;
       line-height: 28px;
     }
 
     .item {
-      margin-top:30px;
+      margin-top: 30px;
       width: 25%;
-      float:left;
+      float: left;
       border-right: 1px solid $bd-color;
       cursor: pointer;
 
@@ -195,20 +202,21 @@ a {
         border-right: none;
       }
 
-      &:last-child{
+      &:last-child {
         border-right: none;
       }
 
-      &:hover{
+      &:hover {
         .image-wrapper {
           background: $primary-color;
-          .iconfont{
+
+          .iconfont {
             color: #fff;
           }
         }
       }
 
-      .icon-line{
+      .icon-line {
         width: 100%;
         text-align: center;
       }
@@ -232,23 +240,23 @@ a {
 
       }
 
-      .image-wrapper{
+      .image-wrapper {
         display: inline-block;
         width: 60px;
         height: 60px;
-        border:1px solid $primary-color;
+        border: 1px solid $primary-color;
         line-height: 58px;
         text-align: center;
         @include transition(all .3s ease-in-out);
         @include borderRadius(100%);
 
-        .iconfont{
+        .iconfont {
           font-size: 34px;
           color: $primary-color;
         }
       }
 
-      .text-line{
+      .text-line {
         margin-top: 15px;
         width: 100%;
         line-height: 20px;
@@ -277,15 +285,15 @@ a {
     font-size: 14px;
     line-height: 28px;
     color: $font-color;
-    text-align:left;
+    text-align: left;
 
     a {
       display: inline-block;
       color: #fff;
       margin: 0 12px;
 
-      &:first-child{
-        margin-left:0;
+      &:first-child {
+        margin-left: 0;
       }
 
       &:hover {
@@ -293,19 +301,21 @@ a {
       }
     }
   }
+
   .box-links-2 {
     font-size: 0;
     color: #fff;
     text-align: left;
-    margin-top:5px;
+    margin-top: 5px;
 
     a {
-      font-size:13px;
+      font-size: 13px;
       display: inline-block;
       line-height: 28px;
       padding: 0 8px 0 9px;
       color: #fff;
       position: relative;
+
       &:before {
         content: '';
         height: 13px;
@@ -317,33 +327,37 @@ a {
         top: 50%;
         margin-top: -6px;
       }
+
       &:hover {
         text-decoration: underline;
       }
     }
+
     label {
       font-size: 13px;
       line-height: 28px;
     }
+
     label + a, a:first-child {
       &:before {
         display: none;
       }
     }
   }
+
   .site-statement {
     text-align: left;
     color: #fff;
     font-size: 12px;
     line-height: 28px;
 
-    li:first-child{
-      font-size:13px;
+    li:first-child {
+      font-size: 13px;
     }
 
-    .police-line{
+    .police-line {
 
-      .image-wrapper{
+      .image-wrapper {
         margin-right: 5px;
       }
 
@@ -355,7 +369,7 @@ a {
   }
 }
 
-.back-to-top{
+.back-to-top {
   display: inline-block;
   position: fixed;
   width: 40px;
@@ -365,12 +379,12 @@ a {
   z-index: 100;
   bottom: 20px;
   right: 40px;
-  cursor:pointer;
+  cursor: pointer;
   background: #f5f5f5;
   @include borderRadius(4px);
   @include boxShadow(0 0 4px rgba(0, 0, 0, .5));
 
-  i{
+  i {
     font-size: 16px;
   }
 }
@@ -381,8 +395,21 @@ a {
   right: 90px;
   background: #f5f5f5;
   z-index: 1100;
+  min-width: 300px;
   @include boxShadow(0 0 10px rgba(0, 0, 0, 0.5));
   @include borderRadius(5px);
+
+  &.closed {
+    bottom: 0;
+
+    .dialog-content-remind {
+      display: none;
+    }
+
+    .dialog-footer {
+      display: none;
+    }
+  }
 
   .dialog-header {
     border-bottom: 1px solid $bd-color;
@@ -396,12 +423,12 @@ a {
     color: $lighter-font-color;
 
     .title {
-      float:left;
+      float: left;
       font-weight: bold;
     }
 
     .btns {
-      float:right;
+      float: right;
     }
 
     .btn {
@@ -411,8 +438,15 @@ a {
       line-height: 44px;
       text-align: center;
       cursor: pointer;
-      float:left;
+      float: left;
       margin-right: 5px;
+
+      &:hover{
+
+        .iconfont {
+          color: $primary-color;
+        }
+      }
     }
   }
 
@@ -420,18 +454,25 @@ a {
     padding: 0 20px;
   }
 
-  .dialog-footer{
+  .dialog-footer {
     height: 36px;
     line-height: 36px;
-    font-size:12px;
+    font-size: 12px;
     text-align: center;
 
-    .btn-remind{
-      cursor:pointer;
+    .btn-remind {
+      cursor: pointer;
       position: relative;
       color: #5C5D68;
       height: 24px;
       display: inline-block;
+
+      &.checked {
+
+        .iconfont {
+          color: $bd-color;
+        }
+      }
 
       .icon-wrapper {
         display: inline-block;
@@ -448,7 +489,7 @@ a {
       }
     }
 
-    .btn-remind.checked{
+    .btn-remind.checked {
       .iconfont {
         color: $lighter-font-color !important;
       }
@@ -460,8 +501,7 @@ a {
 
     .remind-item {
       width: 100%;
-      min-width: 298px;
-      padding:10px 0 14px;
+      padding: 10px 0 14px;
       position: relative;
       border-bottom: 1px dashed $bd-color;
 
@@ -471,16 +511,16 @@ a {
         color: $primary-color;
 
         .iconfont {
-          margin-right:5px;
+          margin-right: 5px;
         }
 
-        .text{
+        .text {
           font-size: 13px;
           font-weight: bold;
         }
       }
 
-      ul{
+      ul {
         display: inline-block;
         width: 100%;
         vertical-align: middle;
@@ -491,59 +531,60 @@ a {
 
         .dot {
           display: inline-block;
-          height:4px;
-          width:4px;
+          height: 4px;
+          width: 4px;
           background: $font-color;
           margin: 0 8px 0 5px;
           vertical-align: middle;
           @include borderRadius(6px);
         }
 
-        a{
+        a {
           color: $font-color;
-          font-size:12px;
+          font-size: 12px;
 
-          span{
+          span {
             color: $primary-color;
           }
 
-          &:hover{
+          &:hover {
             text-decoration: underline;
           }
         }
       }
 
-      li{
+      li {
         @include setHeightGroup(32px);
         display: block;
       }
     }
 
-    dl{
+    dl {
       position: absolute;
-      width:90px;
-      height:68px;
+      width: 90px;
+      height: 68px;
       top: 50%;
       left: 0;
 
       margin-top: -34px;
     }
-    dt{
+
+    dt {
       text-align: center;
-      span{
+
+      span {
         vertical-align: top;
       }
     }
+
     dd {
       color: #9d9eaa;
       font-size: 12px;
       text-align: center;
     }
 
-    .wrapper-links{
+    .wrapper-links {
       position: relative;
-      min-height: 64px;
-      line-height: 64px;
     }
 
     .icon {
@@ -554,12 +595,12 @@ a {
   }
 }
 
-.ant-dropdown{
+.ant-dropdown {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0,0,0,.65);
+  color: rgba(0, 0, 0, .65);
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 1.5715;
@@ -567,10 +608,10 @@ a {
   -webkit-font-feature-settings: 'tnum';
   font-feature-settings: 'tnum';
   position: absolute;
-  top:38px;
+  top: 38px;
   right: 10px;
   z-index: 1050;
-  display: block;
+  display: none;
 
   &.user-dropdown {
     right: 46px;
@@ -585,7 +626,7 @@ a {
     color: $font-color;
   }
 
-  .ant-dropdown-menu{
+  .ant-dropdown-menu {
     position: relative;
     margin: 0;
     padding: 4px 0;
@@ -595,16 +636,16 @@ a {
     background-clip: padding-box;
     border-radius: 2px;
     outline: none;
-    -webkit-box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
-    box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   .ant-dropdown-menu-item {
     clear: both;
     margin: 0;
     padding: 5px 12px;
-    color: rgba(0,0,0,.65);
+    color: rgba(0, 0, 0, .65);
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -613,7 +654,7 @@ a {
     -webkit-transition: all .3s;
     transition: all .3s;
 
-    &:hover{
+    &:hover {
       background: #f5f5f5;
     }
   }
